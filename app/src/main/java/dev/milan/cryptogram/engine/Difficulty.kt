@@ -1,9 +1,12 @@
 package dev.milan.cryptogram.engine
 
+import kotlinx.serialization.Serializable
+
 /**
  * The four fixed difficulty bands. Values are the single source of truth for band length
  * ranges, reveal ratios, lives, free hints and feedback timing (design doc section 4.1).
  */
+@Serializable
 enum class Difficulty(
     val minLen: Int,
     val maxLen: Int,
