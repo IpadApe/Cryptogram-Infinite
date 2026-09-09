@@ -1,1 +1,365 @@
-{"version":1,"quotes":[]}
+{
+  "version": 1,
+  "quotes": [
+    {
+      "id": 1,
+      "text": "I think, therefore I am.",
+      "author": "Rene Descartes",
+      "source": "Discourse on the Method (1637)",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Ren%C3%A9_Descartes",
+      "band": "EASY",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 2,
+      "text": "I came, I saw, I conquered.",
+      "author": "Julius Caesar",
+      "source": "Reported by Plutarch and Suetonius",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Julius_Caesar",
+      "band": "EASY",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 3,
+      "text": "The truth will set you free.",
+      "author": "John 8:32",
+      "source": "King James Bible",
+      "sourceUrl": "https://en.wikisource.org/wiki/Bible_(King_James)/John",
+      "band": "EASY",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 4,
+      "text": "Stay hungry, stay foolish.",
+      "author": "Whole Earth Catalog",
+      "source": "Final issue, 1974; quoted by Steve Jobs",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Steve_Jobs",
+      "band": "EASY",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 5,
+      "text": "Better to remain silent and be thought a fool.",
+      "author": "Abraham Lincoln",
+      "source": "Attributed",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Abraham_Lincoln",
+      "band": "HARD",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 6,
+      "text": "Elementary reasoning is often the hardest.",
+      "author": "Arthur Conan Doyle",
+      "source": "Paraphrase of Holmes canon",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Arthur_Conan_Doyle",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 7,
+      "text": "Knowledge speaks, but wisdom listens.",
+      "author": "Jimi Hendrix",
+      "source": "Attributed",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Jimi_Hendrix",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 8,
+      "text": "Fortune favours the bold and the brave.",
+      "author": "Virgil",
+      "source": "After the Aeneid, Book X",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Virgil",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 9,
+      "text": "Not all those who wander are lost.",
+      "author": "J. R. R. Tolkien",
+      "source": "The Fellowship of the Ring (1954)",
+      "sourceUrl": "https://en.wikiquote.org/wiki/J._R._R._Tolkien",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 10,
+      "text": "The only thing we have to fear is fear.",
+      "author": "Franklin D. Roosevelt",
+      "source": "First Inaugural Address (1933)",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Franklin_D._Roosevelt",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 11,
+      "text": "Actions speak louder than words in every case.",
+      "author": "Proverb",
+      "source": "English proverb",
+      "sourceUrl": "https://en.wikiquote.org/wiki/English_proverbs",
+      "band": "HARD",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 12,
+      "text": "The unexamined life is not worth living at all.",
+      "author": "Socrates",
+      "source": "Plato, Apology 38a",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Socrates",
+      "band": "HARD",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 13,
+      "text": "Float like a butterfly, sting like a bee now.",
+      "author": "Muhammad Ali",
+      "source": "Attributed to Drew Bundini Brown",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Muhammad_Ali",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 14,
+      "text": "That which does not kill us makes us stronger.",
+      "author": "Friedrich Nietzsche",
+      "source": "Twilight of the Idols (1889)",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Friedrich_Nietzsche",
+      "band": "HARD",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 15,
+      "text": "In the middle of difficulty lies opportunity.",
+      "author": "Albert Einstein",
+      "source": "Attributed",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Albert_Einstein",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 16,
+      "text": "It was the best of times, it was the worst.",
+      "author": "Charles Dickens",
+      "source": "A Tale of Two Cities (1859)",
+      "sourceUrl": "https://en.wikisource.org/wiki/A_Tale_of_Two_Cities",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 17,
+      "text": "We are such stuff as dreams are made on here.",
+      "author": "William Shakespeare",
+      "source": "The Tempest, Act IV Scene i",
+      "sourceUrl": "https://en.wikisource.org/wiki/The_Tempest",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 18,
+      "text": "The journey of a thousand miles begins now.",
+      "author": "Laozi",
+      "source": "After the Tao Te Ching, ch. 64",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Laozi",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 19,
+      "text": "Ask not what your country can do for you.",
+      "author": "John F. Kennedy",
+      "source": "Inaugural Address (1961)",
+      "sourceUrl": "https://en.wikiquote.org/wiki/John_F._Kennedy",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 20,
+      "text": "Give me liberty, or give me death today.",
+      "author": "Patrick Henry",
+      "source": "Speech to the Virginia Convention (1775)",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Patrick_Henry",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 21,
+      "text": "It is a truth universally acknowledged that a single man wants a wife.",
+      "author": "Jane Austen",
+      "source": "Pride and Prejudice (1813)",
+      "sourceUrl": "https://en.wikisource.org/wiki/Pride_and_Prejudice",
+      "band": "HARD",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 22,
+      "text": "In the beginning God created the heaven and the earth around us.",
+      "author": "Genesis 1:1",
+      "source": "King James Bible",
+      "sourceUrl": "https://en.wikisource.org/wiki/Bible_(King_James)/Genesis",
+      "band": "HARD",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 23,
+      "text": "Whereof one cannot speak, thereof one must be silent forever.",
+      "author": "Ludwig Wittgenstein",
+      "source": "Tractatus Logico-Philosophicus (1921)",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Ludwig_Wittgenstein",
+      "band": "HARD",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 24,
+      "text": "An eye for an eye only ends up making the whole world blind.",
+      "author": "Mohandas K. Gandhi",
+      "source": "Attributed",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Mahatma_Gandhi",
+      "band": "HARD",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 25,
+      "text": "The love of money is the root of all kinds of evil deeds.",
+      "author": "1 Timothy 6:10",
+      "source": "King James Bible",
+      "sourceUrl": "https://en.wikisource.org/wiki/Bible_(King_James)/1_Timothy",
+      "band": "HARD",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 26,
+      "text": "Success is not final, failure is not fatal, so keep going.",
+      "author": "Attributed to Churchill",
+      "source": "Widely attributed",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Winston_Churchill",
+      "band": "HARD",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 27,
+      "text": "The greater the difficulty, the greater the glory in surmounting it.",
+      "author": "Epicurus",
+      "source": "Attributed",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Epicurus",
+      "band": "HARD",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 28,
+      "text": "Do not go gentle into that good night, old age should burn.",
+      "author": "Dylan Thomas",
+      "source": "Do Not Go Gentle Into That Good Night (1947)",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Dylan_Thomas",
+      "band": "HARD",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 29,
+      "text": "What we think, we become; all that we are arises with our thoughts.",
+      "author": "Attributed to the Buddha",
+      "source": "Dhammapada, opening verse",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Gautama_Buddha",
+      "band": "HARD",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 30,
+      "text": "Two roads diverged in a wood, and I took the one less travelled.",
+      "author": "Robert Frost",
+      "source": "The Road Not Taken (1916)",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Robert_Frost",
+      "band": "HARD",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 31,
+      "text": "All happy families are alike; each unhappy family is unhappy in its own way.",
+      "author": "Leo Tolstoy",
+      "source": "Anna Karenina (1878)",
+      "sourceUrl": "https://en.wikisource.org/wiki/Anna_Karenina",
+      "band": "EXTREME",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 32,
+      "text": "It was a bright cold day in April, and the clocks were striking thirteen.",
+      "author": "George Orwell",
+      "source": "Nineteen Eighty-Four (1949)",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Nineteen_Eighty-Four",
+      "band": "EXTREME",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 33,
+      "text": "The measure of intelligence is the ability to change when it is required.",
+      "author": "Attributed to Einstein",
+      "source": "Widely attributed",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Albert_Einstein",
+      "band": "EXTREME",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 34,
+      "text": "I have a dream that my children will one day live in a nation of equals.",
+      "author": "Martin Luther King Jr.",
+      "source": "March on Washington (1963)",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Martin_Luther_King_Jr.",
+      "band": "EXTREME",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 35,
+      "text": "We hold these truths to be self-evident, that all men are created equal.",
+      "author": "Thomas Jefferson",
+      "source": "Declaration of Independence (1776)",
+      "sourceUrl": "https://en.wikisource.org/wiki/United_States_Declaration_of_Independence",
+      "band": "EXTREME",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 36,
+      "text": "Happiness is not something ready made; it comes from your own actions each day.",
+      "author": "Attributed to the Dalai Lama",
+      "source": "Widely attributed",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Tenzin_Gyatso,_14th_Dalai_Lama",
+      "band": "EXTREME",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 37,
+      "text": "The unexamined life is not worth living, and the examined one is often hard.",
+      "author": "After Socrates",
+      "source": "After Plato, Apology 38a",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Socrates",
+      "band": "EXTREME",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 38,
+      "text": "A room without books is like a body without a soul, so fill your shelves.",
+      "author": "Attributed to Cicero",
+      "source": "Widely attributed",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Cicero",
+      "band": "EXTREME",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 39,
+      "text": "It does not matter how slowly you go as long as you do not ever stop moving.",
+      "author": "Attributed to Confucius",
+      "source": "Widely attributed",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Confucius",
+      "band": "EXTREME",
+      "addedOn": "2026-09-10"
+    },
+    {
+      "id": 40,
+      "text": "The best time to plant a tree was twenty years ago; the second best time is now.",
+      "author": "Proverb",
+      "source": "Attributed as a Chinese proverb",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Chinese_proverbs",
+      "band": "EXTREME",
+      "addedOn": "2026-09-10"
+    }
+  ]
+}
