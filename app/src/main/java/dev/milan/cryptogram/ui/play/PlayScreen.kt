@@ -26,12 +26,13 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import dev.milan.cryptogram.engine.Difficulty
 import dev.milan.cryptogram.engine.PuzzleStatus
+import dev.milan.cryptogram.ui.results.ResultArgs
 
 @Composable
 fun PlayScreen(
     difficulty: Difficulty,
     level: Int,
-    onSolved: (ResultsRoute) -> Unit,
+    onSolved: (ResultArgs) -> Unit,
     onExit: () -> Unit,
     modifier: Modifier = Modifier,
     viewModel: PlayViewModel = viewModel(
@@ -57,7 +58,7 @@ fun PlayScreen(
     LaunchedEffect(Unit) {
         viewModel.eventFlow.collect { event ->
             when (event) {
-                is PlayEvent.NavigateToResults -> onSolved(event.route)
+                is PlayEvent.NavigateToResults -> onSolved(event.args)
             }
         }
     }

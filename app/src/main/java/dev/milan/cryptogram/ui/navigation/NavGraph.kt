@@ -17,8 +17,9 @@ import dev.milan.cryptogram.engine.Difficulty
 import dev.milan.cryptogram.ui.home.HomeScreen
 import dev.milan.cryptogram.ui.levels.LevelSelectScreen
 import dev.milan.cryptogram.ui.play.PlayScreen
-import dev.milan.cryptogram.ui.play.ResultsRoute
+import dev.milan.cryptogram.ui.results.ResultArgs
 import dev.milan.cryptogram.ui.results.ResultsScreen
+import dev.milan.cryptogram.ui.stats.StatsScreen
 
 /** Route strings and argument keys for the whole app (design doc section 8). */
 object Routes {
@@ -26,9 +27,7 @@ object Routes {
     const val LEVELS = "levels/{difficulty}"
     const val PLAY_LEVEL = "play/level/{difficulty}/{level}"
     const val PLAY_DAILY = "play/daily/{date}/{difficulty}"
-    const val RESULTS =
-        "results?difficulty={difficulty}&level={level}&quoteId={quoteId}" +
-            "&timeMs={timeMs}&mistakes={mistakes}&hintsUsed={hintsUsed}&stars={stars}"
+    const val RESULTS = "results/{args}"
     const val DAILY = "daily"
     const val STATS = "stats"
     const val SETTINGS = "settings"
@@ -37,10 +36,7 @@ object Routes {
     fun levels(difficulty: Difficulty) = "levels/${difficulty.name}"
     fun playLevel(difficulty: Difficulty, level: Int) = "play/level/${difficulty.name}/$level"
     fun playDaily(date: String, difficulty: Difficulty) = "play/daily/$date/${difficulty.name}"
-
-    fun results(r: ResultsRoute) =
-        "results?difficulty=${r.difficulty.name}&level=${r.level}&quoteId=${r.quoteId}" +
-            "&timeMs=${r.timeMs}&mistakes=${r.mistakes}&hintsUsed=${r.hintsUsed}&stars=${r.stars}"
+    fun results(args: ResultArgs) = "results/${args.encode()}"
 }
 
 private fun diffArg(name: String?): Difficulty =
@@ -72,9 +68,7 @@ fun NavGraph(
         ) { entry ->
             LevelSelectScreen(
                 difficulty = diffArg(entry.arguments?.getString("difficulty")),
-                onOpenLevel = { d, level ->
-                    navController.navigate(Routes.playLevel(d, level))
-                },
+                onOpenLevel = { d, level -> navController.navigate(Routes.playLevel(d, level)) },
             )
         }
 
@@ -85,13 +79,11 @@ fun NavGraph(
                 navArgument("level") { type = NavType.IntType },
             ),
         ) { entry ->
-            val difficulty = diffArg(entry.arguments?.getString("difficulty"))
-            val level = entry.arguments?.getInt("level") ?: 1
             PlayScreen(
-                difficulty = difficulty,
-                level = level,
-                onSolved = { route ->
-                    navController.navigate(Routes.results(route)) {
+                difficulty = diffArg(entry.arguments?.getString("difficulty")),
+                level = entry.arguments?.getInt("level") ?: 1,
+                onSolved = { args ->
+                    navController.navigate(Routes.results(args)) {
                         popUpTo(Routes.PLAY_LEVEL) { inclusive = true }
                     }
                 },
@@ -101,36 +93,27 @@ fun NavGraph(
 
         composable(
             Routes.RESULTS,
-            arguments = listOf(
-                navArgument("difficulty") { type = NavType.StringType; defaultValue = "EASY" },
-                navArgument("level") { type = NavType.IntType; defaultValue = 1 },
-                navArgument("quoteId") { type = NavType.IntType; defaultValue = 0 },
-                navArgument("timeMs") { type = NavType.LongType; defaultValue = 0L },
-                navArgument("mistakes") { type = NavType.IntType; defaultValue = 0 },
-                navArgument("hintsUsed") { type = NavType.IntType; defaultValue = 0 },
-                navArgument("stars") { type = NavType.IntType; defaultValue = 0 },
-            ),
+            arguments = listOf(navArgument("args") { type = NavType.StringType }),
         ) { entry ->
-            val a = entry.arguments!!
+            val args = ResultArgs.decode(entry.arguments?.getString("args").orEmpty())
             ResultsScreen(
-                difficulty = diffArg(a.getString("difficulty")),
-                level = a.getInt("level"),
-                timeMs = a.getLong("timeMs"),
-                mistakes = a.getInt("mistakes"),
-                hintsUsed = a.getInt("hintsUsed"),
-                stars = a.getInt("stars"),
-                onNextLevel = { d, level ->
-                    navController.navigate(Routes.playLevel(d, level)) {
+                args = args,
+                onNextLevel = { a ->
+                    navController.navigate(Routes.playLevel(a.difficulty, (a.level ?: 0) + 1)) {
                         popUpTo(Routes.HOME)
                     }
+                },
+                onBackToDaily = {
+                    navController.navigate(Routes.DAILY) { popUpTo(Routes.HOME) }
                 },
                 onHome = { navController.popBackStack(Routes.HOME, inclusive = false) },
             )
         }
 
+        composable(Routes.STATS) { StatsScreen() }
+
         composable(Routes.PLAY_DAILY) { Placeholder("Play (daily)") }
         composable(Routes.DAILY) { Placeholder("Daily") }
-        composable(Routes.STATS) { Placeholder("Stats") }
         composable(Routes.SETTINGS) { Placeholder("Settings") }
         composable(Routes.SOURCES) { Placeholder("Sources") }
     }

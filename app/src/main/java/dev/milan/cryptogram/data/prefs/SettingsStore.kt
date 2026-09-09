@@ -97,6 +97,12 @@ class SettingsStore(private val context: Context) {
         context.dataStore.edit { it[CONSENT_OBTAINED] = value }
     }
 
+    val bestStreak: Flow<Int> = data.map { it[BEST_STREAK] ?: 0 }
+
+    suspend fun setBestStreak(value: Int) {
+        context.dataStore.edit { it[BEST_STREAK] = value }
+    }
+
     private companion object {
         val CORPUS_LOADED_VERSION = intPreferencesKey("corpusLoadedVersion")
         val REMOVE_ADS_OWNED = booleanPreferencesKey("removeAdsOwned")
@@ -105,6 +111,7 @@ class SettingsStore(private val context: Context) {
         val THEME_MODE = stringPreferencesKey("themeMode")
         val LAST_DAILY_DATE_SEEN = stringPreferencesKey("lastDailyDateSeen")
         val CONSENT_OBTAINED = booleanPreferencesKey("consentObtained")
+        val BEST_STREAK = intPreferencesKey("bestStreak")
 
         val FROZEN_MAX_ID: Map<Difficulty, Preferences.Key<Int>> =
             Difficulty.entries.associateWith { intPreferencesKey("frozenMaxId_${it.name}") }

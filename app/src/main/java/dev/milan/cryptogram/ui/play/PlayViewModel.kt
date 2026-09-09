@@ -18,6 +18,8 @@ import dev.milan.cryptogram.engine.PuzzleState
 import dev.milan.cryptogram.engine.PuzzleStatus
 import dev.milan.cryptogram.engine.starRating
 import dev.milan.cryptogram.ui.appContainer
+import dev.milan.cryptogram.ui.results.PlayKind
+import dev.milan.cryptogram.ui.results.ResultArgs
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.delay
@@ -46,18 +48,8 @@ data class PlayUiState(
     val showFailedDialog: Boolean,
 )
 
-data class ResultsRoute(
-    val difficulty: Difficulty,
-    val level: Int,
-    val quoteId: Int,
-    val timeMs: Long,
-    val mistakes: Int,
-    val hintsUsed: Int,
-    val stars: Int,
-)
-
 sealed interface PlayEvent {
-    data class NavigateToResults(val route: ResultsRoute) : PlayEvent
+    data class NavigateToResults(val args: ResultArgs) : PlayEvent
 }
 
 class PlayViewModel(
@@ -187,7 +179,17 @@ class PlayViewModel(
         settings.setCurrentLevel(difficulty, maxOf(current, level + 1))
         events.send(
             PlayEvent.NavigateToResults(
-                ResultsRoute(difficulty, level, quoteId, s.elapsedMs, s.mistakes, hintsUsed, stars),
+                ResultArgs(
+                    kind = PlayKind.LEVEL,
+                    difficulty = difficulty,
+                    level = level,
+                    date = null,
+                    quoteId = quoteId,
+                    timeMs = s.elapsedMs,
+                    mistakes = s.mistakes,
+                    hintsUsed = hintsUsed,
+                    stars = stars,
+                ),
             ),
         )
     }
