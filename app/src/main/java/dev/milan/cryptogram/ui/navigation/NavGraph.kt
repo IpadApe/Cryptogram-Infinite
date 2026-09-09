@@ -14,6 +14,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import dev.milan.cryptogram.engine.Difficulty
+import dev.milan.cryptogram.ui.daily.DailyScreen
 import dev.milan.cryptogram.ui.home.HomeScreen
 import dev.milan.cryptogram.ui.levels.LevelSelectScreen
 import dev.milan.cryptogram.ui.play.PlayScreen
@@ -112,8 +113,34 @@ fun NavGraph(
 
         composable(Routes.STATS) { StatsScreen() }
 
-        composable(Routes.PLAY_DAILY) { Placeholder("Play (daily)") }
-        composable(Routes.DAILY) { Placeholder("Daily") }
+        composable(Routes.DAILY) {
+            DailyScreen(
+                onPlay = { date, difficulty ->
+                    navController.navigate(Routes.playDaily(date, difficulty))
+                },
+            )
+        }
+
+        composable(
+            Routes.PLAY_DAILY,
+            arguments = listOf(
+                navArgument("date") { type = NavType.StringType },
+                navArgument("difficulty") { type = NavType.StringType },
+            ),
+        ) { entry ->
+            PlayScreen(
+                difficulty = diffArg(entry.arguments?.getString("difficulty")),
+                level = 0,
+                dailyDate = entry.arguments?.getString("date"),
+                onSolved = { args ->
+                    navController.navigate(Routes.results(args)) {
+                        popUpTo(Routes.PLAY_DAILY) { inclusive = true }
+                    }
+                },
+                onExit = { navController.popBackStack(Routes.DAILY, inclusive = false) },
+            )
+        }
+
         composable(Routes.SETTINGS) { Placeholder("Settings") }
         composable(Routes.SOURCES) { Placeholder("Sources") }
     }

@@ -96,6 +96,12 @@ interface DailyResultDao {
     @Query("SELECT * FROM daily_result WHERE date = :date AND difficulty = :difficulty")
     suspend fun get(date: String, difficulty: String): DailyResultEntity?
 
+    @Query("SELECT * FROM daily_result WHERE date = :date")
+    fun observeForDate(date: String): Flow<List<DailyResultEntity>>
+
+    @Query("SELECT COUNT(*) FROM daily_result")
+    fun totalSolved(): Flow<Int>
+
     @Upsert
     suspend fun upsert(entity: DailyResultEntity)
 

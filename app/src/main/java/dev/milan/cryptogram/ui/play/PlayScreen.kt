@@ -35,9 +35,10 @@ fun PlayScreen(
     onSolved: (ResultArgs) -> Unit,
     onExit: () -> Unit,
     modifier: Modifier = Modifier,
+    dailyDate: String? = null,
     viewModel: PlayViewModel = viewModel(
-        factory = PlayViewModel.factory(difficulty, level),
-        key = "play-$difficulty-$level",
+        factory = PlayViewModel.factory(difficulty, level, dailyDate),
+        key = "play-${dailyDate ?: "level"}-$difficulty-$level",
     ),
 ) {
     val ui by viewModel.state.collectAsStateWithLifecycle()
@@ -78,8 +79,9 @@ fun PlayScreen(
                 .padding(horizontal = 16.dp, vertical = 8.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
         ) {
+            val band = state.difficulty.name.lowercase().replaceFirstChar { it.uppercase() }
             Text(
-                "${state.difficulty.name.lowercase().replaceFirstChar { it.uppercase() }} $level",
+                if (state.isDaily) "Daily · $band" else "$band $level",
                 style = MaterialTheme.typography.titleMedium,
             )
             Text(formatTime(puzzle.elapsedMs), style = MaterialTheme.typography.titleMedium)

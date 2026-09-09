@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import dev.milan.cryptogram.data.corpus.QuoteRepository
+import dev.milan.cryptogram.data.daily.DailyRepository
 import dev.milan.cryptogram.data.db.dao.InProgressDao
 import dev.milan.cryptogram.data.db.entities.InProgressEntity
 import dev.milan.cryptogram.data.prefs.SettingsStore
@@ -33,14 +34,17 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
+import java.time.LocalDate
 
 const val KIND_LEVEL = "LEVEL"
+const val KIND_DAILY = "DAILY"
 
 data class PlayUiState(
     val puzzle: PuzzleState,
     val quoteAuthor: String,
     val difficulty: Difficulty,
     val level: Int,
+    val isDaily: Boolean,
     val canCheck: Boolean,
     val canHint: Boolean,
     val canAdHint: Boolean,
@@ -55,11 +59,16 @@ sealed interface PlayEvent {
 class PlayViewModel(
     private val difficulty: Difficulty,
     private val level: Int,
+    private val dailyDate: String?,
     private val quotes: QuoteRepository,
     private val progress: ProgressRepository,
+    private val daily: DailyRepository,
     private val inProgressDao: InProgressDao,
     private val settings: SettingsStore,
 ) : ViewModel() {
+
+    private val isDaily = dailyDate != null
+    private val kind = if (isDaily) KIND_DAILY else KIND_LEVEL
 
     private val _state = MutableStateFlow<PlayUiState?>(null)
     val state: StateFlow<PlayUiState?> = _state.asStateFlow()
@@ -72,6 +81,7 @@ class PlayViewModel(
 
     private lateinit var levelIndex: LevelIndex
     private var quoteId = -1
+    private var dailySeed = 0L
     private var author = ""
     private var restartCount = 0
     private var solveHandled = false
@@ -82,21 +92,32 @@ class PlayViewModel(
     init {
         viewModelScope.launch {
             levelIndex = quotes.levelIndex()
-            quoteId = levelIndex.quoteIdFor(difficulty, level)
+            if (isDaily) {
+                val pick = daily.getToday(LocalDate.parse(dailyDate)).picks.getValue(difficulty)
+                quoteId = pick.quoteId
+                dailySeed = pick.seed
+            } else {
+                quoteId = levelIndex.quoteIdFor(difficulty, level)
+            }
             val quote = quotes.byId(quoteId)
             author = quote?.author.orEmpty()
 
-            val slot = inProgressDao.get(KIND_LEVEL, difficulty.name)
+            val slot = inProgressDao.get(kind, difficulty.name)
+            val matches = if (isDaily) slot?.date == dailyDate else slot?.level == level
             val restored = slot
-                ?.takeIf { it.level == level }
+                ?.takeIf { matches }
                 ?.let { runCatching { PuzzleSession.fromJson(it.stateJson) }.getOrNull() }
             startSession(restored ?: freshSession(quote?.text.orEmpty(), cycleOffset = 0))
         }
     }
 
     private fun freshSession(plain: String, cycleOffset: Int): PuzzleSession {
-        val cycle = levelIndex.cycleFor(difficulty, level) + cycleOffset
-        val seed = difficulty.ordinal * 1_000_000_000L + level * 1_000L + cycle
+        val seed = if (isDaily) {
+            dailySeed + cycleOffset
+        } else {
+            val cycle = levelIndex.cycleFor(difficulty, level) + cycleOffset
+            difficulty.ordinal * 1_000_000_000L + level * 1_000L + cycle
+        }
         return PuzzleSession(plain, difficulty, seed)
     }
 
@@ -123,10 +144,10 @@ class PlayViewModel(
                 if (s.status == PuzzleStatus.IN_PROGRESS) {
                     inProgressDao.upsert(
                         InProgressEntity(
-                            kind = KIND_LEVEL,
+                            kind = kind,
                             difficulty = difficulty.name,
                             level = level,
-                            date = null,
+                            date = dailyDate,
                             stateJson = newSession.toJson(),
                             updatedAt = System.currentTimeMillis(),
                         ),
@@ -152,6 +173,7 @@ class PlayViewModel(
             quoteAuthor = author,
             difficulty = difficulty,
             level = level,
+            isDaily = isDaily,
             canCheck = running && difficulty.feedback == FeedbackMode.ON_CHECK,
             canHint = running && s.hintsLeft > 0,
             canAdHint = running && s.hintsLeft == 0 && s.adHintsUsed < MAX_AD_HINTS_PER_PUZZLE,
@@ -165,25 +187,31 @@ class PlayViewModel(
         solveHandled = true
         val stars = starRating(s.mistakes, s.adHintsUsed)
         val hintsUsed = (difficulty.freeHints - s.hintsLeft) + s.adHintsUsed
-        progress.recordSolve(
-            difficulty = difficulty,
-            level = level,
-            timeMs = s.elapsedMs,
-            mistakes = s.mistakes,
-            stars = stars,
-            hintsUsed = hintsUsed,
-            solvedAt = System.currentTimeMillis(),
-        )
-        inProgressDao.delete(KIND_LEVEL, difficulty.name)
-        val current = settings.currentLevel(difficulty).first()
-        settings.setCurrentLevel(difficulty, maxOf(current, level + 1))
+
+        if (isDaily) {
+            daily.recordSolve(dailyDate!!, difficulty, s.elapsedMs, s.mistakes, stars)
+        } else {
+            progress.recordSolve(
+                difficulty = difficulty,
+                level = level,
+                timeMs = s.elapsedMs,
+                mistakes = s.mistakes,
+                stars = stars,
+                hintsUsed = hintsUsed,
+                solvedAt = System.currentTimeMillis(),
+            )
+            val current = settings.currentLevel(difficulty).first()
+            settings.setCurrentLevel(difficulty, maxOf(current, level + 1))
+        }
+        inProgressDao.delete(kind, difficulty.name)
+
         events.send(
             PlayEvent.NavigateToResults(
                 ResultArgs(
-                    kind = PlayKind.LEVEL,
+                    kind = if (isDaily) PlayKind.DAILY else PlayKind.LEVEL,
                     difficulty = difficulty,
-                    level = level,
-                    date = null,
+                    level = if (isDaily) null else level,
+                    date = dailyDate,
                     quoteId = quoteId,
                     timeMs = s.elapsedMs,
                     mistakes = s.mistakes,
@@ -209,13 +237,18 @@ class PlayViewModel(
     }
 
     companion object {
-        fun factory(difficulty: Difficulty, level: Int) = viewModelFactory {
+        fun factory(difficulty: Difficulty, level: Int, dailyDate: String? = null) = viewModelFactory {
             initializer {
                 val c = appContainer
                 PlayViewModel(
-                    difficulty, level,
-                    c.quoteRepository, c.progressRepository,
-                    c.database.inProgressDao(), c.settingsStore,
+                    difficulty = difficulty,
+                    level = level,
+                    dailyDate = dailyDate,
+                    quotes = c.quoteRepository,
+                    progress = c.progressRepository,
+                    daily = c.dailyRepository,
+                    inProgressDao = c.database.inProgressDao(),
+                    settings = c.settingsStore,
                 )
             }
         }

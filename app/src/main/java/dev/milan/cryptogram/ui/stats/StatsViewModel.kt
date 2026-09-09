@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
+import dev.milan.cryptogram.data.daily.DailyRepository
 import dev.milan.cryptogram.data.prefs.SettingsStore
 import dev.milan.cryptogram.data.progress.ProgressRepository
 import dev.milan.cryptogram.engine.Difficulty
@@ -13,6 +14,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import java.time.LocalDate
 
 data class BandStatRow(
     val difficulty: Difficulty,
@@ -32,6 +34,7 @@ data class StatsUiState(
 
 class StatsViewModel(
     private val progress: ProgressRepository,
+    private val daily: DailyRepository,
     private val settings: SettingsStore,
 ) : ViewModel() {
 
@@ -50,11 +53,15 @@ class StatsViewModel(
                     stars = s.sumStars,
                 )
             }
+            val today = LocalDate.now()
+            val streak = DailyRepository.currentStreak(daily.solvedDatesAllFour().first(), today)
+            val best = maxOf(settings.bestStreak.first(), streak)
+            if (best > settings.bestStreak.first()) settings.setBestStreak(best)
             _state.value = StatsUiState(
                 bands = rows,
-                dailyStreak = 0, // Brief 4
-                bestStreak = settings.bestStreak.first(),
-                dailiesSolved = 0, // Brief 4
+                dailyStreak = streak,
+                bestStreak = best,
+                dailiesSolved = daily.totalDailiesSolved().first(),
                 loading = false,
             )
         }
@@ -64,7 +71,7 @@ class StatsViewModel(
         fun factory() = viewModelFactory {
             initializer {
                 val c = appContainer
-                StatsViewModel(c.progressRepository, c.settingsStore)
+                StatsViewModel(c.progressRepository, c.dailyRepository, c.settingsStore)
             }
         }
     }

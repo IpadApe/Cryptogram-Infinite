@@ -1,6 +1,7 @@
 package dev.milan.cryptogram
 
 import android.app.Application
+import dev.milan.cryptogram.data.daily.DailySyncWorker
 import dev.milan.cryptogram.di.AppContainer
 
 class CryptogramApp : Application() {
@@ -11,5 +12,6 @@ class CryptogramApp : Application() {
     override fun onCreate() {
         super.onCreate()
         container = AppContainer(this)
+        DailySyncWorker.enqueue(this)
     }
 }

@@ -69,6 +69,17 @@ fun HomeScreen(
                                 s.daily?.date ?: "Tap to play today's puzzles",
                                 style = MaterialTheme.typography.bodyMedium,
                             )
+                            s.daily?.let { d ->
+                                Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                                    Difficulty.entries.forEach { band ->
+                                        val done = band in d.solvedBands
+                                        Text(
+                                            (if (done) "● " else "○ ") + band.name.first(),
+                                            style = MaterialTheme.typography.labelSmall,
+                                        )
+                                    }
+                                }
+                            }
                             Text("Streak: ${s.streak}", style = MaterialTheme.typography.bodySmall)
                         }
                     }
