@@ -1,4 +1,4 @@
-package com.example.cryptograminfinite
+package dev.milan.cryptogram
 
 import org.junit.Test
 

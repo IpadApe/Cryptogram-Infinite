@@ -1,4 +1,4 @@
-package com.example.cryptograminfinite
+package dev.milan.cryptogram
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,11 +7,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.cryptograminfinite.ui.theme.CryptogramInfiniteTheme
+import dev.milan.cryptogram.ui.navigation.NavGraph
+import dev.milan.cryptogram.ui.theme.CryptogramInfiniteTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,28 +18,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             CryptogramInfiniteTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    NavGraph(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    CryptogramInfiniteTheme {
-        Greeting("Android")
     }
 }
