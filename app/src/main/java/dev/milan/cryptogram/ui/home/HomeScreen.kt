@@ -21,6 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import dev.milan.cryptogram.ads.BannerAd
 import dev.milan.cryptogram.engine.Difficulty
 
 @Composable
@@ -57,7 +58,10 @@ fun HomeScreen(
                 }
             }
 
-            LazyColumn(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            LazyColumn(
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
                 items(s.bands, key = { it.difficulty }) { band ->
                     BandCard(band, onClick = { onOpenBand(band.difficulty) })
                 }
@@ -94,6 +98,8 @@ fun HomeScreen(
                     Text("Remove ads")
                 }
             }
+
+            BannerAd()
         }
     }
 }

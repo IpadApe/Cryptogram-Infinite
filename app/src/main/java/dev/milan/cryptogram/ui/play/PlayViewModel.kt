@@ -78,6 +78,7 @@ class PlayViewModel(
 
     private val resumed = MutableStateFlow(false)
     private val failedDialog = MutableStateFlow(false)
+    private val adHintLoaded = MutableStateFlow(false)
 
     private lateinit var levelIndex: LevelIndex
     private var quoteId = -1
@@ -128,8 +129,9 @@ class PlayViewModel(
         solveHandled = false
 
         bindingJobs += viewModelScope.launch {
-            combine(newSession.state, failedDialog) { s, failed -> uiState(s, failed) }
-                .collect { _state.value = it }
+            combine(newSession.state, failedDialog, adHintLoaded) { s, failed, adLoaded ->
+                uiState(s, failed, adLoaded)
+            }.collect { _state.value = it }
         }
         bindingJobs += viewModelScope.launch {
             while (isActive) {
@@ -166,7 +168,7 @@ class PlayViewModel(
         }
     }
 
-    private fun uiState(s: PuzzleState, failed: Boolean): PlayUiState {
+    private fun uiState(s: PuzzleState, failed: Boolean, adLoaded: Boolean): PlayUiState {
         val running = s.status == PuzzleStatus.IN_PROGRESS
         return PlayUiState(
             puzzle = s,
@@ -176,11 +178,14 @@ class PlayViewModel(
             isDaily = isDaily,
             canCheck = running && difficulty.feedback == FeedbackMode.ON_CHECK,
             canHint = running && s.hintsLeft > 0,
-            canAdHint = running && s.hintsLeft == 0 && s.adHintsUsed < MAX_AD_HINTS_PER_PUZZLE,
-            adHintLoaded = false, // wired in Brief 5
+            canAdHint = running && s.hintsLeft == 0 &&
+                s.adHintsUsed < MAX_AD_HINTS_PER_PUZZLE && adLoaded,
+            adHintLoaded = adLoaded,
             showFailedDialog = failed,
         )
     }
+
+    fun setAdHintLoaded(value: Boolean) { adHintLoaded.value = value }
 
     private suspend fun onSolved(s: PuzzleState) {
         if (solveHandled) return

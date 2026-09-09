@@ -2,6 +2,9 @@ package dev.milan.cryptogram.di
 
 import android.content.Context
 import dev.milan.cryptogram.BuildConfig
+import dev.milan.cryptogram.ads.AdManager
+import dev.milan.cryptogram.ads.ConsentManager
+import dev.milan.cryptogram.ads.RewardedHintAd
 import dev.milan.cryptogram.data.corpus.CorpusLoader
 import dev.milan.cryptogram.data.corpus.QuoteRepository
 import dev.milan.cryptogram.data.daily.DailyRemoteSource
@@ -15,7 +18,6 @@ import okhttp3.OkHttpClient
  * Manual dependency container (no Hilt/Koin). Created once in [dev.milan.cryptogram.CryptogramApp].
  *
  * Wired progressively by build brief. Still to come:
- *  - adManager        (Brief 5)
  *  - billingManager   (Brief 6)
  */
 class AppContainer(context: Context) {
@@ -49,4 +51,11 @@ class AppContainer(context: Context) {
             resultDao = database.dailyResultDao(),
         )
     }
+
+    val adManager: AdManager by lazy { AdManager() }
+
+    val consentManager: ConsentManager by lazy { ConsentManager(settingsStore, adManager) }
+
+    fun newRewardedHintAd(): RewardedHintAd =
+        RewardedHintAd(appContext, BuildConfig.REWARDED_UNIT_ID)
 }

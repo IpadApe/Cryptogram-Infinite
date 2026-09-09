@@ -29,6 +29,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import dev.milan.cryptogram.ads.BannerAd
 import dev.milan.cryptogram.engine.Difficulty
 
 @Composable
@@ -45,6 +46,7 @@ fun LevelSelectScreen(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
+        bottomBar = { BannerAd() },
         floatingActionButton = {
             ExtendedFloatingActionButton(
                 text = { Text("Continue · ${state.continueLevel}") },

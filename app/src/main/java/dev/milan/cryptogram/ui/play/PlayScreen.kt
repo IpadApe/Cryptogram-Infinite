@@ -12,10 +12,13 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import android.app.Activity
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
@@ -26,6 +29,7 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import dev.milan.cryptogram.engine.Difficulty
 import dev.milan.cryptogram.engine.PuzzleStatus
+import dev.milan.cryptogram.ui.rememberAppContainer
 import dev.milan.cryptogram.ui.results.ResultArgs
 
 @Composable
@@ -43,6 +47,13 @@ fun PlayScreen(
 ) {
     val ui by viewModel.state.collectAsStateWithLifecycle()
     val lifecycleOwner = LocalLifecycleOwner.current
+    val context = LocalContext.current
+    val container = rememberAppContainer()
+    val rewardedHint = remember { container.newRewardedHintAd() }
+    val rewardedLoaded by rewardedHint.loaded.collectAsStateWithLifecycle()
+
+    LaunchedEffect(Unit) { rewardedHint.load() }
+    LaunchedEffect(rewardedLoaded) { viewModel.setAdHintLoaded(rewardedLoaded) }
 
     DisposableEffect(lifecycleOwner) {
         val observer = LifecycleEventObserver { _, event ->
@@ -109,10 +120,18 @@ fun PlayScreen(
                 state.canAdHint -> "Hint (watch ad)"
                 else -> "Hint"
             },
-            hintEnabled = state.canHint, // ad path enabled in Brief 5
+            hintEnabled = state.canHint || state.canAdHint,
             onKey = viewModel::enter,
             onBackspace = viewModel::clearCell,
-            onHint = { viewModel.hint(fromAd = false) },
+            onHint = {
+                if (state.canHint) {
+                    viewModel.hint(fromAd = false)
+                } else if (state.canAdHint) {
+                    (context as? Activity)?.let { activity ->
+                        rewardedHint.show(activity) { viewModel.hint(fromAd = true) }
+                    }
+                }
+            },
             onCheck = viewModel::check,
         )
     }

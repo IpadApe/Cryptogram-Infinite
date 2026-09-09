@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import dev.milan.cryptogram.ads.BannerAd
 
 @Composable
 fun ResultsScreen(
@@ -103,6 +104,8 @@ fun ResultsScreen(
             )
         }) { Text("Share") }
         OutlinedButton(onClick = onHome) { Text("Home") }
+
+        BannerAd()
     }
 }
 
