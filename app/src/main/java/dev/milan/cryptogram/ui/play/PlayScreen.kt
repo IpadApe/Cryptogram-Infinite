@@ -15,6 +15,7 @@ import androidx.compose.material3.TextButton
 import android.app.Activity
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -51,6 +52,11 @@ fun PlayScreen(
     val container = rememberAppContainer()
     val rewardedHint = remember { container.newRewardedHintAd() }
     val rewardedLoaded by rewardedHint.loaded.collectAsStateWithLifecycle()
+    val soundEnabled by container.settingsStore.soundEnabled
+        .collectAsStateWithLifecycle(initialValue = true)
+    val hapticsEnabled by container.settingsStore.hapticsEnabled
+        .collectAsStateWithLifecycle(initialValue = true)
+    val feedback = rememberPlayFeedback(soundEnabled, hapticsEnabled)
 
     LaunchedEffect(Unit) { rewardedHint.load() }
     LaunchedEffect(rewardedLoaded) { viewModel.setAdHintLoaded(rewardedLoaded) }
@@ -82,6 +88,15 @@ fun PlayScreen(
     }
 
     val puzzle = state.puzzle
+
+    val lastMistakes = remember { mutableIntStateOf(puzzle.mistakes) }
+    LaunchedEffect(puzzle.mistakes) {
+        if (puzzle.mistakes > lastMistakes.intValue) feedback.onWrong()
+        lastMistakes.intValue = puzzle.mistakes
+    }
+    LaunchedEffect(puzzle.status) {
+        if (puzzle.status == PuzzleStatus.SOLVED) feedback.onSolve()
+    }
 
     Column(modifier.fillMaxSize()) {
         Row(
@@ -121,7 +136,7 @@ fun PlayScreen(
                 else -> "Hint"
             },
             hintEnabled = state.canHint || state.canAdHint,
-            onKey = viewModel::enter,
+            onKey = { c -> feedback.onTap(); viewModel.enter(c) },
             onBackspace = viewModel::clearCell,
             onHint = {
                 if (state.canHint) {

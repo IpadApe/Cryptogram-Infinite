@@ -5,6 +5,7 @@ import dev.milan.cryptogram.BuildConfig
 import dev.milan.cryptogram.ads.AdManager
 import dev.milan.cryptogram.ads.ConsentManager
 import dev.milan.cryptogram.ads.RewardedHintAd
+import dev.milan.cryptogram.billing.BillingManager
 import dev.milan.cryptogram.data.corpus.CorpusLoader
 import dev.milan.cryptogram.data.corpus.QuoteRepository
 import dev.milan.cryptogram.data.daily.DailyRemoteSource
@@ -12,17 +13,19 @@ import dev.milan.cryptogram.data.daily.DailyRepository
 import dev.milan.cryptogram.data.db.AppDatabase
 import dev.milan.cryptogram.data.prefs.SettingsStore
 import dev.milan.cryptogram.data.progress.ProgressRepository
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import okhttp3.OkHttpClient
 
 /**
  * Manual dependency container (no Hilt/Koin). Created once in [dev.milan.cryptogram.CryptogramApp].
- *
- * Wired progressively by build brief. Still to come:
- *  - billingManager   (Brief 6)
  */
 class AppContainer(context: Context) {
 
     private val appContext: Context = context.applicationContext
+
+    private val appScope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
 
     val database: AppDatabase by lazy { AppDatabase.build(appContext) }
 
@@ -55,6 +58,10 @@ class AppContainer(context: Context) {
     val adManager: AdManager by lazy { AdManager() }
 
     val consentManager: ConsentManager by lazy { ConsentManager(settingsStore, adManager) }
+
+    val billingManager: BillingManager by lazy {
+        BillingManager(appContext, settingsStore, appScope)
+    }
 
     fun newRewardedHintAd(): RewardedHintAd =
         RewardedHintAd(appContext, BuildConfig.REWARDED_UNIT_ID)

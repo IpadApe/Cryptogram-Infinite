@@ -1,11 +1,6 @@
 package dev.milan.cryptogram.ui.navigation
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
@@ -20,6 +15,8 @@ import dev.milan.cryptogram.ui.levels.LevelSelectScreen
 import dev.milan.cryptogram.ui.play.PlayScreen
 import dev.milan.cryptogram.ui.results.ResultArgs
 import dev.milan.cryptogram.ui.results.ResultsScreen
+import dev.milan.cryptogram.ui.settings.SettingsScreen
+import dev.milan.cryptogram.ui.sources.SourcesScreen
 import dev.milan.cryptogram.ui.stats.StatsScreen
 
 /** Route strings and argument keys for the whole app (design doc section 8). */
@@ -141,14 +138,9 @@ fun NavGraph(
             )
         }
 
-        composable(Routes.SETTINGS) { Placeholder("Settings") }
-        composable(Routes.SOURCES) { Placeholder("Sources") }
-    }
-}
-
-@Composable
-private fun Placeholder(name: String) {
-    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Text(name, style = MaterialTheme.typography.headlineMedium)
+        composable(Routes.SETTINGS) {
+            SettingsScreen(onOpenSources = { navController.navigate(Routes.SOURCES) })
+        }
+        composable(Routes.SOURCES) { SourcesScreen() }
     }
 }
