@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Upsert
+import androidx.room.ColumnInfo
 import dev.milan.cryptogram.data.db.entities.BandStats
 import dev.milan.cryptogram.data.db.entities.DailyCacheEntity
 import dev.milan.cryptogram.data.db.entities.DailyResultEntity
@@ -28,6 +29,11 @@ interface QuoteDao {
     suspend fun insertAll(quotes: List<QuoteEntity>)
 }
 
+data class LevelStars(
+    @ColumnInfo(name = "level") val level: Int,
+    @ColumnInfo(name = "stars") val stars: Int,
+)
+
 @Dao
 interface ProgressDao {
     @Query("SELECT * FROM progress WHERE difficulty = :difficulty AND level = :level")
@@ -35,6 +41,9 @@ interface ProgressDao {
 
     @Upsert
     suspend fun upsert(entity: ProgressEntity)
+
+    @Query("SELECT level, stars FROM progress WHERE difficulty = :difficulty")
+    fun bandProgress(difficulty: String): Flow<List<LevelStars>>
 
     @Query("SELECT MAX(level) FROM progress WHERE difficulty = :difficulty")
     fun highestSolved(difficulty: String): Flow<Int?>
@@ -59,6 +68,9 @@ interface ProgressDao {
 interface InProgressDao {
     @Query("SELECT * FROM in_progress WHERE kind = :kind AND difficulty = :difficulty")
     suspend fun get(kind: String, difficulty: String): InProgressEntity?
+
+    @Query("SELECT * FROM in_progress WHERE kind = :kind AND difficulty = :difficulty")
+    fun observe(kind: String, difficulty: String): Flow<InProgressEntity?>
 
     @Upsert
     suspend fun upsert(entity: InProgressEntity)

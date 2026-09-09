@@ -79,6 +79,9 @@ android {
 kotlin {
     compilerOptions {
         jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+        optIn.add("androidx.compose.material3.ExperimentalMaterial3Api")
+        optIn.add("androidx.compose.foundation.ExperimentalFoundationApi")
+        optIn.add("androidx.compose.foundation.layout.ExperimentalLayoutApi")
     }
 }
 
