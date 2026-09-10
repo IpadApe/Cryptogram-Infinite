@@ -19,7 +19,7 @@ This document is the single source of truth. Every open question from the grill 
 | Reveals (% of distinct letters, floor) | Easy 50% · Medium 30% · Hard 15% · Extreme 5% (min 0) |
 | Feedback | Easy/Medium: wrong letter turns red on entry · Hard: `Check` button · Extreme: nothing until grid fully correct |
 | Lives per puzzle | 5 / 4 / 3 / 3 · zero lives = restart same level with new key · no revive · no global lives |
-| Free hints per puzzle | 3 / 2 / 1 / 0 · hint reveals one chosen cipher letter · extra hints via rewarded ad, max 3 per puzzle |
+| Free hints per puzzle | 3 / 2 / 1 / 0 · hint reveals one chosen cipher number · extra hints via rewarded ad, max 3 per puzzle |
 | Ads | Banner on Home, Level Select, Results only. No interstitials, ever. No ads on Play screen. |
 | Remove Ads | Removes banners only. Rewarded hint ads remain available to everyone. |
 | Levels | Numbered per difficulty, seeded shuffle, append-only corpus, cycle re-keys. Nothing gated. |
@@ -183,19 +183,30 @@ const val MAX_AD_HINTS_PER_PUZZLE = 3
 
 ### 4.2 Cipher key (`Cipher.kt`)
 
+Number-substitution cipher: each distinct plaintext letter is replaced by a number 1..26. `key[i]` is the cipher number for plaintext letter `'A' + i`.
+
 ```kotlin
 object Cipher {
-    /** Returns a derangement of A..Z (no letter maps to itself), deterministic for seed. */
-    fun key(seed: Long): CharArray {
+    /** A permutation of 1..26, deterministic for seed. key[i] = cipher number for 'A'+i. */
+    fun key(seed: Long): IntArray {
         val rng = kotlin.random.Random(seed)
-        val letters = ('A'..'Z').toMutableList()
-        while (true) {
-            letters.shuffle(rng)
-            if (letters.indices.none { letters[it] == 'A' + it }) return letters.toCharArray()
-        }
+        return (1..26).toMutableList().also { it.shuffle(rng) }.toIntArray()
     }
-    fun encrypt(plain: String, key: CharArray): String =
-        plain.uppercase().map { c -> if (c in 'A'..'Z') key[c - 'A'] else c }.joinToString("")
+    /** cipher number (1..26) -> plaintext letter. Index 0 unused. */
+    fun invert(key: IntArray): CharArray {
+        val inv = CharArray(27)
+        for (i in 0 until 26) inv[key[i]] = 'A' + i
+        return inv
+    }
+    /** Tokenises plaintext: a number per letter, the literal char for anything else. */
+    fun encrypt(plain: String, key: IntArray): List<CipherToken> =
+        plain.uppercase().map { c ->
+            if (c in 'A'..'Z') CipherToken.Num(key[c - 'A']) else CipherToken.Sym(c)
+        }
+}
+sealed interface CipherToken {
+    data class Num(val n: Int) : CipherToken   // encoded letter
+    data class Sym(val c: Char) : CipherToken  // passed-through space / punctuation
 }
 ```
 
@@ -215,7 +226,7 @@ fun revealedLetters(plain: String, d: Difficulty, seed: Long): Set<Char> {
 }
 ```
 
-Revealed letters are pre-filled in the grid, locked (not editable), and shown on the keyboard as used.
+Revealed letters are pre-filled in the grid, locked (not editable), and shown on the keyboard as used. A letter is "revealed" as a plaintext letter; the cipher number whose correct answer is that letter is the locked cell.
 
 ### 4.4 Level index (`LevelIndex.kt`)
 
@@ -249,34 +260,38 @@ class LevelIndex(
 
 ```kotlin
 data class PuzzleState(
-    val plain: String,                 // uppercase original with punctuation
-    val cipher: String,
-    val key: CharArray,                // plain index -> cipher char
-    val mapping: Map<Char, Char>,      // cipherChar -> guessed plainChar (player entries)
-    val revealed: Set<Char>,           // plain letters pre-revealed (locked)
+    val plain: String,                // uppercase original with punctuation
+    val difficulty: Difficulty,
+    val key: IntArray,                // plain index -> cipher number (1..26)
+    val mapping: Map<Int, Char>,      // cipher number -> guessed plainChar (player entries)
+    val revealed: Set<Char>,          // plain letters pre-revealed (locked)
     val livesLeft: Int,
-    val hintsLeft: Int,                // free hints remaining
+    val hintsLeft: Int,               // free hints remaining
     val adHintsUsed: Int,
     val mistakes: Int,
-    val wrongCipherChars: Set<Char>,   // cipher chars currently marked wrong (IMMEDIATE / after CHECK)
-    val selectedCipherChar: Char?,
+    val wrongCipherNums: Set<Int>,    // cipher numbers currently marked wrong (IMMEDIATE / after CHECK)
+    val selectedCipherNum: Int?,
     val elapsedMs: Long,
-    val status: PuzzleStatus           // IN_PROGRESS, SOLVED, FAILED
-)
+    val status: PuzzleStatus          // IN_PROGRESS, SOLVED, FAILED
+) {
+    fun tokens(): List<CipherToken> = Cipher.encrypt(plain, key)   // ciphertext, derived
+}
 enum class PuzzleStatus { IN_PROGRESS, SOLVED, FAILED }
 ```
 
-Rules:
-- `enter(plainGuess: Char)`: requires `selectedCipherChar != null` and selected cipher char not locked (revealed). If `plainGuess` is already mapped from a different cipher char, that other mapping is cleared first (one plain letter can only be used once). Sets `mapping[selected] = plainGuess`, then:
-  - `IMMEDIATE`: if `decrypt(selected) != plainGuess` → add to `wrongCipherChars`, `mistakes++`, `livesLeft--`. Else remove from `wrongCipherChars`.
+The ciphertext is not stored — it is `Cipher.encrypt(plain, key)`. The player selects a number cell and types the plaintext letter they think it stands for; the A–Z keyboard is unchanged.
+
+Rules ("cipher number" = a value 1..26; the player types a plaintext letter for it):
+- `select(cipherNum: Int)` / `enter(plainGuess: Char)`: `enter` requires `selectedCipherNum != null` and that number not locked (its correct letter is revealed). If `plainGuess` is already mapped from a different cipher number, that other mapping is cleared first (one plain letter can only back one number). Sets `mapping[selected] = plainGuess`, then:
+  - `IMMEDIATE`: if the number's correct letter `!= plainGuess` → add to `wrongCipherNums`, `mistakes++`, `livesLeft--`. Else remove from `wrongCipherNums`.
   - `ON_CHECK`: no evaluation.
   - `ON_COMPLETE`: no evaluation.
-  - After any entry, if all cipher letters are mapped: evaluate full grid. If all correct → `SOLVED`. If `ON_COMPLETE` and not correct → `mistakes++`, `livesLeft--`, do **not** reveal which letters are wrong.
+  - After any entry, if all cipher numbers are mapped: evaluate full grid. If all correct → `SOLVED`. If `ON_COMPLETE` and not correct → `mistakes++`, `livesLeft--`, do **not** reveal which numbers are wrong.
   - If `livesLeft == 0` → `FAILED`.
-  - Auto-advance selection to the next unmapped cipher letter (left-to-right in ciphertext).
-- `clear()`: removes mapping for selected cipher char; removes it from `wrongCipherChars`.
-- `check()` (`ON_CHECK` only): compute wrong set among mapped chars; if non-empty → `wrongCipherChars = set`, `mistakes++`, `livesLeft--`; if empty and grid complete → `SOLVED`.
-- `hint()`: requires `hintsLeft > 0` or a rewarded ad grant; reveals `selectedCipherChar` (or first unmapped if none selected): sets mapping to correct plain, adds to `revealed` (locked), removes from `wrongCipherChars`, `hintsLeft--` or `adHintsUsed++`. Then run completion check.
+  - Auto-advance selection to the next unmapped cipher number (left-to-right in ciphertext).
+- `clear()`: removes mapping for the selected cipher number; removes it from `wrongCipherNums`.
+- `check()` (`ON_CHECK` only): compute wrong set among mapped numbers; if non-empty → `wrongCipherNums = set`, `mistakes++`, `livesLeft--`; if empty and grid complete → `SOLVED`.
+- `hint()`: requires `hintsLeft > 0` or a rewarded ad grant; reveals `selectedCipherNum` (or first unmapped if none selected): sets mapping to the correct letter, adds that letter to `revealed` (locked), removes the number from `wrongCipherNums`, `hintsLeft--` or `adHintsUsed++`. Then run completion check.
 - `tick(deltaMs)`: adds to `elapsedMs` only while `IN_PROGRESS` and the screen is resumed.
 - Serializable to JSON for autosave (`InProgressEntity.stateJson`).
 
@@ -365,7 +380,7 @@ Navigation routes (`NavGraph.kt`): `home`, `levels/{difficulty}`, `play/level/{d
 
 **LevelSelect** — grid of level numbers for the chosen difficulty, paged 100 per page (`LazyVerticalGrid`, 5 columns), solved = filled with star count, in-progress = outlined with dot, unsolved = plain. Tapping any level opens it. "Continue" FAB → `currentLevel`. Banner at bottom.
 
-**Play** — top bar: difficulty + level (or "Daily · Easy"), timer, lives as hearts (`livesLeft/lives`), hints counter. Body: `PuzzleGrid` — words wrapped as units; each letter is a cell with the cipher letter on top (small) and guess below (large); punctuation cells are non-interactive; revealed cells filled and locked; wrong cells tinted `errorContainer`; selected cipher letter highlighted in every occurrence. Bottom: `CipherKeyboard` A–Z in 3 rows, letters already used greyed but tappable (re-assigns), backspace, and a row with `Hint` (shows `hintsLeft` or "Watch ad" state), `Check` (Hard only). No system IME. Autosave to `in_progress` on every state change (debounced 300 ms). Back navigates out without losing state. On `SOLVED` → navigate to Results; on `FAILED` → dialog "Out of lives" with single action "Try again" → new session same level, `cycle+1`.
+**Play** — top bar: difficulty + level (or "Daily · Easy"), timer, lives as hearts (`livesLeft/lives`), hints counter. Body: `PuzzleGrid` — words wrapped as units; each letter is a cell with the cipher **number** (1–26) below (small) and the guessed letter above (large); punctuation/space cells are non-interactive; revealed cells filled and locked; wrong cells tinted `errorContainer`; the selected number highlighted in every occurrence. Bottom: `CipherKeyboard` A–Z in 3 rows, letters already used greyed but tappable (re-assigns), backspace, and a row with `Hint` (shows `hintsLeft` or "Watch ad" state), `Check` (Hard only). No system IME. Autosave to `in_progress` on every state change (debounced 300 ms). Back navigates out without losing state. On `SOLVED` → navigate to Results; on `FAILED` → dialog "Out of lives" with single action "Try again" → new session same level, `cycle+1`.
 
 **Results** — quote in full with author and source (tappable → opens `sourceUrl`), time, mistakes, hints used, stars, "Next level" (or "Back to Daily"), "Share" (text: `Cryptogram Infinite · Hard 42 · 3:21 · ★★★`). Banner at bottom.
 

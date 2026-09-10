@@ -10,10 +10,10 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -34,61 +34,70 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import dev.milan.cryptogram.engine.CipherToken
 import dev.milan.cryptogram.engine.PuzzleState
 import dev.milan.cryptogram.engine.PuzzleStatus
 
 /**
- * Renders the ciphertext as tappable letter cells, wrapping whole words as units
- * (design doc sections 7-8). Cell size shrinks to fit the widest word. Wrong cells
- * shake; on solve every cell flips to primaryContainer with a short stagger.
+ * Renders the ciphertext as tappable cells, one number per letter, wrapping whole
+ * words as units (design doc sections 7-8). Symbol cells are inert; pre-revealed
+ * cells are locked; wrong cells shake; on solve every cell flips to
+ * primaryContainer with a short stagger.
  */
 @Composable
 fun PuzzleGrid(
     state: PuzzleState,
-    onCellClick: (Char) -> Unit,
+    onCellClick: (Int) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    val lockedChars = state.solvableCipherChars
-        .filter { correctPlain(state, it) in state.revealed }
+    val inv = remember(state.key) {
+        IntArray(27).also { for (i in 0 until 26) it[state.key[i]] = i }
+    }
+    fun correctPlain(n: Int): Char = 'A' + inv[n]
+
+    val lockedNums = state.solvableCipherNums
+        .filter { correctPlain(it) in state.revealed }
         .toSet()
 
-    val words = splitWords(state.cipher)
-    val longestWord = (words.maxOfOrNull { it.length } ?: 1).coerceAtLeast(1)
+    val words = splitWords(state.tokens())
+    val longestWord = (words.maxOfOrNull { it.size } ?: 1).coerceAtLeast(1)
     val solved = state.status == PuzzleStatus.SOLVED
 
     BoxWithConstraints(modifier) {
-        val gap = 2.dp
-        val maxCell = 30.dp
+        val gap = 3.dp
+        val maxCell = 34.dp
         val fitted = (maxWidth - gap * (longestWord - 1)) / longestWord
-        val cellWidth: Dp = fitted.coerceIn(16.dp, maxCell)
+        val cellWidth: Dp = fitted.coerceIn(22.dp, maxCell)
 
         Column(Modifier.verticalScroll(rememberScrollState())) {
             FlowRow(
-                horizontalArrangement = Arrangement.spacedBy(10.dp),
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
                 verticalArrangement = Arrangement.spacedBy(10.dp),
             ) {
                 var flatIndex = 0
                 words.forEach { word ->
                     Row(horizontalArrangement = Arrangement.spacedBy(gap)) {
-                        word.forEach { ch ->
-                            if (ch in 'A'..'Z') {
-                                val index = flatIndex++
-                                LetterCell(
-                                    cipherChar = ch,
-                                    guess = state.mapping[ch],
-                                    locked = ch in lockedChars,
-                                    wrong = ch in state.wrongCipherChars,
-                                    selected = ch == state.selectedCipherChar,
-                                    solved = solved,
-                                    solveDelayMs = index * 20,
-                                    width = cellWidth,
-                                    onClick = { onCellClick(ch) },
-                                )
-                            } else {
-                                Text(
-                                    ch.toString(),
+                        word.forEach { token ->
+                            when (token) {
+                                is CipherToken.Num -> {
+                                    val index = flatIndex++
+                                    NumberCell(
+                                        number = token.n,
+                                        guess = state.mapping[token.n],
+                                        locked = token.n in lockedNums,
+                                        wrong = token.n in state.wrongCipherNums,
+                                        selected = token.n == state.selectedCipherNum,
+                                        solved = solved,
+                                        solveDelayMs = index * 20,
+                                        width = cellWidth,
+                                        onClick = { onCellClick(token.n) },
+                                    )
+                                }
+
+                                is CipherToken.Sym -> Text(
+                                    token.c.toString(),
                                     modifier = Modifier
-                                        .width(cellWidth * 0.5f)
+                                        .width(cellWidth * 0.4f)
                                         .padding(top = 16.dp),
                                     style = MaterialTheme.typography.titleMedium,
                                 )
@@ -102,8 +111,8 @@ fun PuzzleGrid(
 }
 
 @Composable
-private fun LetterCell(
-    cipherChar: Char,
+private fun NumberCell(
+    number: Int,
     guess: Char?,
     locked: Boolean,
     wrong: Boolean,
@@ -143,9 +152,9 @@ private fun LetterCell(
     }
 
     val desc = when {
-        guess != null && locked -> "Cipher $cipherChar, locked as $guess"
-        guess != null -> "Cipher $cipherChar, guess $guess"
-        else -> "Cipher $cipherChar, empty"
+        guess != null && locked -> "Number $number, locked as $guess"
+        guess != null -> "Number $number, guess $guess"
+        else -> "Number $number, empty"
     }
 
     Column(
@@ -162,29 +171,24 @@ private fun LetterCell(
     ) {
         Text((guess ?: ' ').toString(), style = MaterialTheme.typography.titleMedium)
         Text(
-            cipherChar.toString(),
-            fontSize = 9.sp,
+            number.toString(),
+            fontSize = 10.sp,
             textAlign = TextAlign.Center,
             color = scheme.onSurfaceVariant,
         )
     }
 }
 
-private fun correctPlain(state: PuzzleState, cipherChar: Char): Char {
-    val idx = state.key.indexOf(cipherChar)
-    return if (idx >= 0) 'A' + idx else cipherChar
-}
-
-private fun splitWords(cipher: String): List<String> {
-    val out = mutableListOf<String>()
-    val sb = StringBuilder()
-    for (ch in cipher) {
-        if (ch == ' ') {
-            if (sb.isNotEmpty()) { out.add(sb.toString()); sb.clear() }
+private fun splitWords(tokens: List<CipherToken>): List<List<CipherToken>> {
+    val out = mutableListOf<List<CipherToken>>()
+    var cur = mutableListOf<CipherToken>()
+    for (t in tokens) {
+        if (t is CipherToken.Sym && t.c == ' ') {
+            if (cur.isNotEmpty()) { out.add(cur); cur = mutableListOf() }
         } else {
-            sb.append(ch)
+            cur.add(t)
         }
     }
-    if (sb.isNotEmpty()) out.add(sb.toString())
+    if (cur.isNotEmpty()) out.add(cur)
     return out
 }

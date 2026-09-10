@@ -7,14 +7,11 @@ import org.junit.Test
 class CipherTest {
 
     @Test
-    fun `key is a derangement of A to Z for 1000 seeds`() {
+    fun `key is a permutation of 1 to 26 for 1000 seeds`() {
         for (seed in 0L until 1000L) {
             val key = Cipher.key(seed)
             assertEquals("seed $seed: wrong length", 26, key.size)
-            assertEquals("seed $seed: not a permutation", ('A'..'Z').toSet(), key.toSet())
-            for (i in 0 until 26) {
-                assertTrue("seed $seed: letter ${'A' + i} maps to itself", key[i] != 'A' + i)
-            }
+            assertEquals("seed $seed: not a permutation of 1..26", (1..26).toSet(), key.toSet())
         }
     }
 
@@ -24,11 +21,25 @@ class CipherTest {
     }
 
     @Test
-    fun `encrypt then decrypt round-trips and keeps punctuation`() {
+    fun `invert maps every cipher number back to its plaintext letter`() {
         val key = Cipher.key(7L)
-        val plain = "THE QUICK, BROWN FOX!"
-        val cipher = Cipher.encrypt(plain, key)
-        assertEquals(plain, Cipher.decrypt(cipher, key))
-        assertEquals("punctuation is preserved", ",!", cipher.filterNot { it in 'A'..'Z' || it == ' ' })
+        val inv = Cipher.invert(key)
+        for (i in 0 until 26) {
+            assertEquals('A' + i, inv[key[i]])
+        }
+    }
+
+    @Test
+    fun `encrypt yields one number per letter and passes punctuation through`() {
+        val key = Cipher.key(7L)
+        val tokens = Cipher.encrypt("THE QUICK, FOX!", key)
+        val letters = tokens.count { it is CipherToken.Num }
+        assertEquals(11, letters) // T H E Q U I C K F O X
+        assertTrue(tokens.any { it is CipherToken.Sym && it.c == ',' })
+        assertTrue(tokens.any { it is CipherToken.Sym && it.c == '!' })
+        assertTrue(tokens.any { it is CipherToken.Sym && it.c == ' ' })
+        tokens.filterIsInstance<CipherToken.Num>().forEach {
+            assertTrue("number ${it.n} out of range", it.n in 1..26)
+        }
     }
 }

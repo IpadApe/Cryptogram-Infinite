@@ -8,8 +8,8 @@ import kotlinx.serialization.json.Json
 /**
  * Pure-Kotlin puzzle logic (design doc section 4.5). No Android dependencies.
  *
- * Construct with the plaintext, its [Difficulty] and a seed; the cipher key, the
- * ciphertext and the pre-revealed letters are all derived deterministically.
+ * The cipher symbols are numbers 1..26; the player assigns a plaintext letter to
+ * each number. Construct with the plaintext, its [Difficulty] and a seed.
  */
 class PuzzleSession private constructor(initial: PuzzleState) {
 
@@ -22,41 +22,42 @@ class PuzzleSession private constructor(initial: PuzzleState) {
 
     private val difficulty: Difficulty = initial.difficulty
 
-    private val correctPlainOf: Map<Char, Char> = run {
+    /** cipher number -> the correct plaintext letter. */
+    private val correctPlainOf: Map<Int, Char> = run {
         val inv = Cipher.invert(initial.key)
-        ('A'..'Z').associateWith { c -> inv[c - 'A'] }
+        (1..26).associateWith { inv[it] }
     }
 
-    private fun lockedCipherChars(s: PuzzleState): Set<Char> =
-        s.solvableCipherChars.filter { correctPlainOf.getValue(it) in s.revealed }.toSet()
+    private fun lockedCipherNums(s: PuzzleState): Set<Int> =
+        s.solvableCipherNums.filter { correctPlainOf.getValue(it) in s.revealed }.toSet()
 
     // --- public API --------------------------------------------------------
 
-    fun select(cipherChar: Char) {
+    fun select(cipherNum: Int) {
         val s = _state.value
         if (s.status != PuzzleStatus.IN_PROGRESS) return
-        if (cipherChar !in s.solvableCipherChars) return
-        _state.value = s.copy(selectedCipherChar = cipherChar)
+        if (cipherNum !in s.solvableCipherNums) return
+        _state.value = s.copy(selectedCipherNum = cipherNum)
     }
 
     fun enter(plainGuess: Char) {
         val guess = plainGuess.uppercaseChar()
         var s = _state.value
         if (s.status != PuzzleStatus.IN_PROGRESS) return
-        val target = s.selectedCipherChar ?: return
+        val target = s.selectedCipherNum ?: return
         if (guess !in 'A'..'Z') return
-        if (target in lockedCipherChars(s)) return
+        if (target in lockedCipherNums(s)) return
 
-        val locked = lockedCipherChars(s)
+        val locked = lockedCipherNums(s)
         val mapping = s.mapping.toMutableMap()
-        // One plaintext letter may back only one cipher letter.
+        // One plaintext letter may back only one cipher number.
         mapping.entries
             .filter { it.value == guess && it.key != target && it.key !in locked }
             .map { it.key }
             .forEach { mapping.remove(it) }
         mapping[target] = guess
 
-        val wrong = s.wrongCipherChars.toMutableSet()
+        val wrong = s.wrongCipherNums.toMutableSet()
         var mistakes = s.mistakes
         var lives = s.livesLeft
 
@@ -72,7 +73,7 @@ class PuzzleSession private constructor(initial: PuzzleState) {
 
         s = s.copy(
             mapping = mapping,
-            wrongCipherChars = wrong,
+            wrongCipherNums = wrong,
             mistakes = mistakes,
             livesLeft = lives,
         )
@@ -84,11 +85,11 @@ class PuzzleSession private constructor(initial: PuzzleState) {
     fun clear() {
         val s = _state.value
         if (s.status != PuzzleStatus.IN_PROGRESS) return
-        val target = s.selectedCipherChar ?: return
-        if (target in lockedCipherChars(s)) return
+        val target = s.selectedCipherNum ?: return
+        if (target in lockedCipherNums(s)) return
         _state.value = s.copy(
             mapping = s.mapping - target,
-            wrongCipherChars = s.wrongCipherChars - target,
+            wrongCipherNums = s.wrongCipherNums - target,
         )
     }
 
@@ -98,15 +99,15 @@ class PuzzleSession private constructor(initial: PuzzleState) {
         if (s.status != PuzzleStatus.IN_PROGRESS) return
         if (difficulty.feedback != FeedbackMode.ON_CHECK) return
 
-        val wrong = s.mapping.filter { (c, g) -> correctPlainOf.getValue(c) != g }.keys
+        val wrong = s.mapping.filter { (n, g) -> correctPlainOf.getValue(n) != g }.keys
         if (wrong.isNotEmpty()) {
             s = s.copy(
-                wrongCipherChars = wrong,
+                wrongCipherNums = wrong,
                 mistakes = s.mistakes + 1,
                 livesLeft = s.livesLeft - 1,
             )
         } else if (isGridComplete(s)) {
-            s = s.copy(status = PuzzleStatus.SOLVED, wrongCipherChars = emptySet())
+            s = s.copy(status = PuzzleStatus.SOLVED, wrongCipherNums = emptySet())
         }
         _state.value = finalize(s)
     }
@@ -117,7 +118,7 @@ class PuzzleSession private constructor(initial: PuzzleState) {
         if (!fromAd && s.hintsLeft <= 0) return
         if (fromAd && s.adHintsUsed >= MAX_AD_HINTS_PER_PUZZLE) return
 
-        val target = s.selectedCipherChar?.takeIf { it !in lockedCipherChars(s) }
+        val target = s.selectedCipherNum?.takeIf { it !in lockedCipherNums(s) }
             ?: firstUnmapped(s)
             ?: return
         val answer = correctPlainOf.getValue(target)
@@ -130,7 +131,7 @@ class PuzzleSession private constructor(initial: PuzzleState) {
         s = s.copy(
             mapping = mapping,
             revealed = s.revealed + answer,
-            wrongCipherChars = s.wrongCipherChars - target,
+            wrongCipherNums = s.wrongCipherNums - target,
             hintsLeft = if (fromAd) s.hintsLeft else s.hintsLeft - 1,
             adHintsUsed = if (fromAd) s.adHintsUsed + 1 else s.adHintsUsed,
         )
@@ -150,28 +151,29 @@ class PuzzleSession private constructor(initial: PuzzleState) {
     // --- internals -------------------------------------------------------
 
     private fun isGridComplete(s: PuzzleState): Boolean =
-        s.solvableCipherChars.all { it in s.mapping }
+        s.solvableCipherNums.all { it in s.mapping }
 
     private fun isGridCorrect(s: PuzzleState): Boolean =
-        s.solvableCipherChars.all { s.mapping[it] == correctPlainOf.getValue(it) }
+        s.solvableCipherNums.all { s.mapping[it] == correctPlainOf.getValue(it) }
 
-    private fun firstUnmapped(s: PuzzleState): Char? =
-        s.cipher.firstOrNull { it in 'A'..'Z' && it !in s.mapping }
+    private fun firstUnmapped(s: PuzzleState): Int? =
+        s.tokens().firstNotNullOfOrNull { t ->
+            (t as? CipherToken.Num)?.n?.takeIf { it !in s.mapping }
+        }
 
     private fun advanceSelection(s: PuzzleState): PuzzleState {
         if (s.status != PuzzleStatus.IN_PROGRESS) return s
         val next = firstUnmapped(s) ?: return s
-        return s.copy(selectedCipherChar = next)
+        return s.copy(selectedCipherNum = next)
     }
 
-    /** Full-grid evaluation once every cipher letter is mapped. */
     private fun evaluateIfComplete(s: PuzzleState): PuzzleState {
         if (!isGridComplete(s)) return s
         if (isGridCorrect(s)) {
-            return s.copy(status = PuzzleStatus.SOLVED, wrongCipherChars = emptySet())
+            return s.copy(status = PuzzleStatus.SOLVED, wrongCipherNums = emptySet())
         }
         if (difficulty.feedback == FeedbackMode.ON_COMPLETE) {
-            // Lose a life, but do not expose which letters are wrong.
+            // Lose a life, but do not expose which numbers are wrong.
             return s.copy(mistakes = s.mistakes + 1, livesLeft = s.livesLeft - 1)
         }
         return s
@@ -192,20 +194,20 @@ class PuzzleSession private constructor(initial: PuzzleState) {
 
         private fun buildInitial(plain: String, difficulty: Difficulty, seed: Long): PuzzleState {
             val key = Cipher.key(seed)
-            val cipher = Cipher.encrypt(plain, key)
             val revealed = RevealPolicy.revealedLetters(plain, difficulty, seed)
-
             val inv = Cipher.invert(key)
-            val solvable = cipher.filter { it in 'A'..'Z' }.toSet()
-            val mapping = solvable
-                .filter { inv[it - 'A'] in revealed }
-                .associateWith { inv[it - 'A'] }
 
-            val firstUnmapped = cipher.firstOrNull { it in 'A'..'Z' && it !in mapping }
+            val solvable = plain.filter { it in 'A'..'Z' }.map { key[it - 'A'] }.toSet()
+            val mapping = solvable
+                .filter { inv[it] in revealed }
+                .associateWith { inv[it] }
+
+            val firstUnmapped = plain.firstNotNullOfOrNull { c ->
+                if (c in 'A'..'Z') key[c - 'A'].takeIf { it !in mapping } else null
+            }
 
             return PuzzleState(
                 plain = plain,
-                cipher = cipher,
                 difficulty = difficulty,
                 key = key,
                 mapping = mapping,
@@ -214,12 +216,11 @@ class PuzzleSession private constructor(initial: PuzzleState) {
                 hintsLeft = difficulty.freeHints,
                 adHintsUsed = 0,
                 mistakes = 0,
-                wrongCipherChars = emptySet(),
-                selectedCipherChar = firstUnmapped,
+                wrongCipherNums = emptySet(),
+                selectedCipherNum = firstUnmapped,
                 elapsedMs = 0L,
                 status = PuzzleStatus.IN_PROGRESS,
             )
         }
-
     }
 }

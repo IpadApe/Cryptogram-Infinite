@@ -232,7 +232,7 @@ class PlayViewModel(
     }
 
     fun setResumed(value: Boolean) { resumed.value = value }
-    fun select(cipherChar: Char) { session?.select(cipherChar) }
+    fun select(cipherNum: Int) { session?.select(cipherNum) }
     fun enter(plainChar: Char) { session?.enter(plainChar) }
     fun clearCell() { session?.clear() }
     fun check() { session?.check() }

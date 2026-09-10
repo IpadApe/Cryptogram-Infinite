@@ -1,34 +1,34 @@
 package dev.milan.cryptogram.engine
 
 /**
- * Monoalphabetic substitution cipher over A..Z. Deterministic for a given seed
- * (design doc section 4.2). `key[i]` is the cipher letter that plaintext letter
- * `'A' + i` maps to; the key is always a derangement (no letter maps to itself).
+ * Number-substitution cipher. Each distinct plaintext letter is replaced by a
+ * number 1..26 (design doc section 4.2). Deterministic for a given seed.
+ * `key[i]` is the cipher number that plaintext letter `'A' + i` maps to.
  */
 object Cipher {
 
-    /** A derangement of A..Z, deterministic for [seed]. */
-    fun key(seed: Long): CharArray {
+    /** A permutation of 1..26, deterministic for [seed]. */
+    fun key(seed: Long): IntArray {
         val rng = kotlin.random.Random(seed)
-        val letters = ('A'..'Z').toMutableList()
-        while (true) {
-            letters.shuffle(rng)
-            if (letters.indices.none { letters[it] == 'A' + it }) return letters.toCharArray()
-        }
+        return (1..26).toMutableList().also { it.shuffle(rng) }.toIntArray()
     }
 
-    /** cipher letter -> plaintext letter, i.e. the inverse of [key]. */
-    fun invert(key: CharArray): CharArray {
-        val inv = CharArray(26)
-        for (i in 0 until 26) inv[key[i] - 'A'] = 'A' + i
+    /** cipher number (1..26) -> plaintext letter. Index 0 is unused. */
+    fun invert(key: IntArray): CharArray {
+        val inv = CharArray(27)
+        for (i in 0 until 26) inv[key[i]] = 'A' + i
         return inv
     }
 
-    fun encrypt(plain: String, key: CharArray): String =
-        plain.uppercase().map { c -> if (c in 'A'..'Z') key[c - 'A'] else c }.joinToString("")
+    /** Tokenises plaintext: a number per letter, the literal char for anything else. */
+    fun encrypt(plain: String, key: IntArray): List<CipherToken> =
+        plain.uppercase().map { c ->
+            if (c in 'A'..'Z') CipherToken.Num(key[c - 'A']) else CipherToken.Sym(c)
+        }
+}
 
-    fun decrypt(cipher: String, key: CharArray): String {
-        val inv = invert(key)
-        return cipher.uppercase().map { c -> if (c in 'A'..'Z') inv[c - 'A'] else c }.joinToString("")
-    }
+/** One position of a ciphertext: an encoded letter, or a passed-through symbol/space. */
+sealed interface CipherToken {
+    data class Num(val n: Int) : CipherToken
+    data class Sym(val c: Char) : CipherToken
 }
