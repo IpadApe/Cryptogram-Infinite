@@ -1,0 +1,23 @@
+# One Wikiquote/Wikisource page slug per line. Used by the offline curation
+# pipeline (design doc section 3.6) to pull candidate quotes. Lines starting
+# with # are ignored.
+Albert_Einstein
+Marcus_Aurelius
+Ralph_Waldo_Emerson
+Mark_Twain
+Oscar_Wilde
+Friedrich_Nietzsche
+Confucius
+Laozi
+Seneca_the_Younger
+Epictetus
+Jane_Austen
+Fyodor_Dostoevsky
+Leo_Tolstoy
+Virginia_Woolf
+Maya_Angelou
+Carl_Sagan
+Richard_Feynman
+Winston_Churchill
+Abraham_Lincoln
+Nelson_Mandela
