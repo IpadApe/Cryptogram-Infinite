@@ -86,6 +86,7 @@ fun PuzzleGrid(
                                         guess = state.mapping[token.n],
                                         locked = token.n in lockedNums,
                                         wrong = token.n in state.wrongCipherNums,
+                                        flashWrong = token.n == state.lastWrongNum,
                                         selected = token.n == state.selectedCipherNum,
                                         solved = solved,
                                         solveDelayMs = index * 20,
@@ -116,6 +117,7 @@ private fun NumberCell(
     guess: Char?,
     locked: Boolean,
     wrong: Boolean,
+    flashWrong: Boolean,
     selected: Boolean,
     solved: Boolean,
     solveDelayMs: Int,
@@ -123,9 +125,10 @@ private fun NumberCell(
     onClick: () -> Unit,
 ) {
     val scheme = MaterialTheme.colorScheme
+    val isRed = wrong || flashWrong
     val target = when {
         solved -> scheme.primaryContainer
-        wrong -> scheme.errorContainer
+        isRed -> scheme.errorContainer
         locked -> scheme.secondaryContainer
         selected -> scheme.primaryContainer
         else -> scheme.surface
@@ -135,12 +138,15 @@ private fun NumberCell(
         animationSpec = tween(durationMillis = 180, delayMillis = if (solved) solveDelayMs else 0),
         label = "cellBg",
     )
+    val borderColor = if (isRed) scheme.error else scheme.outline
+    val borderWidth = if (isRed) 2.dp else 1.dp
 
-    // Wrong-letter shake: 8dp, ~300ms.
+    // Wrong-guess shake: 8dp, ~300ms. Runs for a persistent (ON_CHECK) or a
+    // transient (IMMEDIATE) wrong marker.
     val shake = remember { Animatable(0f) }
     val density = LocalDensity.current
-    LaunchedEffect(wrong) {
-        if (wrong) {
+    LaunchedEffect(wrong, flashWrong) {
+        if (wrong || flashWrong) {
             val px = with(density) { 8.dp.toPx() }
             shake.snapTo(0f)
             repeat(3) {
@@ -164,17 +170,17 @@ private fun NumberCell(
             .graphicsLayer { translationX = shake.value }
             .clip(RoundedCornerShape(4.dp))
             .background(bg)
-            .border(1.dp, scheme.outline, RoundedCornerShape(4.dp))
+            .border(borderWidth, borderColor, RoundedCornerShape(4.dp))
             .let { if (locked) it else it.clickable(onClick = onClick) }
             .semantics { contentDescription = desc }
             .padding(vertical = 2.dp),
     ) {
         Text((guess ?: ' ').toString(), style = MaterialTheme.typography.titleMedium)
         Text(
-            number.toString(),
+            number.toString().padStart(2, '0'),
             fontSize = 10.sp,
             textAlign = TextAlign.Center,
-            color = scheme.onSurfaceVariant,
+            color = if (isRed) scheme.error else scheme.onSurfaceVariant,
         )
     }
 }

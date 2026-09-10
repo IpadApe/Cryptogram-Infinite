@@ -37,16 +37,33 @@ class PuzzleSession private constructor(initial: PuzzleState) {
         val s = _state.value
         if (s.status != PuzzleStatus.IN_PROGRESS) return
         if (cipherNum !in s.solvableCipherNums) return
-        _state.value = s.copy(selectedCipherNum = cipherNum)
+        _state.value = s.copy(selectedCipherNum = cipherNum, lastWrongNum = null)
     }
 
     fun enter(plainGuess: Char) {
         val guess = plainGuess.uppercaseChar()
-        var s = _state.value
+        val s = _state.value
         if (s.status != PuzzleStatus.IN_PROGRESS) return
         val target = s.selectedCipherNum ?: return
         if (guess !in 'A'..'Z') return
         if (target in lockedCipherNums(s)) return
+
+        // IMMEDIATE + wrong: don't place it, don't disturb other cells. Lose a
+        // life, flash the cell red + shake, and leave it empty.
+        if (difficulty.feedback == FeedbackMode.IMMEDIATE &&
+            correctPlainOf.getValue(target) != guess
+        ) {
+            // Keep the selection on this cell so the player can retry it.
+            _state.value = finalize(
+                s.copy(
+                    mistakes = s.mistakes + 1,
+                    livesLeft = s.livesLeft - 1,
+                    wrongCipherNums = s.wrongCipherNums - target,
+                    lastWrongNum = target,
+                ),
+            )
+            return
+        }
 
         val locked = lockedCipherNums(s)
         val mapping = s.mapping.toMutableMap()
@@ -57,29 +74,14 @@ class PuzzleSession private constructor(initial: PuzzleState) {
             .forEach { mapping.remove(it) }
         mapping[target] = guess
 
-        val wrong = s.wrongCipherNums.toMutableSet()
-        var mistakes = s.mistakes
-        var lives = s.livesLeft
-
-        if (difficulty.feedback == FeedbackMode.IMMEDIATE) {
-            if (correctPlainOf.getValue(target) != guess) {
-                wrong += target
-                mistakes++
-                lives--
-            } else {
-                wrong -= target
-            }
-        }
-
-        s = s.copy(
+        var next = s.copy(
             mapping = mapping,
-            wrongCipherNums = wrong,
-            mistakes = mistakes,
-            livesLeft = lives,
+            wrongCipherNums = s.wrongCipherNums - target,
+            lastWrongNum = null,
         )
-        s = evaluateIfComplete(s)
-        s = advanceSelection(s)
-        _state.value = finalize(s)
+        next = evaluateIfComplete(next)
+        next = advanceSelection(next)
+        _state.value = finalize(next)
     }
 
     fun clear() {
@@ -90,6 +92,7 @@ class PuzzleSession private constructor(initial: PuzzleState) {
         _state.value = s.copy(
             mapping = s.mapping - target,
             wrongCipherNums = s.wrongCipherNums - target,
+            lastWrongNum = null,
         )
     }
 
@@ -132,6 +135,7 @@ class PuzzleSession private constructor(initial: PuzzleState) {
             mapping = mapping,
             revealed = s.revealed + answer,
             wrongCipherNums = s.wrongCipherNums - target,
+            lastWrongNum = null,
             hintsLeft = if (fromAd) s.hintsLeft else s.hintsLeft - 1,
             adHintsUsed = if (fromAd) s.adHintsUsed + 1 else s.adHintsUsed,
         )

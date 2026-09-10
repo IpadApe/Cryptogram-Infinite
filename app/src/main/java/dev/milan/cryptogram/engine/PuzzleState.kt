@@ -27,6 +27,8 @@ data class PuzzleState(
     val selectedCipherNum: Int?,
     val elapsedMs: Long,
     val status: PuzzleStatus,
+    /** A cipher number whose last IMMEDIATE guess was wrong: flash red + shake, then it stays empty. */
+    val lastWrongNum: Int? = null,
 ) {
     /** The ciphertext, position by position. */
     fun tokens(): List<CipherToken> = Cipher.encrypt(plain, key)
@@ -50,7 +52,8 @@ data class PuzzleState(
             wrongCipherNums == other.wrongCipherNums &&
             selectedCipherNum == other.selectedCipherNum &&
             elapsedMs == other.elapsedMs &&
-            status == other.status
+            status == other.status &&
+            lastWrongNum == other.lastWrongNum
     }
 
     override fun hashCode(): Int {
@@ -67,6 +70,7 @@ data class PuzzleState(
         result = 31 * result + (selectedCipherNum ?: 0)
         result = 31 * result + elapsedMs.hashCode()
         result = 31 * result + status.hashCode()
+        result = 31 * result + (lastWrongNum ?: 0)
         return result
     }
 }

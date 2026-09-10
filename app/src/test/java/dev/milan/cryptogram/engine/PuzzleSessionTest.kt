@@ -2,6 +2,7 @@ package dev.milan.cryptogram.engine
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotEquals
+import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
@@ -33,7 +34,7 @@ class PuzzleSessionTest {
     }
 
     @Test
-    fun `IMMEDIATE loses a life on a wrong entry and not on a correct one`() {
+    fun `IMMEDIATE wrong entry loses a life, clears the guess, and flags the cell`() {
         val session = PuzzleSession(alphabetPlain, Difficulty.EASY, seed = 1L)
         val start = session.state.value.livesLeft
 
@@ -44,12 +45,16 @@ class PuzzleSessionTest {
 
         assertEquals(start - 1, session.state.value.livesLeft)
         assertEquals(1, session.state.value.mistakes)
-        assertTrue(target in session.state.value.wrongCipherNums)
+        assertEquals(target, session.state.value.lastWrongNum)
+        assertNull("wrong guess must not stick", session.state.value.mapping[target])
 
+        // Selecting the cell again clears the red flag; a correct entry sticks.
         session.select(target)
+        assertNull(session.state.value.lastWrongNum)
         session.enter(session.correctFor(target))
         assertEquals(start - 1, session.state.value.livesLeft)
-        assertTrue(target !in session.state.value.wrongCipherNums)
+        assertEquals(session.correctFor(target), session.state.value.mapping[target])
+        assertNull(session.state.value.lastWrongNum)
     }
 
     @Test
