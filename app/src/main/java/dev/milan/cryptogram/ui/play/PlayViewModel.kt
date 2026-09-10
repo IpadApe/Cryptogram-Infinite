@@ -87,6 +87,7 @@ class PlayViewModel(
     private var author = ""
     private var restartCount = 0
     private var solveHandled = false
+    private var autofill = true
 
     private var session: PuzzleSession? = null
     private val bindingJobs = mutableListOf<Job>()
@@ -94,6 +95,7 @@ class PlayViewModel(
     init {
         viewModelScope.launch {
             val ok = runCatching {
+                autofill = settings.autofillEnabled.first()
                 levelIndex = quotes.levelIndex()
                 if (isDaily) {
                     val pick = daily.getToday(LocalDate.parse(dailyDate)).picks.getValue(difficulty)
@@ -123,7 +125,7 @@ class PlayViewModel(
             val cycle = levelIndex.cycleFor(difficulty, level) + cycleOffset
             difficulty.ordinal * 1_000_000_000L + level * 1_000L + cycle
         }
-        return PuzzleSession(plain, difficulty, seed)
+        return PuzzleSession(plain, difficulty, seed, autofill = autofill)
     }
 
     private fun startSession(newSession: PuzzleSession) {
@@ -233,6 +235,7 @@ class PlayViewModel(
 
     fun setResumed(value: Boolean) { resumed.value = value }
     fun select(cipherNum: Int) { session?.select(cipherNum) }
+    fun selectAt(position: Int) { session?.selectAt(position) }
     fun enter(plainChar: Char) { session?.enter(plainChar) }
     fun clearCell() { session?.clear() }
     fun nextNumber() { session?.selectNext() }

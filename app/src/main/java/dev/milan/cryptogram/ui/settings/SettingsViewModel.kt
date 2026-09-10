@@ -18,6 +18,7 @@ import kotlinx.coroutines.launch
 data class SettingsUiState(
     val soundEnabled: Boolean = true,
     val hapticsEnabled: Boolean = true,
+    val autofillEnabled: Boolean = true,
     val themeMode: ThemeMode = ThemeMode.SYSTEM,
     val removeAdsOwned: Boolean = false,
 )
@@ -30,14 +31,16 @@ class SettingsViewModel(
     val state: StateFlow<SettingsUiState> = combine(
         settings.soundEnabled,
         settings.hapticsEnabled,
+        settings.autofillEnabled,
         settings.themeMode,
         settings.removeAdsOwned,
-    ) { sound, haptics, theme, ownsAds ->
-        SettingsUiState(sound, haptics, theme, ownsAds)
+    ) { sound, haptics, autofill, theme, ownsAds ->
+        SettingsUiState(sound, haptics, autofill, theme, ownsAds)
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), SettingsUiState())
 
     fun setSound(value: Boolean) = viewModelScope.launch { settings.setSoundEnabled(value) }
     fun setHaptics(value: Boolean) = viewModelScope.launch { settings.setHapticsEnabled(value) }
+    fun setAutofill(value: Boolean) = viewModelScope.launch { settings.setAutofillEnabled(value) }
     fun setTheme(value: ThemeMode) = viewModelScope.launch { settings.setThemeMode(value) }
 
     fun purchaseRemoveAds(activity: Activity) = billing.launchPurchase(activity)

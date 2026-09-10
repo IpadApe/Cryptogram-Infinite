@@ -46,15 +46,14 @@ import dev.milan.cryptogram.ui.theme.Serif
 
 /**
  * The ciphertext as tappable tiles, whole words wrapped as units (design canvas
- * "Working prototype"). An unsolved tile shows its number in mono; a guessed tile
- * shows the letter in serif and the number drops to a caption beneath, so the code
- * stays readable. Given tiles are green; a wrong guess shakes, flashes red and
- * clears itself.
+ * "Working prototype"). The number always sits under the tile as a caption; the
+ * tile box holds only the guessed letter (in serif) once the player fills it.
+ * Given tiles are green; a wrong guess shakes, flashes red and clears itself.
  */
 @Composable
 fun PuzzleGrid(
     state: PuzzleState,
-    onCellClick: (Int) -> Unit,
+    onTileClick: (num: Int, position: Int) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val c = CryptoTheme.colors
@@ -85,15 +84,16 @@ fun PuzzleGrid(
                         when (token) {
                             is CipherToken.Num -> {
                                 val i = flatIndex++
+                                val filled = state.isPositionFilled(i)
                                 Tile(
                                     number = token.n,
-                                    guess = state.mapping[token.n],
+                                    letter = if (filled) state.mapping[token.n] else null,
                                     locked = token.n in lockedNums,
                                     flashWrong = token.n == state.lastWrongNum,
                                     selected = token.n == state.selectedCipherNum,
                                     solved = solved,
                                     solveDelayMs = i * 20,
-                                    onClick = { onCellClick(token.n) },
+                                    onClick = { onTileClick(token.n, i) },
                                 )
                             }
 
@@ -116,7 +116,7 @@ fun PuzzleGrid(
 @Composable
 private fun Tile(
     number: Int,
-    guess: Char?,
+    letter: Char?,
     locked: Boolean,
     flashWrong: Boolean,
     selected: Boolean,
@@ -125,7 +125,7 @@ private fun Tile(
     onClick: () -> Unit,
 ) {
     val c = CryptoTheme.colors
-    val hasGuess = guess != null
+    val hasGuess = letter != null
 
     val tileBg = when {
         selected && !solved -> c.accent.copy(alpha = 0.16f)
@@ -165,8 +165,8 @@ private fun Tile(
     }
 
     val desc = when {
-        hasGuess && locked -> "Number $number, given as $guess"
-        hasGuess -> "Number $number, guess $guess"
+        hasGuess && locked -> "Number $number, given as $letter"
+        hasGuess -> "Number $number, guess $letter"
         else -> "Number $number, empty"
     }
 
@@ -191,13 +191,7 @@ private fun Tile(
             contentAlignment = Alignment.Center,
         ) {
             if (hasGuess && !flashWrong) {
-                Text(guess.toString(), fontFamily = Serif, fontSize = 19.sp, color = glyphColor)
-            } else {
-                Text(
-                    number.toString().padStart(2, '0'),
-                    fontFamily = Mono, fontWeight = FontWeight.Medium, fontSize = 12.sp,
-                    color = glyphColor,
-                )
+                Text(letter.toString(), fontFamily = Serif, fontSize = 19.sp, color = glyphColor)
             }
         }
         Spacer(
@@ -207,16 +201,17 @@ private fun Tile(
                 .height(2.dp)
                 .background(underline),
         )
-        Box(Modifier.height(11.dp), contentAlignment = Alignment.TopCenter) {
-            if (hasGuess && !flashWrong) {
-                Text(
-                    number.toString().padStart(2, '0'),
-                    fontFamily = Mono, fontWeight = FontWeight.Medium, fontSize = 8.sp,
-                    color = c.muted,
-                    modifier = Modifier.padding(top = 2.dp),
-                )
-            }
-        }
+        // The number always sits under the letter.
+        Text(
+            number.toString().padStart(2, '0'),
+            modifier = Modifier.padding(top = 3.dp),
+            fontFamily = Mono, fontWeight = FontWeight.Medium, fontSize = 8.5.sp,
+            color = when {
+                flashWrong -> c.bad
+                selected || locked -> c.accent
+                else -> c.muted
+            },
+        )
     }
 }
 

@@ -11,6 +11,10 @@ enum class PuzzleStatus { IN_PROGRESS, SOLVED, FAILED }
  * The ciphertext is a number-substitution of [plain]: [key] maps plaintext index
  * -> cipher number (1..26). [mapping] holds cipher number -> the plaintext letter
  * the player (or a reveal/hint) has assigned to it.
+ *
+ * [autofill] true: assigning a number fills every tile of that number at once.
+ * false: the player fills one tile at a time; [filledPositions] holds the letter
+ * positions (index among letter tiles, left to right) already placed.
  */
 @Serializable
 data class PuzzleState(
@@ -29,13 +33,25 @@ data class PuzzleState(
     val status: PuzzleStatus,
     /** A cipher number whose last IMMEDIATE guess was wrong: flash red + shake, then it stays empty. */
     val lastWrongNum: Int? = null,
+    val autofill: Boolean = true,
+    val filledPositions: Set<Int> = emptySet(),
+    val selectedPosition: Int? = null,
 ) {
     /** The ciphertext, position by position. */
     fun tokens(): List<CipherToken> = Cipher.encrypt(plain, key)
 
+    /** Cipher number for each letter tile, left to right. Index == "position". */
+    val letterNums: List<Int>
+        get() = plain.uppercase().filter { it in 'A'..'Z' }.map { key[it - 'A'] }
+
     /** Distinct cipher numbers that appear in the ciphertext and must be solved. */
     val solvableCipherNums: Set<Int>
-        get() = plain.uppercase().filter { it in 'A'..'Z' }.map { key[it - 'A'] }.toSet()
+        get() = letterNums.toSet()
+
+    /** Is the tile at letter-position [pos] showing its guess to the player? */
+    fun isPositionFilled(pos: Int): Boolean =
+        if (autofill) letterNums.getOrNull(pos)?.let { it in mapping } == true
+        else pos in filledPositions
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
@@ -53,7 +69,10 @@ data class PuzzleState(
             selectedCipherNum == other.selectedCipherNum &&
             elapsedMs == other.elapsedMs &&
             status == other.status &&
-            lastWrongNum == other.lastWrongNum
+            lastWrongNum == other.lastWrongNum &&
+            autofill == other.autofill &&
+            filledPositions == other.filledPositions &&
+            selectedPosition == other.selectedPosition
     }
 
     override fun hashCode(): Int {
@@ -71,6 +90,9 @@ data class PuzzleState(
         result = 31 * result + elapsedMs.hashCode()
         result = 31 * result + status.hashCode()
         result = 31 * result + (lastWrongNum ?: 0)
+        result = 31 * result + autofill.hashCode()
+        result = 31 * result + filledPositions.hashCode()
+        result = 31 * result + (selectedPosition ?: -1)
         return result
     }
 }

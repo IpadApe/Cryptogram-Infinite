@@ -65,6 +65,13 @@ class SettingsStore(private val context: Context) {
         context.dataStore.edit { it[HAPTICS_ENABLED] = value }
     }
 
+    /** true: assigning a number fills every matching tile at once. false: one tile at a time. */
+    val autofillEnabled: Flow<Boolean> = data.map { it[AUTOFILL_ENABLED] ?: true }
+
+    suspend fun setAutofillEnabled(value: Boolean) {
+        context.dataStore.edit { it[AUTOFILL_ENABLED] = value }
+    }
+
     val themeMode: Flow<ThemeMode> = data.map {
         runCatching { ThemeMode.valueOf(it[THEME_MODE] ?: ThemeMode.SYSTEM.name) }
             .getOrDefault(ThemeMode.SYSTEM)
@@ -108,6 +115,7 @@ class SettingsStore(private val context: Context) {
         val REMOVE_ADS_OWNED = booleanPreferencesKey("removeAdsOwned")
         val SOUND_ENABLED = booleanPreferencesKey("soundEnabled")
         val HAPTICS_ENABLED = booleanPreferencesKey("hapticsEnabled")
+        val AUTOFILL_ENABLED = booleanPreferencesKey("autofillEnabled")
         val THEME_MODE = stringPreferencesKey("themeMode")
         val LAST_DAILY_DATE_SEEN = stringPreferencesKey("lastDailyDateSeen")
         val CONSENT_OBTAINED = booleanPreferencesKey("consentObtained")

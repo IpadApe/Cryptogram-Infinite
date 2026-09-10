@@ -140,6 +140,49 @@ class PuzzleSessionTest {
     }
 
     @Test
+    fun `autofill fills every tile of a number at once`() {
+        val plain = "BANANA BAND" // number for A/B/N repeats
+        val session = PuzzleSession(plain, Difficulty.EXTREME, seed = 9L, autofill = true)
+        val first = session.numbers().first { session.correctFor(it) !in session.state.value.revealed }
+        val positions = session.state.value.letterNums.withIndex().filter { it.value == first }.map { it.index }
+        session.select(first)
+        session.enter(session.correctFor(first))
+        assertTrue(positions.all { session.state.value.isPositionFilled(it) })
+    }
+
+    @Test
+    fun `manual mode fills one tile at a time`() {
+        val plain = "BANANA BAND"
+        val session = PuzzleSession(plain, Difficulty.EXTREME, seed = 9L, autofill = false)
+        val target = session.numbers().first { session.correctFor(it) !in session.state.value.revealed }
+        val positions = session.state.value.letterNums.withIndex()
+            .filter { it.value == target }.map { it.index }
+        if (positions.size < 2) return // need a repeated number for this check
+
+        session.selectAt(positions[0])
+        session.enter(session.correctFor(target))
+        assertTrue("first tile filled", session.state.value.isPositionFilled(positions[0]))
+        assertTrue("second tile not yet filled", !session.state.value.isPositionFilled(positions[1]))
+
+        session.selectAt(positions[1])
+        session.enter(session.correctFor(target))
+        assertTrue(session.state.value.isPositionFilled(positions[1]))
+    }
+
+    @Test
+    fun `manual mode is solved only when every tile is filled`() {
+        val session = PuzzleSession(alphabetPlain, Difficulty.EXTREME, seed = 10L, autofill = false)
+        val inv = Cipher.invert(session.state.value.key)
+        val letterNums = session.state.value.letterNums
+        letterNums.indices.forEach { pos ->
+            if (session.state.value.isPositionFilled(pos)) return@forEach
+            session.selectAt(pos)
+            session.enter(inv[letterNums[pos]])
+        }
+        assertEquals(PuzzleStatus.SOLVED, session.state.value.status)
+    }
+
+    @Test
     fun `autosave round-trips through json`() {
         val session = PuzzleSession(alphabetPlain, Difficulty.HARD, seed = 6L)
         val target = session.firstUnlocked()

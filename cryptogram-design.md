@@ -279,7 +279,9 @@ data class PuzzleState(
 enum class PuzzleStatus { IN_PROGRESS, SOLVED, FAILED }
 ```
 
-The ciphertext is not stored — it is `Cipher.encrypt(plain, key)`. The player selects a number cell and types the plaintext letter they think it stands for; the A–Z keyboard is unchanged.
+The ciphertext is not stored — it is `Cipher.encrypt(plain, key)`. The player taps a tile (or a frequency bar) and types the plaintext letter they think its number stands for; the A–Z keyboard is unchanged. The number is always shown as a caption under the tile; the tile box holds only the guessed letter.
+
+`autofill` (Settings toggle, default on): assigning a number fills every tile of that number at once. Off: the player fills one tile at a time — `filledPositions` is the set of letter positions (0-based, left to right) already placed, `selectedPosition` the tile the next keystroke lands on. In manual mode the grid is complete only when every letter position is filled.
 
 Rules ("cipher number" = a value 1..26; the player types a plaintext letter for it):
 - `select(cipherNum: Int)` / `enter(plainGuess: Char)`: `enter` requires `selectedCipherNum != null` and that number not locked (its correct letter is revealed). If `plainGuess` is already mapped from a different cipher number, that other mapping is cleared first (one plain letter can only back one number). Sets `mapping[selected] = plainGuess`, then:

@@ -195,7 +195,7 @@ fun PlayScreen(
 
             PuzzleGrid(
                 state = puzzle,
-                onCellClick = { feedback.onTap(); viewModel.select(it) },
+                onTileClick = { _, position -> feedback.onTap(); viewModel.selectAt(position) },
                 modifier = Modifier.weight(1f).fillMaxWidth().padding(top = 30.dp),
             )
 

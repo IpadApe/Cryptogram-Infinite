@@ -69,6 +69,14 @@ fun SettingsScreen(
 
         ToggleRow("Sound", state.soundEnabled, viewModel::setSound)
         ToggleRow("Haptics", state.hapticsEnabled, viewModel::setHaptics)
+        ToggleRow(
+            "Autofill matching tiles",
+            state.autofillEnabled,
+            viewModel::setAutofill,
+            detail = if (state.autofillEnabled)
+                "One keystroke fills every tile of that number"
+            else "Fill one tile at a time",
+        )
 
         Spacer(Modifier.height(16.dp))
         Text("THEME", fontFamily = Mono, fontSize = 9.5.sp, letterSpacing = 0.18.em, color = c.muted)
@@ -127,14 +135,28 @@ fun SettingsScreen(
 }
 
 @Composable
-private fun ToggleRow(label: String, checked: Boolean, onChange: (Boolean) -> Unit) {
+private fun ToggleRow(
+    label: String,
+    checked: Boolean,
+    onChange: (Boolean) -> Unit,
+    detail: String? = null,
+) {
     val c = CryptoTheme.colors
     Row(
         Modifier.fillMaxWidth().padding(vertical = 8.dp),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Text(label, fontFamily = Serif, fontWeight = FontWeight.Light, fontSize = 17.sp, color = c.ink)
+        androidx.compose.foundation.layout.Column(Modifier.weight(1f)) {
+            Text(label, fontFamily = Serif, fontWeight = FontWeight.Light, fontSize = 17.sp, color = c.ink)
+            if (detail != null) {
+                Text(
+                    detail,
+                    fontFamily = dev.milan.cryptogram.ui.theme.Mono, fontSize = 9.sp,
+                    letterSpacing = 0.06.em, color = c.muted,
+                )
+            }
+        }
         Switch(
             checked = checked,
             onCheckedChange = onChange,
