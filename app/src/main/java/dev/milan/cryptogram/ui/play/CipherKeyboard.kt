@@ -31,11 +31,17 @@ private val ROW_PAD = listOf(0.dp, 18.dp, 46.dp)
 
 /**
  * QWERTY letter keyboard on a paper tray, plus DELETE / NEXT NUMBER
- * (design canvas). No system IME. Used letters are greyed.
+ * (design canvas). No system IME.
+ *
+ * [placedLetters]: assigned to a number that still has an empty tile — shown
+ * green, still tappable. [doneLetters]: assigned and every tile of its number
+ * filled (no free slot left) — dimmed. Both come straight from the puzzle state,
+ * so the keyboard resets with each level.
  */
 @Composable
 fun CipherKeyboard(
-    usedLetters: Set<Char>,
+    placedLetters: Set<Char>,
+    doneLetters: Set<Char>,
     onKey: (Char) -> Unit,
     onBackspace: () -> Unit,
     onNextNumber: () -> Unit,
@@ -55,12 +61,21 @@ fun CipherKeyboard(
                 horizontalArrangement = Arrangement.spacedBy(5.dp),
             ) {
                 row.forEach { ch ->
-                    val used = ch in usedLetters
+                    val done = ch in doneLetters
+                    val placed = ch in placedLetters && !done
                     Key(
                         modifier = Modifier.weight(1f),
                         label = ch.toString(),
-                        bg = if (used) c.keyUsed else c.key,
-                        fg = if (used) c.ink.copy(alpha = 0.3f) else c.ink,
+                        bg = when {
+                            placed -> c.accent.copy(alpha = 0.16f)
+                            done -> c.keyUsed
+                            else -> c.key
+                        },
+                        fg = when {
+                            placed -> c.accent
+                            done -> c.ink.copy(alpha = 0.3f)
+                            else -> c.ink
+                        },
                         onClick = { onKey(ch) },
                     )
                 }
