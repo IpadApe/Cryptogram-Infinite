@@ -358,5 +358,734 @@
     "sourceUrl": "https://en.wikiquote.org/wiki/Chinese_proverbs",
     "band": "EXTREME",
     "addedOn": "2026-09-10"
+  },
+  {
+    "id": 41,
+    "text": "Brevity is the soul of wit.",
+    "author": "William Shakespeare",
+    "source": "Hamlet",
+    "sourceUrl": "https://en.wikisource.org/wiki/The_Tragedy_of_Hamlet,_Prince_of_Denmark",
+    "band": "EASY",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 42,
+    "text": "To thine own self be true.",
+    "author": "William Shakespeare",
+    "source": "Hamlet",
+    "sourceUrl": "https://en.wikisource.org/wiki/The_Tragedy_of_Hamlet,_Prince_of_Denmark",
+    "band": "EASY",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 43,
+    "text": "Nothing will come of nothing.",
+    "author": "William Shakespeare",
+    "source": "King Lear",
+    "sourceUrl": "https://en.wikisource.org/wiki/The_Tragedy_of_King_Lear",
+    "band": "EASY",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 44,
+    "text": "Beware the ides of March.",
+    "author": "William Shakespeare",
+    "source": "Julius Caesar",
+    "sourceUrl": "https://en.wikisource.org/wiki/The_Tragedy_of_Julius_Caesar",
+    "band": "EASY",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 45,
+    "text": "All that glisters is not gold.",
+    "author": "William Shakespeare",
+    "source": "The Merchant of Venice",
+    "sourceUrl": "https://en.wikisource.org/wiki/The_Merchant_of_Venice",
+    "band": "EASY",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 46,
+    "text": "Cowards die many times before their deaths.",
+    "author": "William Shakespeare",
+    "source": "Julius Caesar",
+    "sourceUrl": "https://en.wikisource.org/wiki/The_Tragedy_of_Julius_Caesar",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 47,
+    "text": "The course of true love never did run smooth.",
+    "author": "William Shakespeare",
+    "source": "A Midsummer Night's Dream",
+    "sourceUrl": "https://en.wikisource.org/wiki/A_Midsummer_Night%27s_Dream",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 48,
+    "text": "We are such stuff as dreams are made on.",
+    "author": "William Shakespeare",
+    "source": "The Tempest",
+    "sourceUrl": "https://en.wikisource.org/wiki/The_Tempest",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 49,
+    "text": "Uneasy lies the head that wears a crown.",
+    "author": "William Shakespeare",
+    "source": "Henry IV, Part 2",
+    "sourceUrl": "https://en.wikisource.org/wiki/Henry_IV,_Part_2",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 50,
+    "text": "A man is a god in ruins.",
+    "author": "Ralph Waldo Emerson",
+    "source": "Nature",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Ralph_Waldo_Emerson",
+    "band": "EASY",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 51,
+    "text": "Art is a jealous mistress.",
+    "author": "Ralph Waldo Emerson",
+    "source": "Society and Solitude",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Ralph_Waldo_Emerson",
+    "band": "EASY",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 52,
+    "text": "Money often costs too much.",
+    "author": "Ralph Waldo Emerson",
+    "source": "The Conduct of Life",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Ralph_Waldo_Emerson",
+    "band": "EASY",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 53,
+    "text": "Hitch your wagon to a star.",
+    "author": "Ralph Waldo Emerson",
+    "source": "Society and Solitude",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Ralph_Waldo_Emerson",
+    "band": "EASY",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 54,
+    "text": "Life is our dictionary.",
+    "author": "Ralph Waldo Emerson",
+    "source": "The American Scholar",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Ralph_Waldo_Emerson",
+    "band": "EASY",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 55,
+    "text": "Whatever limits us we call Fate.",
+    "author": "Ralph Waldo Emerson",
+    "source": "The Conduct of Life",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Ralph_Waldo_Emerson",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 56,
+    "text": "The years teach much which the days never know.",
+    "author": "Ralph Waldo Emerson",
+    "source": "Essays: Second Series",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Ralph_Waldo_Emerson",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 57,
+    "text": "Science does not know its debt to imagination.",
+    "author": "Ralph Waldo Emerson",
+    "source": "Letters and Social Aims",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Ralph_Waldo_Emerson",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 58,
+    "text": "A friend may well be reckoned the masterpiece of nature.",
+    "author": "Ralph Waldo Emerson",
+    "source": "Essays: First Series",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Ralph_Waldo_Emerson",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 59,
+    "text": "Life is not so short but that there is always time enough for courtesy.",
+    "author": "Ralph Waldo Emerson",
+    "source": "Letters and Social Aims",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Ralph_Waldo_Emerson",
+    "band": "EXTREME",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 60,
+    "text": "The mass of men lead lives of quiet desperation.",
+    "author": "Henry David Thoreau",
+    "source": "Walden",
+    "sourceUrl": "https://en.wikisource.org/wiki/Walden",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 61,
+    "text": "Every poet has trembled on the verge of science.",
+    "author": "Henry David Thoreau",
+    "source": "A Week on the Concord and Merrimack Rivers",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Henry_David_Thoreau",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 62,
+    "text": "Beware of all enterprises that require new clothes.",
+    "author": "Henry David Thoreau",
+    "source": "Walden",
+    "sourceUrl": "https://en.wikisource.org/wiki/Walden",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 63,
+    "text": "That government is best which governs least.",
+    "author": "Henry David Thoreau",
+    "source": "Civil Disobedience",
+    "sourceUrl": "https://en.wikisource.org/wiki/Civil_Disobedience_(Thoreau)",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 64,
+    "text": "Our life is frittered away by detail.",
+    "author": "Henry David Thoreau",
+    "source": "Walden",
+    "sourceUrl": "https://en.wikisource.org/wiki/Walden",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 65,
+    "text": "Any fool can make a rule, and any fool will mind it.",
+    "author": "Henry David Thoreau",
+    "source": "Journal",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Henry_David_Thoreau",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 66,
+    "text": "How vain it is to sit down to write when you have not stood up to live.",
+    "author": "Henry David Thoreau",
+    "source": "Journal",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Henry_David_Thoreau",
+    "band": "EXTREME",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 67,
+    "text": "I am as desirous of being a good neighbor as I am of being a bad subject.",
+    "author": "Henry David Thoreau",
+    "source": "Civil Disobedience",
+    "sourceUrl": "https://en.wikisource.org/wiki/Civil_Disobedience_(Thoreau)",
+    "band": "EXTREME",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 68,
+    "text": "It is not enough to be industrious; so are the ants. What are you industrious about?",
+    "author": "Henry David Thoreau",
+    "source": "Letter to Harrison Blake",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Henry_David_Thoreau",
+    "band": "EXTREME",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 69,
+    "text": "Prosperity is the best protector of principle.",
+    "author": "Mark Twain",
+    "source": "Following the Equator",
+    "sourceUrl": "https://en.wikisource.org/wiki/Following_the_Equator",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 70,
+    "text": "Virtue never has been as respectable as money.",
+    "author": "Mark Twain",
+    "source": "Notebook",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Mark_Twain",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 71,
+    "text": "Many a small thing has been made large by the right kind of advertising.",
+    "author": "Mark Twain",
+    "source": "A Connecticut Yankee in King Arthur's Court",
+    "sourceUrl": "https://en.wikisource.org/wiki/A_Connecticut_Yankee_in_King_Arthur%27s_Court",
+    "band": "EXTREME",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 72,
+    "text": "You can't depend on your eyes when your imagination is out of focus.",
+    "author": "Mark Twain",
+    "source": "A Connecticut Yankee in King Arthur's Court",
+    "sourceUrl": "https://en.wikisource.org/wiki/A_Connecticut_Yankee_in_King_Arthur%27s_Court",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 73,
+    "text": "Time is a waste of money.",
+    "author": "Oscar Wilde",
+    "source": "Phrases and Philosophies for the Use of the Young",
+    "sourceUrl": "https://en.wikisource.org/wiki/Phrases_and_Philosophies_for_the_Use_of_the_Young",
+    "band": "EASY",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 74,
+    "text": "The supreme vice is shallowness.",
+    "author": "Oscar Wilde",
+    "source": "De Profundis",
+    "sourceUrl": "https://en.wikisource.org/wiki/De_Profundis",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 75,
+    "text": "There is no sin except stupidity.",
+    "author": "Oscar Wilde",
+    "source": "The Critic as Artist",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Oscar_Wilde",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 76,
+    "text": "Lost time is never found again.",
+    "author": "Benjamin Franklin",
+    "source": "Poor Richard's Almanack",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Benjamin_Franklin",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 77,
+    "text": "Well done is better than well said.",
+    "author": "Benjamin Franklin",
+    "source": "Poor Richard's Almanack",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Benjamin_Franklin",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 78,
+    "text": "God helps them that help themselves.",
+    "author": "Benjamin Franklin",
+    "source": "Poor Richard's Almanack",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Benjamin_Franklin",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 79,
+    "text": "The things which hurt, instruct.",
+    "author": "Benjamin Franklin",
+    "source": "Poor Richard's Almanack",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Benjamin_Franklin",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 80,
+    "text": "He that can have patience can have what he will.",
+    "author": "Benjamin Franklin",
+    "source": "Poor Richard's Almanack",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Benjamin_Franklin",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 81,
+    "text": "Distrust and caution are the parents of security.",
+    "author": "Benjamin Franklin",
+    "source": "Poor Richard's Almanack",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Benjamin_Franklin",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 82,
+    "text": "Three may keep a secret, if two of them are dead.",
+    "author": "Benjamin Franklin",
+    "source": "Poor Richard's Almanack",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Benjamin_Franklin",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 83,
+    "text": "Early to bed and early to rise makes a man healthy, wealthy, and wise.",
+    "author": "Benjamin Franklin",
+    "source": "Poor Richard's Almanack",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Benjamin_Franklin",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 84,
+    "text": "The best revenge is not to be like your enemy.",
+    "author": "Marcus Aurelius",
+    "source": "Meditations",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Marcus_Aurelius",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 85,
+    "text": "Of the life of man the duration is but a point.",
+    "author": "Marcus Aurelius",
+    "source": "Meditations",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Marcus_Aurelius",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 86,
+    "text": "Waste no more time arguing what a good man should be. Be one.",
+    "author": "Marcus Aurelius",
+    "source": "Meditations",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Marcus_Aurelius",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 87,
+    "text": "Whatever happens at all happens as it should; you will find this true, if you watch narrowly.",
+    "author": "Marcus Aurelius",
+    "source": "Meditations",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Marcus_Aurelius",
+    "band": "EXTREME",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 88,
+    "text": "Constantly regard the universe as one living being, having one substance and one soul.",
+    "author": "Marcus Aurelius",
+    "source": "Meditations",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Marcus_Aurelius",
+    "band": "EXTREME",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 89,
+    "text": "A wrongdoer is often a man who has left something undone, not always one who has done something.",
+    "author": "Marcus Aurelius",
+    "source": "Meditations",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Marcus_Aurelius",
+    "band": "EXTREME",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 90,
+    "text": "Every man is rich or poor according to the proportion between his desires and his enjoyments.",
+    "author": "Samuel Johnson",
+    "source": "The Rambler",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Samuel_Johnson",
+    "band": "EXTREME",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 91,
+    "text": "Curiosity is one of the permanent and certain characteristics of a vigorous intellect.",
+    "author": "Samuel Johnson",
+    "source": "The Rambler",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Samuel_Johnson",
+    "band": "EXTREME",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 92,
+    "text": "A man will turn over half a library to make one book.",
+    "author": "Samuel Johnson",
+    "source": "Boswell, Life of Johnson",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Samuel_Johnson",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 93,
+    "text": "The unexamined life is not worth living.",
+    "author": "Socrates",
+    "source": "Plato, Apology",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Socrates",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 94,
+    "text": "The beginning is the most important part of the work.",
+    "author": "Plato",
+    "source": "The Republic",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Plato",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 95,
+    "text": "Hope is the dream of a waking man.",
+    "author": "Aristotle",
+    "source": "Diogenes Laertius, Lives of the Philosophers",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Aristotle",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 96,
+    "text": "Knowledge of the fact differs from knowledge of the reason for the fact.",
+    "author": "Aristotle",
+    "source": "Posterior Analytics",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Aristotle",
+    "band": "EXTREME",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 97,
+    "text": "Nothing endures but change.",
+    "author": "Heraclitus",
+    "source": "Diogenes Laertius, Lives of the Philosophers",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Heraclitus",
+    "band": "EASY",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 98,
+    "text": "No man ever steps in the same river twice.",
+    "author": "Heraclitus",
+    "source": "Diogenes Laertius, Lives of the Philosophers",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Heraclitus",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 99,
+    "text": "He who does not value life does not deserve it.",
+    "author": "Leonardo da Vinci",
+    "source": "Notebooks",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Leonardo_da_Vinci",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 100,
+    "text": "Intellect is invisible to the man who has none.",
+    "author": "Arthur Schopenhauer",
+    "source": "Parerga and Paralipomena",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Arthur_Schopenhauer",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 101,
+    "text": "We forfeit three-fourths of ourselves in order to be like other people.",
+    "author": "Arthur Schopenhauer",
+    "source": "Parerga and Paralipomena",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Arthur_Schopenhauer",
+    "band": "EXTREME",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 102,
+    "text": "Round numbers are always false.",
+    "author": "Samuel Johnson",
+    "source": "Boswell, Life of Johnson",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Samuel_Johnson",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 103,
+    "text": "Knowledge itself is power.",
+    "author": "Francis Bacon",
+    "source": "Meditationes Sacrae",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Francis_Bacon",
+    "band": "EASY",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 104,
+    "text": "Reading maketh a full man.",
+    "author": "Francis Bacon",
+    "source": "Essays, Of Studies",
+    "sourceUrl": "https://en.wikisource.org/wiki/Essays_(Bacon)",
+    "band": "EASY",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 105,
+    "text": "Beauty is truth, truth beauty.",
+    "author": "John Keats",
+    "source": "Ode on a Grecian Urn",
+    "sourceUrl": "https://en.wikisource.org/wiki/Ode_on_a_Grecian_Urn",
+    "band": "EASY",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 106,
+    "text": "A thing of beauty is a joy for ever.",
+    "author": "John Keats",
+    "source": "Endymion",
+    "sourceUrl": "https://en.wikisource.org/wiki/Endymion_(Keats)",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 107,
+    "text": "The child is father of the man.",
+    "author": "William Wordsworth",
+    "source": "My Heart Leaps Up",
+    "sourceUrl": "https://en.wikisource.org/wiki/My_Heart_Leaps_Up",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 108,
+    "text": "Nature never did betray the heart that loved her.",
+    "author": "William Wordsworth",
+    "source": "Lines Written a Few Miles above Tintern Abbey",
+    "sourceUrl": "https://en.wikisource.org/wiki/Lines_Composed_a_Few_Miles_above_Tintern_Abbey",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 109,
+    "text": "Hope springs eternal in the human breast.",
+    "author": "Alexander Pope",
+    "source": "An Essay on Man",
+    "sourceUrl": "https://en.wikisource.org/wiki/An_Essay_on_Man",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 110,
+    "text": "The fog comes on little cat feet.",
+    "author": "Carl Sandburg",
+    "source": "Fog",
+    "sourceUrl": "https://en.wikisource.org/wiki/Chicago_Poems/Fog",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 111,
+    "text": "Life is a foreign language; all men mispronounce it.",
+    "author": "Christopher Morley",
+    "source": "Thunder on the Left",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Christopher_Morley",
+    "band": "HARD",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 112,
+    "text": "The pen is mightier than the sword.",
+    "author": "Edward Bulwer-Lytton",
+    "source": "Richelieu",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Edward_Bulwer-Lytton",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 113,
+    "text": "Still waters run deep.",
+    "author": "Proverb",
+    "source": "Traditional",
+    "sourceUrl": "https://en.wikiquote.org/wiki/English_proverbs",
+    "band": "EASY",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 114,
+    "text": "Practice makes perfect.",
+    "author": "Proverb",
+    "source": "Traditional",
+    "sourceUrl": "https://en.wikiquote.org/wiki/English_proverbs",
+    "band": "EASY",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 115,
+    "text": "Fortune favours the bold.",
+    "author": "Proverb",
+    "source": "Traditional",
+    "sourceUrl": "https://en.wikiquote.org/wiki/English_proverbs",
+    "band": "EASY",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 116,
+    "text": "Actions speak louder than words.",
+    "author": "Proverb",
+    "source": "Traditional",
+    "sourceUrl": "https://en.wikiquote.org/wiki/English_proverbs",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 117,
+    "text": "Where there's a will there's a way.",
+    "author": "Proverb",
+    "source": "Traditional",
+    "sourceUrl": "https://en.wikiquote.org/wiki/English_proverbs",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 118,
+    "text": "Necessity is the mother of invention.",
+    "author": "Proverb",
+    "source": "Traditional",
+    "sourceUrl": "https://en.wikiquote.org/wiki/English_proverbs",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 119,
+    "text": "Beauty is in the eye of the beholder.",
+    "author": "Proverb",
+    "source": "Traditional",
+    "sourceUrl": "https://en.wikiquote.org/wiki/English_proverbs",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 120,
+    "text": "A house divided against itself cannot stand.",
+    "author": "Abraham Lincoln",
+    "source": "House Divided Speech",
+    "sourceUrl": "https://en.wikisource.org/wiki/House_Divided_Speech",
+    "band": "MEDIUM",
+    "addedOn": "2026-09-10"
+  },
+  {
+    "id": 121,
+    "text": "Life is like riding a bicycle. To keep your balance you must keep moving.",
+    "author": "Albert Einstein",
+    "source": "Letter to Eduard Einstein",
+    "sourceUrl": "https://en.wikiquote.org/wiki/Albert_Einstein",
+    "band": "EXTREME",
+    "addedOn": "2026-09-10"
   }
 ]
