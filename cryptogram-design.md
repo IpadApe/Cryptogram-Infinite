@@ -16,7 +16,7 @@ This document is the single source of truth. Every open question from the grill 
 | Content | Bundled offline corpus (~2,000 quotes, ≥300 per band) + one daily per difficulty fetched from GitHub |
 | Provenance | Every quote is a verbatim row in the verified quote DB with `author`, `source`, `sourceUrl`. Never AI-composed. |
 | Difficulty bands (chars) | Easy 20–30 · Medium 31–45 · Hard 46–70 · Extreme 71–100 |
-| Reveals (% of distinct letters, floor) | Easy 60% · Medium 45% · Hard 30% · Extreme 15% (min 0) — raised from 50/30/15/5 after playtest: finishing was too hard once the given letters ran out |
+| Reveals (% of distinct letters) | `max(floor(distinct * ratio), distinct - maxHidden)` — ratio Easy 60% · Medium 45% · Hard 30% · Extreme 15%; `maxHidden` Easy 3 · Medium 6 · Hard 10 · Extreme ∞. Two playtests: raised from 50/30/15/5, then added `maxHidden` so a short quote never leaves e.g. 4 distinct letters blank on Easy |
 | Feedback | Easy/Medium: wrong letter turns red on entry · Hard: `Check` button · Extreme: nothing until grid fully correct |
 | Lives per puzzle | 5 / 4 / 3 / 3 · zero lives = restart same level with new key · no revive · no global lives |
 | Free hints per puzzle | 4 / 3 / 2 / 1 · hint reveals one chosen cipher number · extra hints via rewarded ad, max 3 per puzzle |
@@ -217,11 +217,13 @@ Seed rules:
 ### 4.3 Reveal policy (`RevealPolicy.kt`)
 
 ```kotlin
+fun revealCount(distinct: Int, d: Difficulty): Int =
+    maxOf(floor(distinct * d.revealRatio).toInt(), distinct - d.maxHidden).coerceIn(0, distinct)
+
 fun revealedLetters(plain: String, d: Difficulty, seed: Long): Set<Char> {
-    val distinct = plain.uppercase().filter { it in 'A'..'Z' }.toSet().toList().sorted()
-    val n = kotlin.math.floor(distinct.size * d.revealRatio).toInt()
+    val distinct = plain.uppercase().filter { it in 'A'..'Z' }.toSortedSet().toList()
+    val n = revealCount(distinct.size, d)
     val rng = kotlin.random.Random(seed xor 0x5EEDL)
-    // prefer revealing letters with mid frequency: sort by count desc, take from the middle third first
     return distinct.shuffled(rng).take(n).toSet()
 }
 ```
