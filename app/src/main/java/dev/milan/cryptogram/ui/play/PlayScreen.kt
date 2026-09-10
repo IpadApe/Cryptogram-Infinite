@@ -42,6 +42,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
@@ -83,6 +84,7 @@ fun PlayScreen(
         .collectAsStateWithLifecycle(initialValue = true)
     val feedback = rememberPlayFeedback(soundEnabled, hapticsEnabled)
     var freqOpen by remember { mutableStateOf(true) }
+    var keyboardOpen by remember { mutableStateOf(true) }
 
     LaunchedEffect(Unit) { rewardedHint.load() }
     LaunchedEffect(rewardedLoaded) { viewModel.setAdHintLoaded(rewardedLoaded) }
@@ -217,7 +219,9 @@ fun PlayScreen(
 
             PuzzleGrid(
                 state = puzzle,
-                onTileClick = { _, position -> feedback.onTap(); viewModel.selectAt(position) },
+                onTileClick = { _, position ->
+                    feedback.onTap(); viewModel.selectAt(position); keyboardOpen = true
+                },
                 modifier = Modifier.weight(1f).fillMaxWidth().padding(top = 30.dp),
             )
 
@@ -311,13 +315,32 @@ fun PlayScreen(
                 }
             }
 
-            CipherKeyboard(
-                placedLetters = placedLetters,
-                doneLetters = doneLetters,
-                onKey = { ch -> feedback.onTap(); viewModel.enter(ch) },
-                onBackspace = viewModel::clearCell,
-                onNextNumber = viewModel::nextNumber,
-            )
+            // keyboard show/hide bar
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .background(c.keyboardBg)
+                    .clickable(remember { MutableInteractionSource() }, null) { keyboardOpen = !keyboardOpen }
+                    .padding(horizontal = 16.dp, vertical = 9.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(if (keyboardOpen) "▾" else "▸", fontFamily = Mono, fontSize = 10.sp, color = c.muted)
+                Spacer(Modifier.width(7.dp))
+                Text(
+                    if (keyboardOpen) "HIDE KEYBOARD" else "SHOW KEYBOARD",
+                    fontFamily = Mono, fontSize = 8.5.sp, letterSpacing = 0.18.em, color = c.muted,
+                )
+            }
+
+            if (keyboardOpen) {
+                CipherKeyboard(
+                    placedLetters = placedLetters,
+                    doneLetters = doneLetters,
+                    onKey = { ch -> feedback.onTap(); viewModel.enter(ch) },
+                    onBackspace = viewModel::clearCell,
+                    onNextNumber = viewModel::nextNumber,
+                )
+            }
         }
     }
 

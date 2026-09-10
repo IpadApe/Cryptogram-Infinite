@@ -102,6 +102,24 @@ class PuzzleSessionTest {
     }
 
     @Test
+    fun `ON_CHECK auto-marks wrong tiles once the grid is full`() {
+        val session = PuzzleSession(alphabetPlain, Difficulty.HARD, seed = 7L)
+        val last = session.numbers().last { session.correctFor(it) !in session.state.value.revealed }
+        session.solveAllCorrect(except = last)
+        val bogus = ('A'..'Z').first { it !in alphabetPlain }
+        session.select(last)
+        session.enter(bogus) // grid now full, one wrong — no CHECK pressed
+
+        val s = session.state.value
+        assertEquals(PuzzleStatus.IN_PROGRESS, s.status)
+        assertTrue("wrong tile surfaced automatically", last in s.wrongCipherNums)
+
+        session.select(last)
+        session.enter(session.correctFor(last))
+        assertEquals(PuzzleStatus.SOLVED, session.state.value.status)
+    }
+
+    @Test
     fun `hint on the last unmapped number solves the puzzle`() {
         val session = PuzzleSession(alphabetPlain, Difficulty.MEDIUM, seed = 4L)
         val last = session.numbers().last { session.correctFor(it) !in session.state.value.revealed }

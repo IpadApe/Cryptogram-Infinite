@@ -245,10 +245,17 @@ class PuzzleSession private constructor(initial: PuzzleState) {
         if (isGridCorrect(s)) {
             return s.copy(status = PuzzleStatus.SOLVED, wrongCipherNums = emptySet())
         }
-        if (difficulty.feedback == FeedbackMode.ON_COMPLETE) {
-            return s.copy(mistakes = s.mistakes + 1, livesLeft = s.livesLeft - 1)
+        return when (difficulty.feedback) {
+            FeedbackMode.ON_COMPLETE ->
+                s.copy(mistakes = s.mistakes + 1, livesLeft = s.livesLeft - 1)
+            FeedbackMode.ON_CHECK ->
+                // Grid is full but wrong: surface the wrong tiles now so the
+                // player isn't stuck hunting for CHECK.
+                s.copy(wrongCipherNums = s.mapping.filter { (n, g) ->
+                    correctPlainOf.getValue(n) != g
+                }.keys)
+            FeedbackMode.IMMEDIATE -> s
         }
-        return s
     }
 
     private fun finalize(s: PuzzleState): PuzzleState =

@@ -12,3 +12,6 @@ local.properties
 keystore.properties
 /Screenshot*.png
 /*.png
+/keystore/
+*.jks
+*.keystore
