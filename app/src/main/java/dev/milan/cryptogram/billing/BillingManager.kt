@@ -15,10 +15,14 @@ import com.android.billingclient.api.QueryPurchasesParams
 import com.android.billingclient.api.acknowledgePurchase
 import com.android.billingclient.api.queryProductDetails
 import com.android.billingclient.api.queryPurchasesAsync
+import dev.milan.cryptogram.BuildConfig
 import dev.milan.cryptogram.data.prefs.SettingsStore
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
@@ -38,11 +42,21 @@ class BillingManager(
     private val _removeAdsOwned = MutableStateFlow(false)
     val removeAdsOwned: StateFlow<Boolean> = _removeAdsOwned.asStateFlow()
 
+    /** Short user-facing outcome messages for the purchase button. */
+    private val _messages = MutableSharedFlow<String>(extraBufferCapacity = 4)
+    val messages: SharedFlow<String> = _messages.asSharedFlow()
+
     private val purchasesListener = PurchasesUpdatedListener { result, purchases ->
-        if (result.responseCode == BillingClient.BillingResponseCode.OK && purchases != null) {
-            scope.launch { purchases.forEach { handlePurchase(it) } }
-        } else if (result.responseCode == BillingClient.BillingResponseCode.ITEM_ALREADY_OWNED) {
-            scope.launch { setOwned(true) }
+        when (result.responseCode) {
+            BillingClient.BillingResponseCode.OK ->
+                if (purchases != null) scope.launch { purchases.forEach { handlePurchase(it) } }
+
+            BillingClient.BillingResponseCode.ITEM_ALREADY_OWNED ->
+                scope.launch { setOwned(true); _messages.emit("Ads already removed.") }
+
+            BillingClient.BillingResponseCode.USER_CANCELED -> Unit
+
+            else -> _messages.tryEmit("Purchase failed (${result.responseCode}).")
         }
     }
 
@@ -84,6 +98,11 @@ class BillingManager(
 
     fun launchPurchase(activity: Activity) {
         scope.launch {
+            if (!client.isReady) {
+                _messages.emit("Store isn't connected yet — try again in a moment.")
+                connect()
+                return@launch
+            }
             val productParams = QueryProductDetailsParams.newBuilder()
                 .setProductList(
                     listOf(
@@ -95,7 +114,18 @@ class BillingManager(
                 )
                 .build()
             val details = client.queryProductDetails(productParams)
-                .productDetailsList?.firstOrNull() ?: return@launch
+                .productDetailsList?.firstOrNull()
+
+            if (details == null) {
+                if (BuildConfig.DEBUG) {
+                    setOwned(true)
+                    _messages.emit("Ads removed (debug — no Play product configured).")
+                } else {
+                    _messages.emit("This purchase isn't available right now.")
+                }
+                return@launch
+            }
+
             val flowParams = BillingFlowParams.newBuilder()
                 .setProductDetailsParamsList(
                     listOf(
@@ -105,7 +135,10 @@ class BillingManager(
                     ),
                 )
                 .build()
-            client.launchBillingFlow(activity, flowParams)
+            val result = client.launchBillingFlow(activity, flowParams)
+            if (result.responseCode != BillingClient.BillingResponseCode.OK) {
+                _messages.emit("Couldn't open the purchase (${result.responseCode}).")
+            }
         }
     }
 
@@ -120,6 +153,7 @@ class BillingManager(
             )
         }
         setOwned(true)
+        _messages.emit("Ads removed. Thank you.")
     }
 
     private suspend fun setOwned(owned: Boolean) {

@@ -37,9 +37,12 @@ class RevealPolicyTest {
     }
 
     @Test
-    fun `extreme ratio can reveal zero letters`() {
-        val text = "Short amount of distinct letters here now" // < 20 distinct
+    fun `extreme reveal count follows the band ratio`() {
+        val text = "Short amount of distinct letters here now"
         val revealed = RevealPolicy.revealedLetters(text, Difficulty.EXTREME, 1L)
-        assertEquals(floor(distinctCount(text) * 0.05f).toInt(), revealed.size)
+        assertEquals(
+            floor(distinctCount(text) * Difficulty.EXTREME.revealRatio).toInt(),
+            revealed.size,
+        )
     }
 }

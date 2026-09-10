@@ -61,7 +61,7 @@ class PuzzleSessionTest {
     fun `ON_COMPLETE loses a life on a wrong full grid without exposing wrong numbers`() {
         val session = PuzzleSession(alphabetPlain, Difficulty.EXTREME, seed = 2L)
         val start = session.state.value.livesLeft
-        val last = session.numbers().last { it in session.state.value.solvableCipherNums }
+        val last = session.numbers().last { session.correctFor(it) !in session.state.value.revealed }
 
         session.solveAllCorrect(except = last)
         val bogus = ('A'..'Z').first { it !in alphabetPlain }
@@ -76,10 +76,10 @@ class PuzzleSessionTest {
     }
 
     @Test
-    fun `ON_CHECK loses a life only when check finds a wrong letter`() {
+    fun `ON_CHECK marks wrong tiles without costing a life`() {
         val session = PuzzleSession(alphabetPlain, Difficulty.HARD, seed = 3L)
         val start = session.state.value.livesLeft
-        val last = session.numbers().last { it in session.state.value.solvableCipherNums }
+        val last = session.numbers().last { session.correctFor(it) !in session.state.value.revealed }
 
         session.solveAllCorrect(except = last)
         val bogus = ('A'..'Z').first { it !in alphabetPlain }
@@ -90,7 +90,7 @@ class PuzzleSessionTest {
         assertEquals(0, session.state.value.mistakes)
 
         session.check()
-        assertEquals(start - 1, session.state.value.livesLeft)
+        assertEquals("check does not cost a life", start, session.state.value.livesLeft)
         assertEquals(1, session.state.value.mistakes)
         assertTrue(last in session.state.value.wrongCipherNums)
 
@@ -98,13 +98,13 @@ class PuzzleSessionTest {
         session.enter(session.correctFor(last))
         session.check()
         assertEquals(PuzzleStatus.SOLVED, session.state.value.status)
-        assertEquals(start - 1, session.state.value.livesLeft)
+        assertEquals(start, session.state.value.livesLeft)
     }
 
     @Test
     fun `hint on the last unmapped number solves the puzzle`() {
         val session = PuzzleSession(alphabetPlain, Difficulty.MEDIUM, seed = 4L)
-        val last = session.numbers().last { it in session.state.value.solvableCipherNums }
+        val last = session.numbers().last { session.correctFor(it) !in session.state.value.revealed }
 
         session.solveAllCorrect(except = last)
         assertEquals(PuzzleStatus.IN_PROGRESS, session.state.value.status)

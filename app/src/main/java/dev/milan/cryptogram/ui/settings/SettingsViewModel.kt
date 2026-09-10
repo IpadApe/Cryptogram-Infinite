@@ -9,6 +9,7 @@ import dev.milan.cryptogram.billing.BillingManager
 import dev.milan.cryptogram.data.prefs.SettingsStore
 import dev.milan.cryptogram.data.prefs.ThemeMode
 import dev.milan.cryptogram.ui.appContainer
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
@@ -27,6 +28,15 @@ class SettingsViewModel(
     private val settings: SettingsStore,
     private val billing: BillingManager,
 ) : ViewModel() {
+
+    private val _billingMessage = MutableStateFlow<String?>(null)
+    val billingMessage: StateFlow<String?> = _billingMessage
+
+    init {
+        viewModelScope.launch { billing.messages.collect { _billingMessage.value = it } }
+    }
+
+    fun clearBillingMessage() { _billingMessage.value = null }
 
     val state: StateFlow<SettingsUiState> = combine(
         settings.soundEnabled,

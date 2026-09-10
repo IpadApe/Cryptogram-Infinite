@@ -54,6 +54,7 @@ fun SettingsScreen(
 ) {
     val c = CryptoTheme.colors
     val state by viewModel.state.collectAsStateWithLifecycle()
+    val billingMessage by viewModel.billingMessage.collectAsStateWithLifecycle()
     val context = LocalContext.current
 
     Column(
@@ -113,6 +114,10 @@ fun SettingsScreen(
             AccentButton("Remove ads", onClick = {
                 (context as? Activity)?.let(viewModel::purchaseRemoveAds)
             })
+        }
+        billingMessage?.let { msg ->
+            Spacer(Modifier.height(8.dp))
+            Text(msg, fontFamily = Mono, fontSize = 9.sp, letterSpacing = 0.06.em, color = c.muted)
         }
 
         Spacer(Modifier.height(18.dp))

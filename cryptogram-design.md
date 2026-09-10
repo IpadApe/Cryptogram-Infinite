@@ -16,10 +16,10 @@ This document is the single source of truth. Every open question from the grill 
 | Content | Bundled offline corpus (~2,000 quotes, ≥300 per band) + one daily per difficulty fetched from GitHub |
 | Provenance | Every quote is a verbatim row in the verified quote DB with `author`, `source`, `sourceUrl`. Never AI-composed. |
 | Difficulty bands (chars) | Easy 20–30 · Medium 31–45 · Hard 46–70 · Extreme 71–100 |
-| Reveals (% of distinct letters, floor) | Easy 50% · Medium 30% · Hard 15% · Extreme 5% (min 0) |
+| Reveals (% of distinct letters, floor) | Easy 60% · Medium 45% · Hard 30% · Extreme 15% (min 0) — raised from 50/30/15/5 after playtest: finishing was too hard once the given letters ran out |
 | Feedback | Easy/Medium: wrong letter turns red on entry · Hard: `Check` button · Extreme: nothing until grid fully correct |
 | Lives per puzzle | 5 / 4 / 3 / 3 · zero lives = restart same level with new key · no revive · no global lives |
-| Free hints per puzzle | 3 / 2 / 1 / 0 · hint reveals one chosen cipher number · extra hints via rewarded ad, max 3 per puzzle |
+| Free hints per puzzle | 4 / 3 / 2 / 1 · hint reveals one chosen cipher number · extra hints via rewarded ad, max 3 per puzzle |
 | Ads | Banner on Home, Level Select, Results only. No interstitials, ever. No ads on Play screen. |
 | Remove Ads | Removes banners only. Rewarded hint ads remain available to everyone. |
 | Levels | Numbered per difficulty, seeded shuffle, append-only corpus, cycle re-keys. Nothing gated. |
@@ -292,7 +292,7 @@ Rules ("cipher number" = a value 1..26; the player types a plaintext letter for 
   - If `livesLeft == 0` → `FAILED`.
   - Auto-advance selection to the next unmapped cipher number (left-to-right in ciphertext).
 - `clear()`: removes mapping for the selected cipher number; removes it from `wrongCipherNums`.
-- `check()` (`ON_CHECK` only): compute wrong set among mapped numbers; if non-empty → `wrongCipherNums = set`, `mistakes++`, `livesLeft--`; if empty and grid complete → `SOLVED`.
+- `check()` (`ON_CHECK` only): compute wrong set among mapped numbers; if non-empty → `wrongCipherNums = set`, `mistakes++` (costs a star, **not** a life — Check is the tool that lets the player finish Hard); if empty and grid complete → `SOLVED`.
 - `hint()`: requires `hintsLeft > 0` or a rewarded ad grant; reveals `selectedCipherNum` (or first unmapped if none selected): sets mapping to the correct letter, adds that letter to `revealed` (locked), removes the number from `wrongCipherNums`, `hintsLeft--` or `adHintsUsed++`. Then run completion check.
 - `tick(deltaMs)`: adds to `elapsedMs` only while `IN_PROGRESS` and the screen is resumed.
 - Serializable to JSON for autosave (`InProgressEntity.stateJson`).

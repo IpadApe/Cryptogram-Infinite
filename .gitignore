@@ -10,3 +10,5 @@ local.properties
 .kotlin
 /.idea/
 keystore.properties
+/Screenshot*.png
+/*.png

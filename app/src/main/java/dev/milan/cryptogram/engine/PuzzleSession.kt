@@ -154,11 +154,9 @@ class PuzzleSession private constructor(initial: PuzzleState) {
 
         val wrong = s.mapping.filter { (n, g) -> correctPlainOf.getValue(n) != g }.keys
         if (wrong.isNotEmpty()) {
-            s = s.copy(
-                wrongCipherNums = wrong,
-                mistakes = s.mistakes + 1,
-                livesLeft = s.livesLeft - 1,
-            )
+            // Check marks the wrong tiles so the player can finish; it costs a
+            // star (mistakes++) but not a life.
+            s = s.copy(wrongCipherNums = wrong, mistakes = s.mistakes + 1)
         } else if (isGridComplete(s)) {
             s = s.copy(status = PuzzleStatus.SOLVED, wrongCipherNums = emptySet())
         }
