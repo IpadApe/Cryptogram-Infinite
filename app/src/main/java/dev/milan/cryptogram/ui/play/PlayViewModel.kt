@@ -256,7 +256,7 @@ class PlayViewModel(
                     quotes = c.quoteRepository,
                     progress = c.progressRepository,
                     daily = c.dailyRepository,
-                    inProgressDao = c.database.inProgressDao(),
+                    inProgressDao = c.inProgressDao,
                     settings = c.settingsStore,
                 )
             }

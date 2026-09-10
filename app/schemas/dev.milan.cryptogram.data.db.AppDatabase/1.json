@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "a0cadd4139ebb01b8583b55cc22600f0",
+    "identityHash": "0a96a2967456be4ac6f7bb2b5b2ced1f",
     "entities": [
       {
         "tableName": "quotes",
@@ -108,54 +108,6 @@
         }
       },
       {
-        "tableName": "in_progress",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`kind` TEXT NOT NULL, `difficulty` TEXT NOT NULL, `level` INTEGER NOT NULL, `date` TEXT, `stateJson` TEXT NOT NULL, `updatedAt` INTEGER NOT NULL, PRIMARY KEY(`kind`, `difficulty`))",
-        "fields": [
-          {
-            "fieldPath": "kind",
-            "columnName": "kind",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "difficulty",
-            "columnName": "difficulty",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "level",
-            "columnName": "level",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "date",
-            "columnName": "date",
-            "affinity": "TEXT"
-          },
-          {
-            "fieldPath": "stateJson",
-            "columnName": "stateJson",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "updatedAt",
-            "columnName": "updatedAt",
-            "affinity": "INTEGER",
-            "notNull": true
-          }
-        ],
-        "primaryKey": {
-          "autoGenerate": false,
-          "columnNames": [
-            "kind",
-            "difficulty"
-          ]
-        }
-      },
-      {
         "tableName": "daily_cache",
         "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`date` TEXT NOT NULL, `json` TEXT NOT NULL, `fetchedAt` INTEGER NOT NULL, `isFallback` INTEGER NOT NULL, PRIMARY KEY(`date`))",
         "fields": [
@@ -243,7 +195,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a0cadd4139ebb01b8583b55cc22600f0')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '0a96a2967456be4ac6f7bb2b5b2ced1f')"
     ]
   }
 }

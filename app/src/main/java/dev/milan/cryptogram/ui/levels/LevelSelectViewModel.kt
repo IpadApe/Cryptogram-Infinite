@@ -85,7 +85,7 @@ class LevelSelectViewModel(
                     difficulty,
                     c.quoteRepository,
                     c.progressRepository,
-                    c.database.inProgressDao(),
+                    c.inProgressDao,
                 )
             }
         }

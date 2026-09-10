@@ -11,6 +11,8 @@ import dev.milan.cryptogram.data.corpus.QuoteRepository
 import dev.milan.cryptogram.data.daily.DailyRemoteSource
 import dev.milan.cryptogram.data.daily.DailyRepository
 import dev.milan.cryptogram.data.db.AppDatabase
+import dev.milan.cryptogram.data.db.InProgressDatabase
+import dev.milan.cryptogram.data.db.dao.InProgressDao
 import dev.milan.cryptogram.data.prefs.SettingsStore
 import dev.milan.cryptogram.data.progress.ProgressRepository
 import kotlinx.coroutines.CoroutineScope
@@ -28,6 +30,12 @@ class AppContainer(context: Context) {
     private val appScope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
 
     val database: AppDatabase by lazy { AppDatabase.build(appContext) }
+
+    private val inProgressDatabase: InProgressDatabase by lazy {
+        InProgressDatabase.build(appContext)
+    }
+
+    val inProgressDao: InProgressDao by lazy { inProgressDatabase.inProgressDao() }
 
     val settingsStore: SettingsStore by lazy { SettingsStore(appContext) }
 

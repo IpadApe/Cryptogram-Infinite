@@ -6,12 +6,10 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import dev.milan.cryptogram.data.db.dao.DailyCacheDao
 import dev.milan.cryptogram.data.db.dao.DailyResultDao
-import dev.milan.cryptogram.data.db.dao.InProgressDao
 import dev.milan.cryptogram.data.db.dao.ProgressDao
 import dev.milan.cryptogram.data.db.dao.QuoteDao
 import dev.milan.cryptogram.data.db.entities.DailyCacheEntity
 import dev.milan.cryptogram.data.db.entities.DailyResultEntity
-import dev.milan.cryptogram.data.db.entities.InProgressEntity
 import dev.milan.cryptogram.data.db.entities.ProgressEntity
 import dev.milan.cryptogram.data.db.entities.QuoteEntity
 
@@ -19,7 +17,6 @@ import dev.milan.cryptogram.data.db.entities.QuoteEntity
     entities = [
         QuoteEntity::class,
         ProgressEntity::class,
-        InProgressEntity::class,
         DailyCacheEntity::class,
         DailyResultEntity::class,
     ],
@@ -29,7 +26,6 @@ import dev.milan.cryptogram.data.db.entities.QuoteEntity
 abstract class AppDatabase : RoomDatabase() {
     abstract fun quoteDao(): QuoteDao
     abstract fun progressDao(): ProgressDao
-    abstract fun inProgressDao(): InProgressDao
     abstract fun dailyCacheDao(): DailyCacheDao
     abstract fun dailyResultDao(): DailyResultDao
 
