@@ -170,6 +170,20 @@ class PuzzleSessionTest {
     }
 
     @Test
+    fun `switching to manual mid-game keeps placed letters visible`() {
+        val session = PuzzleSession(alphabetPlain, Difficulty.EXTREME, seed = 11L, autofill = true)
+        val target = session.numbers().first { session.correctFor(it) !in session.state.value.revealed }
+        session.select(target)
+        session.enter(session.correctFor(target))
+        val positions = session.state.value.letterNums.withIndex()
+            .filter { it.value == target }.map { it.index }
+
+        session.setAutofill(false)
+        assertTrue("progress carries across the mode switch",
+            positions.all { session.state.value.isPositionFilled(it) })
+    }
+
+    @Test
     fun `manual mode is solved only when every tile is filled`() {
         val session = PuzzleSession(alphabetPlain, Difficulty.EXTREME, seed = 10L, autofill = false)
         val inv = Cipher.invert(session.state.value.key)

@@ -133,6 +133,15 @@ class PlayViewModel(
         bindingJobs.clear()
         session = newSession
         solveHandled = false
+        newSession.setAutofill(autofill)
+
+        // Keep the fill mode in sync with the setting, even mid-puzzle.
+        bindingJobs += viewModelScope.launch {
+            settings.autofillEnabled.collect { on ->
+                autofill = on
+                newSession.setAutofill(on)
+            }
+        }
 
         bindingJobs += viewModelScope.launch {
             combine(newSession.state, failedDialog, adHintLoaded) { s, failed, adLoaded ->

@@ -38,7 +38,6 @@ import dev.milan.cryptogram.BuildConfig
 import dev.milan.cryptogram.data.prefs.ThemeMode
 import dev.milan.cryptogram.ui.components.AccentButton
 import dev.milan.cryptogram.ui.components.BackHeader
-import dev.milan.cryptogram.ui.components.OutlineButton
 import dev.milan.cryptogram.ui.components.PaperDivider
 import dev.milan.cryptogram.ui.theme.CryptoTheme
 import dev.milan.cryptogram.ui.theme.Mono
@@ -115,8 +114,6 @@ fun SettingsScreen(
                 (context as? Activity)?.let(viewModel::purchaseRemoveAds)
             })
         }
-        Spacer(Modifier.height(10.dp))
-        OutlineButton("Restore purchases", onClick = viewModel::restorePurchases)
 
         Spacer(Modifier.height(18.dp))
         PaperDivider()

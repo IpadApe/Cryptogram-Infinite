@@ -207,6 +207,17 @@ class PuzzleSession private constructor(initial: PuzzleState) {
         _state.value = s.copy(elapsedMs = s.elapsedMs + deltaMs)
     }
 
+    /** Switch fill mode, carrying the player's progress across. */
+    fun setAutofill(enabled: Boolean) {
+        val s = _state.value
+        if (s.autofill == enabled) return
+        // Manual mode needs an explicit filled-position set; derive it from the
+        // current mapping so nothing the player already placed disappears.
+        val filled = if (enabled) s.filledPositions
+        else s.letterNums.indices.filter { s.letterNums[it] in s.mapping }.toSet()
+        _state.value = s.copy(autofill = enabled, filledPositions = filled)
+    }
+
     /** Advance to the next unfilled tile / number (design: "NEXT NUMBER"). */
     fun selectNext() {
         val s = _state.value

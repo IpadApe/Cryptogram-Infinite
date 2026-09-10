@@ -44,7 +44,6 @@ class SettingsViewModel(
     fun setTheme(value: ThemeMode) = viewModelScope.launch { settings.setThemeMode(value) }
 
     fun purchaseRemoveAds(activity: Activity) = billing.launchPurchase(activity)
-    fun restorePurchases() = viewModelScope.launch { billing.refreshOwned() }
 
     companion object {
         fun factory() = viewModelFactory {
