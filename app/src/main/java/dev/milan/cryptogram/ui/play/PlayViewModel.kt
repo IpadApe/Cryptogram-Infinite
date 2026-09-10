@@ -235,6 +235,7 @@ class PlayViewModel(
     fun select(cipherNum: Int) { session?.select(cipherNum) }
     fun enter(plainChar: Char) { session?.enter(plainChar) }
     fun clearCell() { session?.clear() }
+    fun nextNumber() { session?.selectNext() }
     fun check() { session?.check() }
     fun hint(fromAd: Boolean) { session?.hint(fromAd) }
 

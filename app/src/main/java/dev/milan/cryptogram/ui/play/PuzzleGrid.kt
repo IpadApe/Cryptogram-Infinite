@@ -5,19 +5,21 @@ import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -26,23 +28,28 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import dev.milan.cryptogram.engine.CipherToken
 import dev.milan.cryptogram.engine.PuzzleState
 import dev.milan.cryptogram.engine.PuzzleStatus
+import dev.milan.cryptogram.ui.theme.CryptoTheme
+import dev.milan.cryptogram.ui.theme.Mono
+import dev.milan.cryptogram.ui.theme.Serif
 
 /**
- * Renders the ciphertext as tappable cells, one number per letter, wrapping whole
- * words as units (design doc sections 7-8). Symbol cells are inert; pre-revealed
- * cells are locked; wrong cells shake; on solve every cell flips to
- * primaryContainer with a short stagger.
+ * The ciphertext as tappable tiles, whole words wrapped as units (design canvas
+ * "Working prototype"). An unsolved tile shows its number in mono; a guessed tile
+ * shows the letter in serif and the number drops to a caption beneath, so the code
+ * stays readable. Given tiles are green; a wrong guess shakes, flashes red and
+ * clears itself.
  */
 @Composable
 fun PuzzleGrid(
@@ -50,6 +57,7 @@ fun PuzzleGrid(
     onCellClick: (Int) -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val c = CryptoTheme.colors
     val inv = remember(state.key) {
         IntArray(27).also { for (i in 0 until 26) it[state.key[i]] = i }
     }
@@ -58,95 +66,94 @@ fun PuzzleGrid(
     val lockedNums = state.solvableCipherNums
         .filter { correctPlain(it) in state.revealed }
         .toSet()
-
     val words = splitWords(state.tokens())
-    val longestWord = (words.maxOfOrNull { it.size } ?: 1).coerceAtLeast(1)
     val solved = state.status == PuzzleStatus.SOLVED
 
-    BoxWithConstraints(modifier) {
-        val gap = 3.dp
-        val maxCell = 34.dp
-        val fitted = (maxWidth - gap * (longestWord - 1)) / longestWord
-        val cellWidth: Dp = fitted.coerceIn(22.dp, maxCell)
-
-        Column(Modifier.verticalScroll(rememberScrollState())) {
-            FlowRow(
-                horizontalArrangement = Arrangement.spacedBy(12.dp),
-                verticalArrangement = Arrangement.spacedBy(10.dp),
-            ) {
-                var flatIndex = 0
-                words.forEach { word ->
-                    Row(horizontalArrangement = Arrangement.spacedBy(gap)) {
-                        word.forEach { token ->
-                            when (token) {
-                                is CipherToken.Num -> {
-                                    val index = flatIndex++
-                                    NumberCell(
-                                        number = token.n,
-                                        guess = state.mapping[token.n],
-                                        locked = token.n in lockedNums,
-                                        wrong = token.n in state.wrongCipherNums,
-                                        flashWrong = token.n == state.lastWrongNum,
-                                        selected = token.n == state.selectedCipherNum,
-                                        solved = solved,
-                                        solveDelayMs = index * 20,
-                                        width = cellWidth,
-                                        onClick = { onCellClick(token.n) },
-                                    )
-                                }
-
-                                is CipherToken.Sym -> Text(
-                                    token.c.toString(),
-                                    modifier = Modifier
-                                        .width(cellWidth * 0.4f)
-                                        .padding(top = 16.dp),
-                                    style = MaterialTheme.typography.titleMedium,
+    Column(
+        modifier
+            .verticalScroll(rememberScrollState())
+            .padding(horizontal = 16.dp),
+    ) {
+        FlowRow(
+            horizontalArrangement = Arrangement.spacedBy(13.dp),
+            verticalArrangement = Arrangement.spacedBy(24.dp),
+        ) {
+            var flatIndex = 0
+            words.forEach { word ->
+                Row(horizontalArrangement = Arrangement.spacedBy(3.dp)) {
+                    word.forEach { token ->
+                        when (token) {
+                            is CipherToken.Num -> {
+                                val i = flatIndex++
+                                Tile(
+                                    number = token.n,
+                                    guess = state.mapping[token.n],
+                                    locked = token.n in lockedNums,
+                                    flashWrong = token.n == state.lastWrongNum,
+                                    selected = token.n == state.selectedCipherNum,
+                                    solved = solved,
+                                    solveDelayMs = i * 20,
+                                    onClick = { onCellClick(token.n) },
                                 )
                             }
+
+                            is CipherToken.Sym -> Text(
+                                token.c.toString(),
+                                modifier = Modifier.padding(top = 4.dp),
+                                fontFamily = Serif,
+                                fontSize = 19.sp,
+                                color = c.ink,
+                            )
                         }
                     }
                 }
             }
         }
+        Spacer(Modifier.height(8.dp))
     }
 }
 
 @Composable
-private fun NumberCell(
+private fun Tile(
     number: Int,
     guess: Char?,
     locked: Boolean,
-    wrong: Boolean,
     flashWrong: Boolean,
     selected: Boolean,
     solved: Boolean,
     solveDelayMs: Int,
-    width: Dp,
     onClick: () -> Unit,
 ) {
-    val scheme = MaterialTheme.colorScheme
-    val isRed = wrong || flashWrong
-    val target = when {
-        solved -> scheme.primaryContainer
-        isRed -> scheme.errorContainer
-        locked -> scheme.secondaryContainer
-        selected -> scheme.primaryContainer
-        else -> scheme.surface
+    val c = CryptoTheme.colors
+    val hasGuess = guess != null
+
+    val tileBg = when {
+        selected && !solved -> c.accent.copy(alpha = 0.16f)
+        !hasGuess && !solved -> c.tileUnsolved
+        else -> Color.Transparent
     }
     val bg by animateColorAsState(
-        targetValue = target,
-        animationSpec = tween(durationMillis = 180, delayMillis = if (solved) solveDelayMs else 0),
-        label = "cellBg",
+        if (solved) c.accent.copy(alpha = 0.16f) else tileBg,
+        tween(180, delayMillis = if (solved) solveDelayMs else 0),
+        label = "tileBg",
     )
-    val borderColor = if (isRed) scheme.error else scheme.outline
-    val borderWidth = if (isRed) 2.dp else 1.dp
+    val underline = when {
+        flashWrong -> c.bad
+        locked || selected -> c.accent
+        else -> c.divider
+    }
+    val glyphColor = when {
+        flashWrong -> c.bad
+        hasGuess && locked -> c.accent
+        hasGuess -> c.ink
+        selected -> c.accent
+        else -> c.muted
+    }
 
-    // Wrong-guess shake: 8dp, ~300ms. Runs for a persistent (ON_CHECK) or a
-    // transient (IMMEDIATE) wrong marker.
     val shake = remember { Animatable(0f) }
     val density = LocalDensity.current
-    LaunchedEffect(wrong, flashWrong) {
-        if (wrong || flashWrong) {
+    LaunchedEffect(flashWrong) {
+        if (flashWrong) {
             val px = with(density) { 8.dp.toPx() }
             shake.snapTo(0f)
             repeat(3) {
@@ -158,30 +165,58 @@ private fun NumberCell(
     }
 
     val desc = when {
-        guess != null && locked -> "Number $number, locked as $guess"
-        guess != null -> "Number $number, guess $guess"
+        hasGuess && locked -> "Number $number, given as $guess"
+        hasGuess -> "Number $number, guess $guess"
         else -> "Number $number, empty"
     }
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
-            .width(width)
+            .width(22.dp)
             .graphicsLayer { translationX = shake.value }
-            .clip(RoundedCornerShape(4.dp))
-            .background(bg)
-            .border(borderWidth, borderColor, RoundedCornerShape(4.dp))
-            .let { if (locked) it else it.clickable(onClick = onClick) }
-            .semantics { contentDescription = desc }
-            .padding(vertical = 2.dp),
+            .let { if (locked) it else it.clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null,
+                onClick = onClick,
+            ) }
+            .semantics { contentDescription = desc },
     ) {
-        Text((guess ?: ' ').toString(), style = MaterialTheme.typography.titleMedium)
-        Text(
-            number.toString().padStart(2, '0'),
-            fontSize = 10.sp,
-            textAlign = TextAlign.Center,
-            color = if (isRed) scheme.error else scheme.onSurfaceVariant,
+        Box(
+            Modifier
+                .fillMaxWidth()
+                .height(27.dp)
+                .clip(RoundedCornerShape(3.dp))
+                .background(bg),
+            contentAlignment = Alignment.Center,
+        ) {
+            if (hasGuess && !flashWrong) {
+                Text(guess.toString(), fontFamily = Serif, fontSize = 19.sp, color = glyphColor)
+            } else {
+                Text(
+                    number.toString().padStart(2, '0'),
+                    fontFamily = Mono, fontWeight = FontWeight.Medium, fontSize = 12.sp,
+                    color = glyphColor,
+                )
+            }
+        }
+        Spacer(
+            Modifier
+                .padding(top = 4.dp)
+                .fillMaxWidth()
+                .height(2.dp)
+                .background(underline),
         )
+        Box(Modifier.height(11.dp), contentAlignment = Alignment.TopCenter) {
+            if (hasGuess && !flashWrong) {
+                Text(
+                    number.toString().padStart(2, '0'),
+                    fontFamily = Mono, fontWeight = FontWeight.Medium, fontSize = 8.sp,
+                    color = c.muted,
+                    modifier = Modifier.padding(top = 2.dp),
+                )
+            }
+        }
     }
 }
 

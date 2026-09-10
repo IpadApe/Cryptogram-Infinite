@@ -67,6 +67,7 @@ fun NavGraph(
             LevelSelectScreen(
                 difficulty = diffArg(entry.arguments?.getString("difficulty")),
                 onOpenLevel = { d, level -> navController.navigate(Routes.playLevel(d, level)) },
+                onBack = { navController.popBackStack() },
             )
         }
 
@@ -108,13 +109,14 @@ fun NavGraph(
             )
         }
 
-        composable(Routes.STATS) { StatsScreen() }
+        composable(Routes.STATS) { StatsScreen(onBack = { navController.popBackStack() }) }
 
         composable(Routes.DAILY) {
             DailyScreen(
                 onPlay = { date, difficulty ->
                     navController.navigate(Routes.playDaily(date, difficulty))
                 },
+                onBack = { navController.popBackStack() },
             )
         }
 
@@ -139,8 +141,11 @@ fun NavGraph(
         }
 
         composable(Routes.SETTINGS) {
-            SettingsScreen(onOpenSources = { navController.navigate(Routes.SOURCES) })
+            SettingsScreen(
+                onOpenSources = { navController.navigate(Routes.SOURCES) },
+                onBack = { navController.popBackStack() },
+            )
         }
-        composable(Routes.SOURCES) { SourcesScreen() }
+        composable(Routes.SOURCES) { SourcesScreen(onBack = { navController.popBackStack() }) }
     }
 }

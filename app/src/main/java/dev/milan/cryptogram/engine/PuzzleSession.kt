@@ -150,6 +150,14 @@ class PuzzleSession private constructor(initial: PuzzleState) {
         _state.value = s.copy(elapsedMs = s.elapsedMs + deltaMs)
     }
 
+    /** Advance the selection to the next unmapped cipher number (design: "NEXT NUMBER"). */
+    fun selectNext() {
+        val s = _state.value
+        if (s.status != PuzzleStatus.IN_PROGRESS) return
+        val next = firstUnmapped(s) ?: return
+        _state.value = s.copy(selectedCipherNum = next, lastWrongNum = null)
+    }
+
     fun toJson(): String = json.encodeToString(PuzzleState.serializer(), _state.value)
 
     // --- internals -------------------------------------------------------

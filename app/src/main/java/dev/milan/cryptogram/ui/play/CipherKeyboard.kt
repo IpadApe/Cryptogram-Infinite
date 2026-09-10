@@ -1,91 +1,123 @@
 package dev.milan.cryptogram.ui.play
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Button
-import androidx.compose.material3.FilledTonalButton
-import androidx.compose.material3.OutlinedButton
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.semantics.contentDescription
-import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.em
+import androidx.compose.ui.unit.sp
+import dev.milan.cryptogram.ui.theme.CryptoTheme
+import dev.milan.cryptogram.ui.theme.Mono
 
-private val ROWS = listOf("ABCDEFGHI", "JKLMNOPQR", "STUVWXYZ")
+private val ROWS = listOf("QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM")
+private val ROW_PAD = listOf(0.dp, 18.dp, 46.dp)
 
 /**
- * On-screen A–Z keyboard plus backspace, Hint and (Hard) Check (design doc section 8).
- * No system IME is used.
+ * QWERTY letter keyboard on a paper tray, plus DELETE / NEXT NUMBER
+ * (design canvas). No system IME. Used letters are greyed.
  */
 @Composable
 fun CipherKeyboard(
     usedLetters: Set<Char>,
-    canCheck: Boolean,
-    hintLabel: String,
-    hintEnabled: Boolean,
     onKey: (Char) -> Unit,
     onBackspace: () -> Unit,
-    onHint: () -> Unit,
-    onCheck: () -> Unit,
+    onNextNumber: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val c = CryptoTheme.colors
     Column(
-        modifier = modifier
+        modifier
             .fillMaxWidth()
-            .padding(8.dp),
-        verticalArrangement = Arrangement.spacedBy(6.dp),
+            .background(c.keyboardBg)
+            .padding(start = 5.dp, end = 5.dp, top = 11.dp, bottom = 20.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        ROWS.forEach { row ->
+        ROWS.forEachIndexed { i, row ->
             Row(
-                Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(4.dp),
+                Modifier.fillMaxWidth().padding(horizontal = ROW_PAD[i]),
+                horizontalArrangement = Arrangement.spacedBy(5.dp),
             ) {
-                row.forEach { c ->
-                    val used = c in usedLetters
-                    val keyModifier = Modifier
-                        .weight(1f)
-                        .semantics { contentDescription = "Letter $c" }
-                    if (used) {
-                        OutlinedButton(
-                            onClick = { onKey(c) },
-                            modifier = keyModifier,
-                            contentPadding = PaddingZero,
-                        ) { Text(c.toString()) }
-                    } else {
-                        FilledTonalButton(
-                            onClick = { onKey(c) },
-                            modifier = keyModifier,
-                            contentPadding = PaddingZero,
-                        ) { Text(c.toString()) }
-                    }
+                row.forEach { ch ->
+                    val used = ch in usedLetters
+                    Key(
+                        modifier = Modifier.weight(1f),
+                        label = ch.toString(),
+                        bg = if (used) c.keyUsed else c.key,
+                        fg = if (used) c.ink.copy(alpha = 0.3f) else c.ink,
+                        onClick = { onKey(ch) },
+                    )
                 }
             }
         }
-
         Row(
             Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(6.dp),
+            horizontalArrangement = Arrangement.spacedBy(5.dp),
         ) {
-            OutlinedButton(
+            Key(
+                modifier = Modifier.weight(1f),
+                label = "DELETE",
+                bg = c.keySpecial,
+                fg = c.ink,
+                small = true,
                 onClick = onBackspace,
-                modifier = Modifier
-                    .weight(1f)
-                    .semantics { contentDescription = "Backspace" },
-            ) { Text("⌫") }
-            Button(
-                onClick = onHint,
-                enabled = hintEnabled,
-                modifier = Modifier.weight(1.4f),
-            ) { Text(hintLabel) }
-            if (canCheck) {
-                Button(onClick = onCheck, modifier = Modifier.weight(1f)) { Text("Check") }
-            }
+            )
+            Key(
+                modifier = Modifier.weight(1f),
+                label = "NEXT NUMBER",
+                bg = c.keySpecial,
+                fg = c.ink,
+                small = true,
+                onClick = onNextNumber,
+            )
         }
     }
 }
 
-private val PaddingZero = androidx.compose.foundation.layout.PaddingValues(0.dp)
+@Composable
+private fun Key(
+    modifier: Modifier,
+    label: String,
+    bg: Color,
+    fg: Color,
+    onClick: () -> Unit,
+    small: Boolean = false,
+) {
+    Box(
+        modifier
+            .height(if (small) 42.dp else 44.dp)
+            .clip(RoundedCornerShape(6.dp))
+            .background(bg)
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null,
+                onClick = onClick,
+            ),
+        contentAlignment = Alignment.Center,
+    ) {
+        Text(
+            label,
+            fontFamily = Mono,
+            fontWeight = FontWeight.Medium,
+            fontSize = if (small) 10.sp else 16.sp,
+            letterSpacing = if (small) 0.16.em else 0.em,
+            color = fg,
+        )
+    }
+}
