@@ -11,6 +11,8 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 
 private val ROWS = listOf("ABCDEFGHI", "JKLMNOPQR", "STUVWXYZ")
@@ -44,16 +46,19 @@ fun CipherKeyboard(
             ) {
                 row.forEach { c ->
                     val used = c in usedLetters
+                    val keyModifier = Modifier
+                        .weight(1f)
+                        .semantics { contentDescription = "Letter $c" }
                     if (used) {
                         OutlinedButton(
                             onClick = { onKey(c) },
-                            modifier = Modifier.weight(1f),
+                            modifier = keyModifier,
                             contentPadding = PaddingZero,
                         ) { Text(c.toString()) }
                     } else {
                         FilledTonalButton(
                             onClick = { onKey(c) },
-                            modifier = Modifier.weight(1f),
+                            modifier = keyModifier,
                             contentPadding = PaddingZero,
                         ) { Text(c.toString()) }
                     }
@@ -65,7 +70,12 @@ fun CipherKeyboard(
             Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(6.dp),
         ) {
-            OutlinedButton(onClick = onBackspace, modifier = Modifier.weight(1f)) { Text("⌫") }
+            OutlinedButton(
+                onClick = onBackspace,
+                modifier = Modifier
+                    .weight(1f)
+                    .semantics { contentDescription = "Backspace" },
+            ) { Text("⌫") }
             Button(
                 onClick = onHint,
                 enabled = hintEnabled,

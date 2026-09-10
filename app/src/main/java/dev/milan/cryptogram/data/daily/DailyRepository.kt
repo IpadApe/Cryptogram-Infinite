@@ -75,6 +75,7 @@ class DailyRepository(
     }
 
     suspend fun getToday(localDate: LocalDate): DailyPuzzles = withContext(Dispatchers.IO) {
+        quotes.ensureCorpusLoaded()
         val date = localDate.toString()
 
         cacheDao.get(date)?.let { cached ->

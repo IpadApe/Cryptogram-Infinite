@@ -54,6 +54,7 @@ data class PlayUiState(
 
 sealed interface PlayEvent {
     data class NavigateToResults(val args: ResultArgs) : PlayEvent
+    data object LoadFailed : PlayEvent
 }
 
 class PlayViewModel(
@@ -92,23 +93,26 @@ class PlayViewModel(
 
     init {
         viewModelScope.launch {
-            levelIndex = quotes.levelIndex()
-            if (isDaily) {
-                val pick = daily.getToday(LocalDate.parse(dailyDate)).picks.getValue(difficulty)
-                quoteId = pick.quoteId
-                dailySeed = pick.seed
-            } else {
-                quoteId = levelIndex.quoteIdFor(difficulty, level)
-            }
-            val quote = quotes.byId(quoteId)
-            author = quote?.author.orEmpty()
+            val ok = runCatching {
+                levelIndex = quotes.levelIndex()
+                if (isDaily) {
+                    val pick = daily.getToday(LocalDate.parse(dailyDate)).picks.getValue(difficulty)
+                    quoteId = pick.quoteId
+                    dailySeed = pick.seed
+                } else {
+                    quoteId = levelIndex.quoteIdFor(difficulty, level)
+                }
+                val quote = quotes.byId(quoteId)
+                author = quote?.author.orEmpty()
 
-            val slot = inProgressDao.get(kind, difficulty.name)
-            val matches = if (isDaily) slot?.date == dailyDate else slot?.level == level
-            val restored = slot
-                ?.takeIf { matches }
-                ?.let { runCatching { PuzzleSession.fromJson(it.stateJson) }.getOrNull() }
-            startSession(restored ?: freshSession(quote?.text.orEmpty(), cycleOffset = 0))
+                val slot = inProgressDao.get(kind, difficulty.name)
+                val matches = if (isDaily) slot?.date == dailyDate else slot?.level == level
+                val restored = slot
+                    ?.takeIf { matches }
+                    ?.let { runCatching { PuzzleSession.fromJson(it.stateJson) }.getOrNull() }
+                startSession(restored ?: freshSession(quote?.text.orEmpty(), cycleOffset = 0))
+            }.isSuccess
+            if (!ok) events.send(PlayEvent.LoadFailed)
         }
     }
 

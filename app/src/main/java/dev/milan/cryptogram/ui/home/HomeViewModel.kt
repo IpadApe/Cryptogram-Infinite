@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
-import dev.milan.cryptogram.data.corpus.CorpusLoader
+import dev.milan.cryptogram.data.corpus.QuoteRepository
 import dev.milan.cryptogram.data.daily.DailyRepository
 import dev.milan.cryptogram.data.prefs.SettingsStore
 import dev.milan.cryptogram.data.progress.ProgressRepository
@@ -40,7 +40,7 @@ sealed interface HomeUiState {
 }
 
 class HomeViewModel(
-    private val corpusLoader: CorpusLoader,
+    private val quotes: QuoteRepository,
     private val progress: ProgressRepository,
     private val daily: DailyRepository,
     private val settings: SettingsStore,
@@ -51,7 +51,7 @@ class HomeViewModel(
 
     init {
         viewModelScope.launch {
-            corpusLoader.load()
+            quotes.ensureCorpusLoaded()
             val today = LocalDate.now()
             runCatching { daily.getToday(today) } // warm the cache; ignore failures
             readyStream(today).collect { ready ->
@@ -90,7 +90,7 @@ class HomeViewModel(
         fun factory() = viewModelFactory {
             initializer {
                 val c = appContainer
-                HomeViewModel(c.corpusLoader, c.progressRepository, c.dailyRepository, c.settingsStore)
+                HomeViewModel(c.quoteRepository, c.progressRepository, c.dailyRepository, c.settingsStore)
             }
         }
     }

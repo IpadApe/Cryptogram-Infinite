@@ -13,14 +13,20 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import android.app.Activity
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
@@ -77,6 +83,7 @@ fun PlayScreen(
         viewModel.eventFlow.collect { event ->
             when (event) {
                 is PlayEvent.NavigateToResults -> onSolved(event.args)
+                PlayEvent.LoadFailed -> onExit()
             }
         }
     }
@@ -98,7 +105,12 @@ fun PlayScreen(
         if (puzzle.status == PuzzleStatus.SOLVED) feedback.onSolve()
     }
 
-    Column(modifier.fillMaxSize()) {
+    val baseDensity = LocalDensity.current
+    val clampedDensity = remember(baseDensity) {
+        Density(baseDensity.density, baseDensity.fontScale.coerceAtMost(1.3f))
+    }
+
+    val topBar: @Composable () -> Unit = {
         Row(
             Modifier
                 .fillMaxWidth()
@@ -117,16 +129,11 @@ fun PlayScreen(
             )
             Text("Hints ${puzzle.hintsLeft}", style = MaterialTheme.typography.titleMedium)
         }
-
-        PuzzleGrid(
-            state = puzzle,
-            onCellClick = viewModel::select,
-            modifier = Modifier
-                .weight(1f)
-                .fillMaxWidth()
-                .padding(horizontal = 12.dp),
-        )
-
+    }
+    val grid: @Composable (Modifier) -> Unit = { m ->
+        PuzzleGrid(state = puzzle, onCellClick = viewModel::select, modifier = m)
+    }
+    val keyboard: @Composable (Modifier) -> Unit = { m ->
         CipherKeyboard(
             usedLetters = puzzle.mapping.values.toSet(),
             canCheck = state.canCheck,
@@ -148,7 +155,38 @@ fun PlayScreen(
                 }
             },
             onCheck = viewModel::check,
+            modifier = m,
         )
+    }
+
+    CompositionLocalProvider(LocalDensity provides clampedDensity) {
+        BoxWithConstraints(modifier.fillMaxSize()) {
+            if (maxWidth >= 600.dp) {
+                Column(Modifier.fillMaxSize()) {
+                    topBar()
+                    Row(Modifier.fillMaxSize()) {
+                        grid(
+                            Modifier
+                                .weight(1f)
+                                .fillMaxHeight()
+                                .padding(horizontal = 12.dp),
+                        )
+                        keyboard(Modifier.width(360.dp))
+                    }
+                }
+            } else {
+                Column(Modifier.fillMaxSize()) {
+                    topBar()
+                    grid(
+                        Modifier
+                            .weight(1f)
+                            .fillMaxWidth()
+                            .padding(horizontal = 12.dp),
+                    )
+                    keyboard(Modifier.fillMaxWidth())
+                }
+            }
+        }
     }
 
     if (state.showFailedDialog && puzzle.status == PuzzleStatus.FAILED) {

@@ -38,7 +38,7 @@ class AppContainer(context: Context) {
     }
 
     val quoteRepository: QuoteRepository by lazy {
-        QuoteRepository(database.quoteDao(), settingsStore)
+        QuoteRepository(database.quoteDao(), settingsStore, corpusLoader)
     }
 
     val progressRepository: ProgressRepository by lazy {
