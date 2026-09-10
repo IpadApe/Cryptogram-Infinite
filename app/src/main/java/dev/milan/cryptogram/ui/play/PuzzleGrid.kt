@@ -5,6 +5,7 @@ import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -127,7 +128,12 @@ private fun Tile(
     val c = CryptoTheme.colors
     val hasGuess = letter != null
 
+    // A same-number tile that is still empty: highlight it so tapping a
+    // correctly-placed letter shows where else that number goes.
+    val emptyMate = selected && !hasGuess && !solved && !flashWrong
+
     val tileBg = when {
+        emptyMate -> c.accent.copy(alpha = 0.28f)
         selected && !solved -> c.accent.copy(alpha = 0.16f)
         !hasGuess && !solved -> c.tileUnsolved
         else -> Color.Transparent
@@ -175,11 +181,11 @@ private fun Tile(
         modifier = Modifier
             .width(22.dp)
             .graphicsLayer { translationX = shake.value }
-            .let { if (locked) it else it.clickable(
+            .clickable(
                 interactionSource = remember { MutableInteractionSource() },
                 indication = null,
                 onClick = onClick,
-            ) }
+            )
             .semantics { contentDescription = desc },
     ) {
         Box(
@@ -187,7 +193,10 @@ private fun Tile(
                 .fillMaxWidth()
                 .height(27.dp)
                 .clip(RoundedCornerShape(3.dp))
-                .background(bg),
+                .background(bg)
+                .let {
+                    if (emptyMate) it.border(1.5.dp, c.accent, RoundedCornerShape(3.dp)) else it
+                },
             contentAlignment = Alignment.Center,
         ) {
             if (hasGuess && !flashWrong) {
