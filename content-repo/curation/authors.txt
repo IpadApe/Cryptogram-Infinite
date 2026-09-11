@@ -1,23 +1,605 @@
-# One Wikiquote/Wikisource page slug per line. Used by the offline curation
-# pipeline (design doc section 3.6) to pull candidate quotes. Lines starting
-# with # are ignored.
-Albert_Einstein
-Marcus_Aurelius
-Ralph_Waldo_Emerson
-Mark_Twain
-Oscar_Wilde
-Friedrich_Nietzsche
-Confucius
-Laozi
-Seneca_the_Younger
-Epictetus
-Jane_Austen
-Fyodor_Dostoevsky
-Leo_Tolstoy
-Virginia_Woolf
-Maya_Angelou
-Carl_Sagan
-Richard_Feynman
-Winston_Churchill
-Abraham_Lincoln
-Nelson_Mandela
+# cryptogram-content curation: Author|Quote
+# one quote per line, max 100 chars, fictional characters as 'Character (Source)'
+A. Powell Davies|Life is just a chance to grow a soul.
+Abraham Lincoln|A house divided against itself cannot stand.
+Abraham Lincoln|Be sure you put your feet in the right place, then stand firm.
+Abraham Lincoln|I destroy my enemies when I make them my friends.
+Abraham Lincoln|I walk slowly, but I never walk backward.
+Abraham Lincoln|Important principles may, and must, be inflexible.
+Abraham Lincoln|Truth is generally the best vindication against slander.
+Abraham Maslow|What is necessary to change a person is to change his awareness of himself.
+Aesop|No act of kindness, no matter how small, is ever wasted.
+African proverb|When deeds speak, words are nothing.
+Agent Smith (Matrix)|Never send a human to do a machine's job.
+Alan Turing (The Imitation Game)|Are you paying attention?
+Alan Turing (The Imitation Game)|Was I God? No. Because God didn't win the war. We did.
+Albert Camus|Autumn is a second spring when every leaf is a flower.
+Albert Einstein|God always takes the simplest way.
+Albert Einstein|I have no special talent. I am only passionately curious.
+Albert Einstein|Logic will get you from A to B. Imagination will take you everywhere.
+Albert Einstein|Once we accept our limits, we go beyond them.
+Albert Einstein|The only real valuable thing is intuition.
+Albert Einstein|When the solution is simple, God is answering.
+Albert Schweitzer|Wherever a man turns he can find someone who needs him.
+Albus Dumbledore (Harry Potter and the Prisoner of Azkaban)|Happiness can be found even in the darkest of times, when one only remembers to turn on the light.
+Aldous Huxley|There is only one corner of the universe you can be certain of improving, and that's your own self.
+Alexander (Acid)|What can you give the world besides an iPhone charger?
+Alexander Pope|Do good by stealth, and blush to find it fame.
+Alexander the Great|There is nothing impossible to him who will try.
+Alfred Painter|Saying thank you is more than good manners. It is good spirituality.
+Alphonse Karr|Some people are always grumbling because roses have thorns; I am thankful that thorns have roses.
+American proverb|From little acorns mighty oaks do grow.
+Amy Sherman-Palladino (The Marvelous Mrs. Maisel)|Life isn't fair. It's hard and cruel. You have to pick your friends as if there's a war going on.
+Amy Sherman-Palladino (The Marvelous Mrs. Maisel)|The world is full of disappointments, and sometimes people let you down. You can't just run away.
+Anais Nin|Age does not protect you from love. But love, to some extent, protects you from age.
+Anais Nin|There is not one big cosmic meaning for all, there is only the meaning we each give to our life.
+Anatole France|It is better to understand a little than to misunderstand a lot.
+Andre Gide|Man cannot discover new oceans unless he has the courage to lose sight of the shore.
+Andre Layton (Snowpiercer)|This is our leap of faith.
+Andy Dufresne (The Shawshank Redemption)|Get Busy Living, Or Get Busy Dying.
+Andy Dufresne (The Shawshank Redemption)|Hope is a good thing, maybe the best of things, and no good thing ever dies.
+Andy Rooney|If you smile when no one else is around, you really mean it.
+Andy Warhol|They say that time changes things, but you actually have to change them yourself.
+Angela Schwindt|While we try to teach our children all about life, our children teach us what life is all about.
+Anna Pavlova|To follow, without halt, one aim: There is the secret of success.
+Anne Frank|No one has ever become poor by giving.
+Anne Lamott|Joy is the best makeup.
+Anne Schaef|Life is a process. We are a process. The universe is a process.
+Anne Wilson Schaef|Trusting our intuition often saves us from disaster.
+Anthony D'Angelo|Listen to your intuition. It will tell you everything you need to know.
+Antoine de Saint-Exupery|It is only with the heart that one can see rightly, what is essential is invisible to the eye.
+Arie de Gues|Your ability to learn faster than your competition is your only sustainable competitive advantage.
+Aristotle|Change in all things is sweet.
+Aristotle|Happiness depends upon ourselves.
+Aristotle|In all things of nature there is something of the marvellous.
+Aristotle|It is the mark of an educated mind to be able to entertain a thought without accepting it.
+Aristotle|Well begun is half done.
+Atticus Finch (To Kill a Mockingbird)|The one thing that doesn't abide by majority rule is a person's conscience.
+Augustinus Sanctus|The world is a book, and those who do not travel read only a page.
+Babe Ruth|Yesterdays home runs don't win today's games.
+Baltasar Gracian|Without courage, wisdom bears no fruit.
+Bane (Dark Knight Rises)|Ah yes, I was wondering what would break first. Your spirit, or your body?
+Bane (Dark Knight Rises)|Calm down, Doctor! Now's not the time for fear. That comes later.
+Bane (Dark Knight Rises)|I AM the League of Shadows, and I'm here to fulfill Ra's al Ghul's destiny!
+Ben Mezrich (the social network)|A million dollars isn't cool. You know what's cool? A billion dollars.
+Ben Stein|The first step to getting the things you want out of life is this: decide what you want.
+Bender (Futurama)|I say the whole world must learn of our peaceful ways... by force!
+Benjamin Button (The Curious Case of Benjamin Button)|Our lives are defined by opportunities, even the ones we miss.
+Benjamin Disraeli|Ignorance never settle a question.
+Benjamin Disraeli|The secret of success is constancy to purpose.
+Benjamin Disraeli|We make our own fortunes and we call them fate.
+Benjamin Franklin|One today is worth two tomorrows.
+Benjamin Franklin|There never was a good knife made of bad steel.
+Benjamin Franklin|Watch the little things; a small leak will sink a great ship.
+Benjamin Franklin|Well done is better than well said.
+Bernard Shaw|Life isn't about finding yourself. Life is about creating yourself.
+Betty Friedan|It is easier to live through someone else than to become complete yourself.
+Billie Armstrong|Our passion is our strength.
+Blaise Pascal|Kind words do not cost much. Yet they accomplish much.
+Blaise Pascal|The heart has its reasons which reason knows not of.
+Blaise Pascal|The least movement is of importance to all nature. The entire ocean is affected by a pebble.
+Blaise Pascal|We must learn our limits. We are all something, but none of us are everything.
+Blake (Glengarry Glen Ross)|Put that coffee down! Coffee is for closers only.
+Blake (Glengarry Glen Ross)|You see this watch? That watch cost more than your car.
+Bob Newhart|All I can say about life is, Oh God, enjoy it!
+Bodhi (Point Break)|The man that pushes the boundaries tends to break.
+Bodhi (Point Break)|We're all going to die. The only question is how.
+Bodhidharma|All know the way; few actually walk it.
+Brian (Vanilla Sky)|Just remember, the sweet is never as sweet without the sour.
+Brian Tracy|Goals are the fuel in the furnace of achievement.
+Brian Tracy|Whatever we expect with confidence becomes our own self-fulfilling prophecy.
+Bruce Lee|As you think, so shall you become.
+Bruce Lee|If you love life, don't waste time, for time is what life is made up of.
+Bruce Lee|Take no thought of who is right or wrong or who is better than. Be not for or against.
+Bruce Lee|The less effort, the faster and more powerful you will be.
+Bruce Lee|To hell with circumstances; I create opportunities.
+Bruce Wayne (The Dark Knight Rises)|I do fear death. I fear dying in here while my city burns. And there's no one there to save it.
+Bryan Mills (Taken)|I will look for you, I will find you, and I will kill you.
+Buddha|A jug fills drop by drop.
+Buddha|He is able who thinks he is able.
+Buddha|If you light a lamp for somebody, it will also brighten your path.
+Buddha|It is better to travel well than to arrive.
+Buddha|What we think, we become.
+Buddha|You only lose what you cling to.
+Byron Pulsifer|Fate is in your hands and no one elses.
+Byron Pulsifer|If you cannot be silent be brilliant and thoughtful.
+Byron Pulsifer|Look forward to spring as a time when you can start to see what nature has to offer once again.
+Byron Pulsifer|Someone is special only if you tell them.
+Byron Pulsifer|Spring is a time for rebirth and the fulfilment of new life.
+Byron Pulsifer|What you give is what you get.
+Captain Flint (Black Sails)|Everyone is a monster to someone. Since you are so convinced that I am yours. I will be it.
+Captain Jack Sparrow (Pirates of the Caribbean)|If you were waiting for the opportune moment, that was it.
+Carl Sagan|Imagination will often carry us to worlds that never were. But without it we go nowhere.
+Carl Sandburg|Nothing happens unless first we dream.
+Catherine Pulsifer|Being angry never solves anything.
+Catherine Pulsifer|Rather than wishing for change, you first must be prepared to change.
+Cecelia Ahern (Love, Rosie)|Age is just a number, not a state of mind or a reason for any type of particular behaviour.
+Cecelia Ahern (Love, Rosie)|I've learned that home isn't a place, it's a feeling.
+Cecelia Ahern (Love, Rosie)|That's what life is about: People come and go.
+Cersei Lannister (Game of Thrones)|Tears aren't a woman's only weapon. The best one's between your legs.
+Cersei Lannister (Game of Thrones)|When you play the game of thrones, you win or you die. There is no middle ground.
+Cervantes|Be slow of tongue and quick of eye.
+Chanakya|A man is great by deeds, not by birth.
+Channing|Error is discipline through which we advance.
+Charles Dickens|Don't leave a stone unturned. It's always something, to know you have done the most you could.
+Charles Kettering|One fails forward toward success.
+Charles Xavier/Professor X (X-Men: Days of Future Past)|Just because someone stumbles and loses their path, doesn't mean they're lost forever.
+Charlie (Always Sunny in Philadelphia)|Cat in the wall, eh?! Okay, now you're talking my language.
+Charlie (Always Sunny in Philadelphia)|I'm a-- full-on rapist, you know? Uh, Africans, dyslexics, children, that sorta thing.
+Charlie (Always Sunny in Philadelphia)|Storm comin', hatchet comin'!
+Charlie (Always Sunny in Philadelphia)|We're two different people. We can't have the same left.
+Chinese proverb|A gem cannot be polished without friction, nor a man perfected without trials.
+Chinese proverb|Learning is a treasure that will follow its owner everywhere.
+Chinese proverb|Talk doesn't cook rice.
+Chinese proverb|Tension is who you think you should be. Relaxation is who you are.
+Christian Bovee|Example has more followers than reason.
+Christina Yang (Grey's Anatomy)|Oh, screw beautiful. I'm brilliant. If you want to appease me, compliment my brain!
+Christopher Morley|There is only one success - to be able to spend your life in your own way.
+Christopher Reeve|Once you choose hope, anythings possible.
+Cicero|Gratitude is not only the greatest of virtues, but the paren't of all the others.
+Claire Charmont|The one who always loses, is the only person who gets the reward.
+Comic Book Guy (The Simpsons)|Worst. Episode. Ever.
+Confucius|Ability will never catch up with the demand for it.
+Confucius|Silence is a true friend who never betrays.
+Confucius|The cautious seldom err.
+Confucius|To be wronged is nothing unless you continue to remember it.
+Confucius|What you do not want done to yourself, do not do to others.
+Confucius|Wherever you go, go with all your heart.
+Cynthia Ozick|To want to be what one can be is purpose in life.
+Daisaku Ikeda|If you lose today, win tomorrow. In this never-ending spirit of challenge is the heart of a victor.
+Dalai Lama|Be kind whenever possible. It is always possible.
+Dalai Lama|Happiness mainly comes from our own attitude, rather than from external factors.
+Dalai Lama|See the positive side, the potential, and make an effort.
+Dale Carnegie|When fate hands us a lemon, lets try to make lemonade.
+Darth Vader (Star Wars. The Empire Strikes Back)|No, I am your father.
+Dave Weinbaum|The secret to a rich life is to have more beginnings than endings.
+David Bader|Be here now. Be someplace else later. Is that so complicated?
+David McCullough|Real success is finding your lifework in the work that you love.
+Dee (Always Sunny in Philadelphia)|You think I wouldn't know if the guy I'm dating is retarded?
+Dennis (Always Sunny in Philadelphia)|Hello fellow American. This you should vote me. I leave power. Good. Thank you, thank you.
+Dennis (Always Sunny in Philadelphia)|If you're in my room, you're always being filmed.
+Dio Brando (JoJo's Bizarre Adventure: Stardust Crusaders)|Oh? You're approaching me?
+Doakes (Dexter)|Suprise, motherfucker!!
+Dolores Abernathy (Westworld)|These violent delights have violent ends.
+Don Corleone (The Godfather)|I'm gonna make him an offer he can't refuse.
+Donald Kircher|A man of ability and the desire to accomplish something can do anything.
+Donald Trump|Everything in life is luck.
+Donald Trump|You have to think anyway, so why not think big?
+Doris Day|Gratitude is riches. Complaint is poverty.
+Doris Mortman|Until you make peace with who you are, you'll never be content with what you have.
+Doug Horton|Be your own hero, it's cheaper than a movie ticket.
+Dr. Charles Emmerson-Winchester III (M*A*S*H)|I do one thing at a time, I do it very well. And then, I move on.
+Dr. Robert Ford (Westworld)|You can't play God without being acquainted with the devil.
+Dr. Seuss|Don't cry because it's over. Smile because it happened.
+Dr. Sidney Friedman (M*A*S*H)|Ladies and Gentlemen take my advice, pull do your pants and slide on the ice.
+Eckhart Tolle|It is not uncommon for people to spend their whole life waiting to start living.
+Eden (The Handmaids Tale)|Love is patient love is kind.
+Eden Phillpotts|The universe is full of magical things, patiently waiting for our wits to grow sharper.
+Edmond Rostand|A man is not old as long as he is seeking something.
+Edward Young|On every thorn, delightful wisdom grows, In every rill a sweet instruction flows.
+Elbert Hubbard|The final proof of greatness lies in being able to endure criticism without resentment.
+Elbert Hubbard|There is no failure except in no longer trying.
+Eleanor Roosevelt|Do one thing every day that scares you.
+Eleanor Roosevelt|It is not fair to ask of others what you are unwilling to do yourself.
+Eleanor Roosevelt|You must do the things you think you cannot do.
+Elizabeth Arden|I'm not interested in age. People who tell me their age are silly. You're as old as you feel.
+Elizabeth Browning|Light tomorrow with today!
+Elizabeth Browning|Love doesn't make the world go round, love is what makes the ride worthwhile.
+Elizabeth Browning|Whoso loves, believes the impossible.
+Elizabeth Kenny|He who angers you conquers you.
+Ella Fitzgerald|It isn't where you come from, it's where you're going that counts.
+Ella Wilcox|The truest greatness lies in being kind, the truest wisdom in a happy mind.
+Ellen Gilchrist|Don't ruin the present with the ruined past.
+Ellis Boyd Redding (The Shawshank Redemption)|I Have To Remind Myself That Some Birds Aren't Meant To Be Caged.
+Ellis Boyd Redding (The Shawshank Redemption)|There's Not A Day Goes By I Don't Feel Regret.
+Epictetus|Difficulties are things that show a person what they are.
+Epictetus|Freedom is the right to live as we wish.
+Epictetus|If you wish to be a writer, write.
+Epictetus|It's not what happens to you, but how you react to it that matters.
+Epictetus|Know, first, who you are, and then adorn yourself accordingly.
+Epictetus|No man is free who is not master of himself.
+Erich Segal (Love Story (1970))|Love means never having to say you're sorry.
+Ernest Hemingway|Never mistake motion for action.
+Euripides|The wisest men follow their own direction.
+F. Scott Fitzgerald (The Great Gatsby)|So we beat on, boats against the current, borne back ceaselessly into the past.
+Finch (Person Of Interest)|Intentions can be a fickle business.
+Finch (Person Of Interest)|Pain tethers me to the world.
+Five (The Umbrella Academy)|We Didn't Choose This Life, We're Just Living In It.
+Forrest Gump|My mama always said: life's like a box of chocolate - you never know what you gonna get.
+Frances de Sales|Nothing is so strong as gentleness. Nothing is so gentle as real strength.
+Francis Bacon|A prudent question is one half of wisdom.
+Francoise de Motteville|The true way to render ourselves happy is to love our work and find in it our pleasure.
+Frank (Always Sunny in Philadelphia)|I'm not gonna be buried in a grave. When I'm dead, just throw me in the trash.
+Frank (Always Sunny in Philadelphia)|You gotta pay the troll toll, if you wanna get into that boy's soul.
+Frank Murphy (F is for Family)|Oh ho, you're lucky a priest is taking me into the woods!
+Frank Tyger|Your future depends on many things, but mostly on you.
+Franklin Roosevelt|When you come to the end of your rope, tie a knot and hang on.
+Friedrich von Schiller|Keep true to the dreams of thy youth.
+Gail Sheehy|To be tested is good. The challenged life may be the best therapist.
+Galileo Galilei|All truths are easy to understand once they are discovered; the point is to discover them.
+General Douglas MacArthur|It is fatal to enter any war without the will to win it.
+George Eliot|What do we live for, if it is not to make life less difficult for each other?
+George Matthew Adams|Each day can be one of triumph if you keep up your interests.
+George Orwell|Myths which are believed in tend to become true.
+George Patton|If a man does his best, what else is there?
+George Santayan|Those who cannot learn from history are doomed to repeat it.
+George Shaw|My reputation grows with every failure.
+German proverb|Silence is a fence around wisdom.
+Gi-hun (Squid Game)|I don't trust people. Especially the ones who ended up here.
+Gloria Steinem|If the shoe doesn't fit, must we change the foot?
+Goethe|A man sees in the world what he carries in his heart.
+Goethe|What is not started today is never finished tomorrow.
+Gordon Hinckley|Our kindness may be the most persuasive argument for that which we believe.
+Grimlock (Transformers)|Me, Grimlock, want to munch metal!
+H. Jackson Browne|Don't be afraid to go out on a limb. That's where the fruit is.
+H.I. McDonnough (Raising Arizona)|Aw, it ain't armed robbery if the gun ain't loaded.
+H.I. McDonnough (Raising Arizona)|I'll be taking these Huggies and-uh-whatever cash ya got.
+Haddon Robinson|What worries you masters you.
+Han Solo (Star Wars)|May the Force be with you.
+Harold Finch (Person Of Interest)|If you really need a mystery, I recommend the human heart.
+Harold Nicolson|We are all inclined to judge ourselves by our ideals; others, by their acts.
+Harriet Beecher Stowe|All serious daring starts from within.
+Harry Kemp|The poor man is not he who is without a cent, but he who is without a dream.
+Harvey Dent (The Dark Knight)|You either die a hero or live long enough to see yourself become the villian.
+Haynes Bayly|Absence makes the heart grow fonder.
+Helen Keller|Keep yourself to the sunshine and you cannot see the shadow.
+Henri Amiel|Almost everything comes from nothing.
+Henri Bergson|The eye sees only what the mind is prepared to comprehend.
+Henri L. Bergson|Think like a man of action; act like a man of thought.
+Henri-Frederic Amiel|So long as a person is capable of self-renewal they are a living being.
+Henri-Frederic Amiel|Work while you have the light. You are responsible for the talent that has been entrusted to you.
+Henry Beecher|Gratitude is the fairest blossom which springs from the soul.
+Henry Ford|Quality means doing it right when no one is looking.
+Henry J. Kaiser|Trouble is only opportunity in work clothes.
+Henry Thoreau|The world is but a canvas to the imagination.
+Henry Thoreau|Things do not change, we change.
+Henry Thoreau|Things do not change; we change.
+Henry Ward Beecher|Every artist dips his brush in his own soul, and paints his own nature into his pictures.
+Heraclitus|All is flux; nothing stays still.
+Hermann Hesse|If I know what love is, it is because of you.
+Holly (Red Dwarf)|They're all dead. Everybody's dead, Dave.
+Homer (The Simpsons)|Bart, I don't want to alarm you, but there may be a boogie man or boogie men in the house!
+Homer (The Simpsons)|Don't blame me, I voted for Kodos.
+Homer (The Simpsons)|I know you can read my thoughts, boy: meow, meow, meow, meow, meow.
+Homer (The Simpsons)|I'm normally not a praying man, but if you're up there, please save me, Superman.
+Homer (The Simpsons)|Must kill Moe, weee! Must kill Moe, weee!
+Homer (The Simpsons)|To alcohol! The cause of, and solution to, all of life's problems!
+Homer (The Simpsons)|Well, he's got all the money in the world, but there's one thing he can't buy: a dinosaur.
+Homer (The Simpsons)|You don't win friends with salad.
+Homer (The Simpsons)|Your potato? You can't, like, own a potato, man. It's one of Mother Earth's creatures.
+Honore de Balzac|When you doubt your power, you give power to your doubt.
+Horace|Begin, be bold, and venture to be wise.
+Horace Friess|All seasons are beautiful for the person who carries happiness within.
+Hugh Miller|Problems are only opportunities with thorns on them.
+Igor (Young Frankenstein)|There wolf; there castle.
+Indira Gandhi|You can't shake hands with a clenched fist.
+Iris Murdoch|We can only learn to love by loving.
+Iroh (Avatar the Last Airbender)|Sometimes the best way to help yourself is to help someone else.
+Iroh (Avatar the Last Airbender)|This tea is nothing more than hot leaf juice!
+J. R. R. Tolkien (The Hobbit)|Loyalty, Honor, A willing heart, i can ask no more than that.
+Jack Buck|Things turn out best for those who make the best of the way things turn out.
+Jack Dixon|If you focus on results, you will never change. If you focus on change, you will get results.
+James Lowell|A weed is no more than a flower in disguise.
+Janine (The Handmaids Tale)|Cows don't get married.
+Janis Joplin|Don't compromise yourself. You are all you've got.
+Japanese proverb|The day you decide to do it is your lucky day.
+Jared (Silicon Valley)|People don't wanna follow an idea, they wanna follow a leader.
+Jason Fried|No is easier to do. Yes is easier to say.
+Jean de la Fontaine|Sadness flies away on the wings of time.
+Jen (The IT Crowd)|The Elders of the Internet know who I am?!
+Jerry Smith (Rick and Morty)|Life is effort and I'll stop when I die!
+Jim Rohn|Either you run the day or the day runs you.
+Jim Rohn|The more you care, the stronger you can be.
+Joan Clarke (The Imitation Game)|I know it's not ordinary. But who ever loved ordinary?
+Johann Wolfgang von Goethe|Great talent finds happiness in execution.
+Johann Wolfgang von Goethe|In the end we retain from our studies only that which we practically apply.
+Johann Wolfgang von Goethe|Knowing is not enough; we must apply!
+Johann Wolfgang von Goethe|Mountains cannot be surmounted except by winding paths.
+John Acosta|You cannot have what you do not want.
+John Coffey (The Green Mile)|People hurt the ones they love. That's how it is all around the world.
+John Dewey|Arriving at one point is the starting point to another.
+John Dewey|Every great advance in science has issued from a new audacity of the imagination.
+John Dewey|Without some goals and some efforts to reach it, no man can live.
+John Dryden|A thing well said will be wit in all languages.
+John Dryden|Fortune befriends the bold.
+John Eliot|All the great performers I have worked with are fuelled by a personal dream.
+John Lennon|Life is what happens to you while you're busy making other plans.
+John Lennon|Love is the flower you've got to let grow.
+John Lennon|Reality leaves a lot to the imagination.
+John Lennon|Time you enjoy wasting, was not wasted.
+John Lennon|Time you enjoyed wasting was not wasted.
+John Lubbock|A day of worry is more exhausting than a day of work.
+John Lubbock|What we see depends mainly on what we look for.
+John Wooden|Never mistake activity for achievement.
+John Wooden|You can't let praise or criticism get to you. It's a weakness to get caught up in either one.
+Jonas Salk|Intuition will tell the thinking mind where to look next.
+Jonathan Kozol|Pick battles big enough to matter, small enough to win.
+Jordan (The Wolf of Wall Street)|You gonna have to excuse my friend.
+Jordan Roberts , Robert L. Baird, Dan Gerson (Big Hero 6)|On a scale of one to ten, how would your rank your pain?
+Joseph Joubert|He who has imagination without learning has wings but no feet.
+Joseph Stalin|I believe in one thing only, the power of human will.
+Joss Carter (Person Of Interest)|I looked for an 'I'm-sorry-I-got-you-shot' card, but they were all out.
+June (The Handmaids Tale)|I don't need oranges. I need to scream. I need to grab the nearest machine gun.
+Kahlil Gibran|Beauty is not in the face; beauty is a light in the heart.
+Kahlil Gibran|We choose our joys and sorrows long before we experience them.
+Kaneki Ken (Tokyo Ghoul)|Never trust anyone too much, remember the devil was once an angel.
+Kenneth Patton|We learn what we have said from those who listen to our speaking.
+Kin Hubbard|You won't skid if you stay in a rut.
+Kip Bunthart (Parks and Recreation)|Can we have ONE conversation about feminism where MEN get to be in charge?
+Korean proverb|If you kick a stone in anger, you'll hurt your own foot.
+Korg (Thor: Ragnarok)|Another day another Doug.
+Lao Tzu|Be the chief but never the lord.
+Lao Tzu|From wonder into wonder existence opens.
+Lao Tzu|He who is contented is rich.
+Lao Tzu|He who knows himself is enlightened.
+Lao Tzu|He who talks more is sooner exhausted.
+Lao Tzu|To see things in the seed, that is genius.
+Larry Elder|A goal without a plan is just a wish.
+Lauren Bacall|Imagination is the highest kite one can fly.
+Lauren Raffo|Sometimes the biggest act of courage is a small one.
+Lee Mildon|People seldom notice old clothes if you wear a big smile.
+Lena Horne|Always be smarter than the people who hire you.
+Leo Aikman|Blessed is the person who is too busy to worry in the daytime, and too sleepy to worry at night.
+Leo Buscaglia|Never idealize others. They will never live up to your expectations.
+Leo Tolstoy|Everyone thinks of changing the world, but no one thinks of changing himself.
+Leo Tolstoy|We lost because we told ourselves we lost.
+Leonardo da Vinci|All our knowledge has its origins in our perceptions.
+Leonardo da Vinci|Nothing strengthens authority so much as silence.
+Leonardo da Vinci|Time stays long enough for anyone who will use it.
+Leonardo da Vinci|Who sows virtue reaps honour.
+Lin-yutang|I have done my best: that is about all the philosophy of living one needs.
+Lord Herbert|The shortest answer is doing.
+Louis Pasteur|Let me tell you the secret that has led me to my goal: my strength lies solely in my tenacity.
+Louise Hay|The thoughts we choose to think are the tools we use to paint the canvas of our lives.
+Mac (Always Sunny in Philadelphia)|Fight Milk! The first alcoholic dairy based protein drink for bodyguards!
+Mac (Always Sunny in Philadelphia)|I'm not fat. I'm cultivating mass.
+Madame de Stael|Society develops wit, but its contemplation alone forms genius.
+Madara Uchiha (Naruto)|When a man learns to love, he has to bear the risk of hatred.
+Mahatma Gandhi|It is the quality of our work which will please God, not the quantity.
+Mahatma Gandhi|Our greatness lies not so much in being able to remake the world as being able to remake ourselves.
+Mahatma Gandhi|Strength does not come from physical capacity. It comes from an indomitable will.
+Mahatma Gandhi|We must become the change we want to see.
+Manuel Puig|I allow my intuition to lead my path.
+Marcus Aurelius|Each day provides its own gifts.
+Marcus Aurelius|If it is not right do not do it; if it is not true do not say it.
+Marcus Aurelius|Loss is nothing else but change,and change is Natures delight.
+Marcus Aurelius|There is nothing happens to any person but what was in his power to go through with.
+Marcus Aurelius|Waste no more time arguing about what a good man should be. Be one.
+Marcus Aurelius|You have power over your mind - not outside events. Realize this, and you will find strength.
+Margaret Fuller|If you have knowledge, let others light their candles in it.
+Margaret Sangster|Self-complacency is fatal to progress.
+Marie Curie|I never see what has been done; I only see what remains to be done.
+Marie Curie|Nothing in life is to be feared. It is only to be understood.
+Mario Puzo (The Godfather)|Great men are not born great, they grow great.
+Mark Twain|Kindness is the language which the deaf can hear and the blind can see.
+Mark Twain|When in doubt, tell the truth.
+Mark Twain|Whoever is happy will make others happy, too.
+Mark Twain|Wrinkles should merely indicate where smiles have been.
+Mary Bethune|Without faith, nothing is possible. With it, nothing is impossible.
+Mary Morrissey|You block your dream when you allow your fear to grow bigger than your faith.
+Mary Parrish|Love vanquishes time. To lovers, a moment can be eternity, eternity can be the tick of a clock.
+Mary Wollstonecraft|The beginning is always today.
+Master Oogway (Kung fu Panda)|One often meets his destiny on the road he takes to avoid it.
+May Sarton|A garden is always a series of losses set against a few triumphs, like life itself.
+Maya Angelou|All great achievements require time.
+Maya Angelou|I believe that every person is born with talent.
+Maya Angelou|Nothing will work unless you do.
+Maya Angelou|When you learn, teach. When you get, give.
+Maya Lin|To fly, we have to have resistance.
+Melvin Udall (As Good as It Gets)|People who talk in metaphors oughta shampoo my crotch.
+Merovingian (The Matrix Revolutions)|It is remarkable how similar the pattern of love is to the pattern of insanity.
+Michael Corleone (The Godfather Part II)|Keep your friends close, but your enemies closer.
+Michael Korda|To succeed, we must first believe that we can.
+Michael Scott (The Office)|I am running away from my responsibilities. And it feels good.
+Mike Ditka|You're never a loser until you quit trying.
+Mohandas Gandhi|Be the change that you want to see in the world.
+Mohandas Gandhi|Forgiveness is choosing to love. It is the first skill of self-giving love.
+Mohandas Gandhi|Freedom is not worth having if it does not connote freedom to err.
+Moliere|It is not only for what we do that we are held responsible, but also for what we do not do.
+Morpheus (Matrix)|Do you think that's air you're breathing now?
+Morpheus (Matrix)|Stop trying to hit me and hit me.
+Morris West|If you spend your whole life waiting for the storm, you'll never enjoy the sunshine.
+Morty Smith (Rick and Morty)|Nobody exists on purpose. Nobody belongs anywhere. Everybody's gonna die. Come watch TV.
+Moss (The IT Crowd)|Did you see that ludicrous display last night?
+Mother Teresa|Be faithful in small things because it is in them that your strength lies.
+Mother Teresa|Kind words can be short and easy to speak, but their echoes are truly endless.
+Mother Teresa|Let us always meet each other with smile, for the smile is the beginning of love.
+Mother Teresa|Peace begins with a smile.
+Muriel Rukeyser|The universe is made of stories, not atoms.
+Murray Gell-Mann|Think how hard physics would be if particles could think.
+Naomi Williams|It is impossible to feel grateful and depressed in the same moment.
+Napoleon Bonaparte|He who fears being conquered is sure of defeat.
+Napoleon Bonaparte|Imagination rules the world.
+Napoleon Bonaparte|Take time to deliberate, but when the time for action has arrived, stop thinking and go in.
+Napoleon Bonaparte|The best cure for the body is a quiet mind.
+Napoleon Bonaparte|Victory belongs to the most persevering.
+Napoleon Hill|A goal is a dream with a deadline.
+Napoleon Hill|Fears are nothing more than a state of mind.
+Napoleon Hill|If you cannot do great things, do small things in a great way.
+Napoleon Hill|No alibi will save you from accepting the responsibility.
+Napoleon Hill|You can do it if you believe you can!
+Napoleon Hill|You give before you get.
+Naruto Uzumaki (Naruto)|If you have no reason to be alive, it is the same as being dead.
+Nelson Mandela|As we are liberated from our own fear, our presence automatically liberates others.
+Norman Peale|If you want things to be different, perhaps the answer is to become different yourself.
+old lady (Maid)|It took me five tries.
+Oliver Lacon (Tinker Tailor Soldier Spy)|It's the oldest question of all, George. Who can spy on the spies?
+Oprah Winfrey|I don't believe in failure. It is not failure if you enjoyed the process.
+Oprah Winfrey|If you want your life to be more rewarding, you have to change the way you think.
+Oprah Winfrey|The biggest adventure you can ever take is to live the life of your dreams.
+Oprah Winfrey|With every experience, you alone are painting your own canvas, thought by thought, choice by choice.
+Orison Marden|All men who have achieved great things have been great dreamers.
+Oscar Wilde|Be yourself; everyone else is already taken.
+Oscar Wilde|The only thing to do with good advice is to pass it on. It is never of any use to oneself.
+Oscar Wilde|The smallest act of kindness is worth more than the grandest intention.
+Ovid|All things change; nothing perishes.
+Ovid|Let your hook always be cast; in the pool where you least expect it, there will be a fish.
+Ovid|Take rest; a field that has rested gives a bountiful crop.
+Paavo Nurmi|Mind is everything: muscle, pieces of rubber. All that I am, I am because of my mind.
+Pablo Picasso|Everything you can imagine is real.
+Pablo Picasso|I am always doing that which I can not do, in order that I may learn how to do it.
+Pablo Picasso|I am always doing that which I cannot do, in order that I may learn how to do it.
+Paul Edgecomb (The Green Mile)|We each owe a death - there are no exceptions - but, oh God, sometimes the Green Mile seems so long.
+Pearl Buck|Growth itself contains the germ of happiness.
+Pearl Buck|One faces the future with ones past.
+Pericles|Time is the wisest counsellor of all.
+Peter Drucker|Efficiency is doing things right; effectiveness is doing the right things.
+Peter Griffin (Family Guy)|I May Be An Idiot, But There's One Thing I'm Not Sir, And That Is An Idiot.
+Peter Parker/Spiderman (Avengers: Infinity War)|Mr. Stark, I don't feel so good.
+Philip Banks (Uncle Phill) (The Fresh Prince of Bel-Air)|The most dangerous man in the world is the one who doesn't know what he doesn't know.
+Philip Breedveld|Moments of complete apathy are the best for new creations.
+Philip Sidney|Either I will find a way, or I will make one.
+Pierre Auguste Renoir|The pain passes, but the beauty remains.
+Plato|Good actions give strength to ourselves and inspire good actions in others.
+President Merkin Muffley (Dr. Strangelove)|Gentlemen, you can't fight in here! This is the war room!
+Princess Diana|Only do what your heart tells you.
+Princess Rhaenys Velaryon (House Of The Dragon)|Men would sooner put the realm to the torch than see a woman ascend the Iron Throne.
+Publilius Syrus|A rolling stone gathers no moss.
+Publilius Syrus|Never promise more than you can perform.
+Publilius Syrus|While we stop to think, we often miss our opportunity.
+Rabindranath Tagore|We read the world wrong and say that it deceives us.
+Ralph Emerson|Life is a progress, and not a station.
+Ralph Emerson|Our distrust is very expensive.
+Ralph Emerson|Self-trust is the first secret of success.
+Ralph Emerson|Skill to do comes of doing.
+Ralph Emerson|To be great is to be misunderstood.
+Ralph Emerson|We aim above the mark to hit the mark.
+Ralph Marston|Excellence is not a skill. It is an attitude.
+Ralph Waldo Emerson|A hero is no braver than an ordinary man, but he is braver five minutes longer.
+Ralph Waldo Emerson|Imagination is not a talent of some men but is the health of every man.
+Ralph Waldo Emerson|It is only when the mind and character slumber that the dress can be seen.
+Ralph Waldo Emerson|Most of the shadows of life are caused by standing in our own sunshine.
+Ralph Waldo Emerson|Our strength grows out of our weaknesses.
+Rene Descartes|The greatest minds are capable of the greatest vices as well as of the greatest virtues.
+Rhett Butler (Gone With the Wind)|Frankly, my dear, I don't give a damn.
+Richard Bach|Every gift from a friend is a wish for your happiness.
+Richard Bach|Every problem has a gift for you in its hands.
+Richard Bach|In order to win, you must expect to win.
+Richard Bach|Learning is finding out what you already know.
+Richard Bach|The simplest things are often the truest.
+Richard Bach|You teach best what you most need to learn.
+Richard Garriott|Chaos and Order are not enemies, only opposites.
+Rick (Rick and Morty)|Wubba lubba dub dub!
+Rick Sanchez (Rick and Morty)|I'm sorry, but your opinion means very little to me.
+Rick Sanchez (Rick and Morty)|They're just robots, Morty! It's OK to shoot them! They're robots!
+Ricky Baker (Hunt for the Wilderpeople)|I didn't choose the skuxx life, the skuxx life chose me.
+Ricky Baker (Hunt for the Wilderpeople)|It was a relaxing song... and a relaxing sausage.
+Ricky Baker (Hunt for the Wilderpeople)|Shit just got real! Back up, homies, and let go of my uncle!
+Rita Mae Brown|Creativity comes from trust. Trust your instincts. And never hope more than you work.
+Robert Frost|The best way out is always through.
+Robert McKain|The reason most goals are not achieved is that we spend our time doing second things first.
+Rorschach (Watchmen)|I'm not locked in here with you. You're locked in here with me!
+Rose (Titanic)|Jack! Come back! Come back! Come back!.
+Roy (The IT Crowd)|Have you tried turning it off and on again?
+RuPaul (RuPaul's Drag Race)|If you can't love yourself, how in the hell are you gonna love somebody else!
+Sai Baba|All action results from thought, so it is thoughts that matter.
+Saint Augustine|Patience is the companion of wisdom.
+Samuel Johnson|Memory is the mother of all wisdom.
+Samuel Taylor Coleridge|Imagination is the living power and prime agent of all human perception.
+Satchel Paige|Don't look back. Something might be gaining on you.
+Seneca|No man was ever wise by chance.
+Seneca|The greatest remedy for anger is delay.
+Seneca|The mind unlearns with difficulty what it has long learned.
+Shaw (Person Of Interest)|I missed on purpose, jackass.
+Shikamaru Nara (Naruto)|There is no advantage to living life on the run.
+Sigmund Freud|From error to error one discovers the entire truth.
+Socrates|Be as you wish to seem.
+Socrates|The greatest way to live with honour in this world is to be what we pretend to be.
+Socrates|Wisdom begins in wonder.
+Sojourner Truth|Truth is powerful and it prevails.
+Sokka (Avatar the Last Airbender)|This guy is too good he shoots fire from his brain.
+Sophocles|A short saying oft contains much wisdom.
+Sophocles|A short saying often contains much wisdom.
+Sophocles|Much wisdom often goes with fewer words.
+Sophocles|Numberless are the worlds wonders, but none more wonderful than man.
+Sophocles|Wisdom is the supreme part of happiness.
+Soren Kierkegaard|To dare is to lose ones footing momentarily. To not dare is to lose oneself.
+Stephen Fry (A Bit of Fry & Laurie)|Hold the newsreader's nose squarely, waiter, or friendly milk will countermand my trousers.
+Stephen Kaggwa|Try and fail, but don't fail to try.
+Sterling Archer (Archer)|He's not coming back from that. That chick was, like, the Pele of anal.
+Sterling Archer (Archer)|I am not slurring my words, I'm talking in cursive.
+Sterling Archer (Archer)|If I stop drinking all at once, I'm afraid the cumulative hangover will kill me.
+Sterling Archer (Archer)|Karate? The dane cook of martial arts.
+Sun Tzu|You have to believe in yourself.
+Swedish proverb|Worry often gives a small thing a big shadow.
+Sylvia Voirol|Rainbows apologize for angry skies.
+Tehyi Hsieh|Action will remove the doubts that theory cannot solve.
+Thanos (Avengers infinity war)|Dread it, run from it, destiny arrives all the same.
+Thanos (Avengers: Infinity War)|The hardest choices require the strongest wills.
+The Dude (Jeff Bridges) (The Big Lebowski)|That rug really tied the room together, did it not?
+The Handler (The Umbrella Academy)|We're All Looking For Happy.
+Theodore Rubin|Kindness is more important than wisdom, and the recognition of this is the beginning of wisdom.
+Thich Nhat Hanh|Smile, breathe and go slowly.
+Thich Nhat Hanh|Smile, breathe, and go slowly.
+Thomas Edison|If we did the things we are capable of, we would astound ourselves.
+Thomas Edison|Opportunity is missed by most because it is dressed in overalls and looks like work.
+Thomas Fuller|No garden is without its weeds.
+Thomas Jefferson|Don't talk about what you have done or what you are going to do.
+Thomas Jefferson|I'm a great believer in luck and I find the harder I work, the more I have of it.
+Thomas Jefferson|Never put off till tomorrow what you can do today.
+Thomas Jefferson|Reason and free inquiry are the only effectual agents against error.
+Tobio Kageyama (Haikyuu)|You can fly even higher.
+Toni Morrison|If you surrender to the wind, you can ride it.
+Tony Montana (Scarface)|The eyes, Chico. They never lie.
+Tony Robbins|It is in your moments of decision that your destiny is shaped.
+Tony Robbins|Successful people ask better questions, and as a result, they get better answers.
+Tony Robbins|The only limit to your impact is your imagination and commitment.
+Tony Robbins|We can change our lives. We can do, have, and be exactly what we wish.
+Tony Robbins|Whatever happens, take responsibility.
+Tony Robbins|You always succeed in producing a result.
+Tony Stark (Iron Man 3)|We create our own demons.
+Turkish proverb|Kind words will unlock an iron door.
+Tyrion Lannister (Game of Thrones)|A Lannister always pays his debts.
+Tyrion Lannister (Game of Thrones)|Any man who must say "I am the king" is no true king.
+Usman Asif|Fear is a darkroom where negatives develop.
+V. Naipaul|The world is always in movement.
+Valery Legasov (Chernobyl)|Every lie we tell incurs a debt to the truth. Sooner or later that debt is paid.
+Vernon Cooper|These days people seek knowledge, not wisdom. Knowledge is of the past, wisdom is of the future.
+Victoria Holt|Never regret. If it's good, it's wonderful. If it's bad, it's experience.
+Virgil|Fortune favours the brave.
+Virgil|They can conquer who believe they can.
+Virgil|They can do all because they think they can.
+Viviane (The Mists of Avalon)|No man or woman can live another's fate.
+Voltaire|The longer we dwell on our misfortunes, the greater is their power to harm us.
+Voltaire|Think for yourselves and let others enjoy the privilege to do so too.
+Voltaire|To enjoy life, we must touch much of it lightly.
+W. H. Auden|To choose what is difficult all ones days, as if it were easy, that is faith.
+Walt Disney|If you can dream it, you can do it.
+Walt Disney|Weve got to have a dream if we are going to make a dream come true.
+Walt Emerson|What lies behind us and what lies before us are tiny matters compared to what lies within us.
+Walter Cronkite|I can't imagine a person becoming a success who doesn't give this game of life everything hes got.
+Walter Lippmann|Where all think alike, no one thinks very much.
+Wayne Dyer|I think and that is all that I am.
+Wayne Dyer|Our intention creates our reality.
+Wayne Dyer|Real magic in relationships means an absence of judgement of others.
+Wayne Dyer|We are Divine enough to ask and we are important enough to receive.
+Wayne Dyer|You can't choose up sides on a round world.
+Wayne Dyer|You'll see it when you believe it.
+Will Rogers|If you find yourself in a hole, the first thing to do is stop digging.
+William Arthur Ward|Do more than dream: work.
+William Blake|In seed time learn, in harvest teach, in winter enjoy.
+William James|To change ones life, start immediately, do it flamboyantly, no exceptions.
+William R. Inge|Nature takes away any faculty that is not used.
+William Shakespeare|Be great in act, as you have been in thought.
+William Shakespeare|Go to your bosom: Knock there, and ask your heart what it doth know.
+William Shakespeare|Having nothing, nothing can he lose.
+William Shakespeare|Love all, trust a few, do wrong to none.
+William Shakespeare|Speak low, if you speak love.
+William Shakespeare|We know what we are, but know not what we may be.
+William Wallace (Braveheart)|Every man dies, but not every man really lives.
+William Wallace (Braveheart)|They may take our lives, but they'll never take our freedom!
+William Ward|When we seek to discover the best in others, we somehow bring out the best in ourselves.
+Winston Churchill|I never worry about action, but only inaction.
+Winston Churchill|Never, never, never give up.
+Winston Churchill|The price of greatness is responsibility.
+Winston Churchill|We make a living by what we get, but we make a life by what we give.
+Wit|We choose our destiny in the way we treat others.
+Woody Guthrie|Take it easy - but take it.
+Ygritte (Game of Thrones)|You know nothing, Jon Snow.
+Ymber Delecto|The time you think you're missing, misses you too.
+Yoda|Do, or do not. There is no try.
+Yoda (Star Wars Episode V: The Empire Strikes Back)|No. Try not. Do... or do not. There is no try.
+Yogi Berra|You can observe a lot just by watching.
+Yogi Berra|You got to be careful if you don't know where you're going, because you might not get there.
+Zadok Rabinowitz|A man's dreams are an index to his greatness.
+Zig Ziglar|You are the only person on Earth who can use your ability.

@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "quotes": [
     {
       "id": 1,
@@ -1089,6 +1089,3894 @@
       "sourceUrl": "https://en.wikiquote.org/wiki/Albert_Einstein",
       "band": "EXTREME",
       "addedOn": "2026-09-10"
+    },
+    {
+      "id": 122,
+      "text": "Be sure you put your feet in the right place, then stand firm.",
+      "author": "Abraham Lincoln",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Abraham_Lincoln",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 123,
+      "text": "I destroy my enemies when I make them my friends.",
+      "author": "Abraham Lincoln",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Abraham_Lincoln",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 124,
+      "text": "I walk slowly, but I never walk backward.",
+      "author": "Abraham Lincoln",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Abraham_Lincoln",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 125,
+      "text": "Important principles may, and must, be inflexible.",
+      "author": "Abraham Lincoln",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Abraham_Lincoln",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 126,
+      "text": "Truth is generally the best vindication against slander.",
+      "author": "Abraham Lincoln",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Abraham_Lincoln",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 127,
+      "text": "What is necessary to change a person is to change his awareness of himself.",
+      "author": "Abraham Maslow",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Abraham_Maslow",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 128,
+      "text": "No act of kindness, no matter how small, is ever wasted.",
+      "author": "Aesop",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Aesop",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 129,
+      "text": "When deeds speak, words are nothing.",
+      "author": "Proverb",
+      "source": "African proverb",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Proverbs",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 130,
+      "text": "Never send a human to do a machine's job.",
+      "author": "Agent Smith (Matrix)",
+      "source": "Matrix",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Matrix",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 131,
+      "text": "Are you paying attention?",
+      "author": "Alan Turing (The Imitation Game)",
+      "source": "The Imitation Game",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Imitation_Game",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 132,
+      "text": "Was I God? No. Because God didn't win the war. We did.",
+      "author": "Alan Turing (The Imitation Game)",
+      "source": "The Imitation Game",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Imitation_Game",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 133,
+      "text": "Autumn is a second spring when every leaf is a flower.",
+      "author": "Albert Camus",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Albert_Camus",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 134,
+      "text": "God always takes the simplest way.",
+      "author": "Albert Einstein",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Albert_Einstein",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 135,
+      "text": "I have no special talent. I am only passionately curious.",
+      "author": "Albert Einstein",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Albert_Einstein",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 136,
+      "text": "Logic will get you from A to B. Imagination will take you everywhere.",
+      "author": "Albert Einstein",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Albert_Einstein",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 137,
+      "text": "Once we accept our limits, we go beyond them.",
+      "author": "Albert Einstein",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Albert_Einstein",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 138,
+      "text": "The only real valuable thing is intuition.",
+      "author": "Albert Einstein",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Albert_Einstein",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 139,
+      "text": "When the solution is simple, God is answering.",
+      "author": "Albert Einstein",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Albert_Einstein",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 140,
+      "text": "Wherever a man turns he can find someone who needs him.",
+      "author": "Albert Schweitzer",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Albert_Schweitzer",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 141,
+      "text": "Happiness can be found even in the darkest of times, when one only remembers to turn on the light.",
+      "author": "Albus Dumbledore (Harry Potter and the Prisoner of Azkaban)",
+      "source": "Harry Potter and the Prisoner of Azkaban",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Harry_Potter_and_the_Prisoner_of_Azkaban",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 142,
+      "text": "There is only one corner of the universe you can be certain of improving, and that's your own self.",
+      "author": "Aldous Huxley",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Aldous_Huxley",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 143,
+      "text": "Do good by stealth, and blush to find it fame.",
+      "author": "Alexander Pope",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Alexander_Pope",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 144,
+      "text": "There is nothing impossible to him who will try.",
+      "author": "Alexander the Great",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Alexander_the_Great",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 145,
+      "text": "Some people are always grumbling because roses have thorns; I am thankful that thorns have roses.",
+      "author": "Alphonse Karr",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Alphonse_Karr",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 146,
+      "text": "Age does not protect you from love. But love, to some extent, protects you from age.",
+      "author": "Anais Nin",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Anais_Nin",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 147,
+      "text": "There is not one big cosmic meaning for all, there is only the meaning we each give to our life.",
+      "author": "Anais Nin",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Anais_Nin",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 148,
+      "text": "It is better to understand a little than to misunderstand a lot.",
+      "author": "Anatole France",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Anatole_France",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 149,
+      "text": "Man cannot discover new oceans unless he has the courage to lose sight of the shore.",
+      "author": "Andre Gide",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Andre_Gide",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 150,
+      "text": "This is our leap of faith.",
+      "author": "Andre Layton (Snowpiercer)",
+      "source": "Snowpiercer",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Snowpiercer",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 151,
+      "text": "Get Busy Living, Or Get Busy Dying.",
+      "author": "Andy Dufresne (The Shawshank Redemption)",
+      "source": "The Shawshank Redemption",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Shawshank_Redemption",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 152,
+      "text": "Hope is a good thing, maybe the best of things, and no good thing ever dies.",
+      "author": "Andy Dufresne (The Shawshank Redemption)",
+      "source": "The Shawshank Redemption",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Shawshank_Redemption",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 153,
+      "text": "If you smile when no one else is around, you really mean it.",
+      "author": "Andy Rooney",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Andy_Rooney",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 154,
+      "text": "They say that time changes things, but you actually have to change them yourself.",
+      "author": "Andy Warhol",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Andy_Warhol",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 155,
+      "text": "No one has ever become poor by giving.",
+      "author": "Anne Frank",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Anne_Frank",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 156,
+      "text": "Joy is the best makeup.",
+      "author": "Anne Lamott",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Anne_Lamott",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 157,
+      "text": "It is only with the heart that one can see rightly, what is essential is invisible to the eye.",
+      "author": "Antoine de Saint-Exupery",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Antoine_de_Saint-Exupery",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 158,
+      "text": "Change in all things is sweet.",
+      "author": "Aristotle",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Aristotle",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 159,
+      "text": "Happiness depends upon ourselves.",
+      "author": "Aristotle",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Aristotle",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 160,
+      "text": "In all things of nature there is something of the marvellous.",
+      "author": "Aristotle",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Aristotle",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 161,
+      "text": "It is the mark of an educated mind to be able to entertain a thought without accepting it.",
+      "author": "Aristotle",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Aristotle",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 162,
+      "text": "Well begun is half done.",
+      "author": "Aristotle",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Aristotle",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 163,
+      "text": "The one thing that doesn't abide by majority rule is a person's conscience.",
+      "author": "Atticus Finch (To Kill a Mockingbird)",
+      "source": "To Kill a Mockingbird",
+      "sourceUrl": "https://en.wikiquote.org/wiki/To_Kill_a_Mockingbird",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 164,
+      "text": "Yesterdays home runs don't win today's games.",
+      "author": "Babe Ruth",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Babe_Ruth",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 165,
+      "text": "Without courage, wisdom bears no fruit.",
+      "author": "Baltasar Gracian",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Baltasar_Gracian",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 166,
+      "text": "Ah yes, I was wondering what would break first. Your spirit, or your body?",
+      "author": "Bane (Dark Knight Rises)",
+      "source": "Dark Knight Rises",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Dark_Knight_Rises",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 167,
+      "text": "Calm down, Doctor! Now's not the time for fear. That comes later.",
+      "author": "Bane (Dark Knight Rises)",
+      "source": "Dark Knight Rises",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Dark_Knight_Rises",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 168,
+      "text": "I AM the League of Shadows, and I'm here to fulfill Ra's al Ghul's destiny!",
+      "author": "Bane (Dark Knight Rises)",
+      "source": "Dark Knight Rises",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Dark_Knight_Rises",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 169,
+      "text": "The first step to getting the things you want out of life is this: decide what you want.",
+      "author": "Ben Stein",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Ben_Stein",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 170,
+      "text": "I say the whole world must learn of our peaceful ways... by force!",
+      "author": "Bender (Futurama)",
+      "source": "Futurama",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Futurama",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 171,
+      "text": "Our lives are defined by opportunities, even the ones we miss.",
+      "author": "Benjamin Button (The Curious Case of Benjamin Button)",
+      "source": "The Curious Case of Benjamin Button",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Curious_Case_of_Benjamin_Button",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 172,
+      "text": "Ignorance never settle a question.",
+      "author": "Benjamin Disraeli",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Benjamin_Disraeli",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 173,
+      "text": "The secret of success is constancy to purpose.",
+      "author": "Benjamin Disraeli",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Benjamin_Disraeli",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 174,
+      "text": "We make our own fortunes and we call them fate.",
+      "author": "Benjamin Disraeli",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Benjamin_Disraeli",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 175,
+      "text": "One today is worth two tomorrows.",
+      "author": "Benjamin Franklin",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Benjamin_Franklin",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 176,
+      "text": "There never was a good knife made of bad steel.",
+      "author": "Benjamin Franklin",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Benjamin_Franklin",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 177,
+      "text": "Life isn't about finding yourself. Life is about creating yourself.",
+      "author": "Bernard Shaw",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Bernard_Shaw",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 178,
+      "text": "It is easier to live through someone else than to become complete yourself.",
+      "author": "Betty Friedan",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Betty_Friedan",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 179,
+      "text": "Kind words do not cost much. Yet they accomplish much.",
+      "author": "Blaise Pascal",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Blaise_Pascal",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 180,
+      "text": "The heart has its reasons which reason knows not of.",
+      "author": "Blaise Pascal",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Blaise_Pascal",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 181,
+      "text": "The least movement is of importance to all nature. The entire ocean is affected by a pebble.",
+      "author": "Blaise Pascal",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Blaise_Pascal",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 182,
+      "text": "We must learn our limits. We are all something, but none of us are everything.",
+      "author": "Blaise Pascal",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Blaise_Pascal",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 183,
+      "text": "Put that coffee down! Coffee is for closers only.",
+      "author": "Blake (Glengarry Glen Ross)",
+      "source": "Glengarry Glen Ross",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Glengarry_Glen_Ross",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 184,
+      "text": "You see this watch? That watch cost more than your car.",
+      "author": "Blake (Glengarry Glen Ross)",
+      "source": "Glengarry Glen Ross",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Glengarry_Glen_Ross",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 185,
+      "text": "All I can say about life is, Oh God, enjoy it!",
+      "author": "Bob Newhart",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Bob_Newhart",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 186,
+      "text": "The man that pushes the boundaries tends to break.",
+      "author": "Bodhi (Point Break)",
+      "source": "Point Break",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Point_Break",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 187,
+      "text": "We're all going to die. The only question is how.",
+      "author": "Bodhi (Point Break)",
+      "source": "Point Break",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Point_Break",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 188,
+      "text": "All know the way; few actually walk it.",
+      "author": "Bodhidharma",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Bodhidharma",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 189,
+      "text": "Just remember, the sweet is never as sweet without the sour.",
+      "author": "Brian (Vanilla Sky)",
+      "source": "Vanilla Sky",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Vanilla_Sky",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 190,
+      "text": "Goals are the fuel in the furnace of achievement.",
+      "author": "Brian Tracy",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Brian_Tracy",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 191,
+      "text": "Whatever we expect with confidence becomes our own self-fulfilling prophecy.",
+      "author": "Brian Tracy",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Brian_Tracy",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 192,
+      "text": "As you think, so shall you become.",
+      "author": "Bruce Lee",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Bruce_Lee",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 193,
+      "text": "If you love life, don't waste time, for time is what life is made up of.",
+      "author": "Bruce Lee",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Bruce_Lee",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 194,
+      "text": "Take no thought of who is right or wrong or who is better than. Be not for or against.",
+      "author": "Bruce Lee",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Bruce_Lee",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 195,
+      "text": "The less effort, the faster and more powerful you will be.",
+      "author": "Bruce Lee",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Bruce_Lee",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 196,
+      "text": "To hell with circumstances; I create opportunities.",
+      "author": "Bruce Lee",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Bruce_Lee",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 197,
+      "text": "I do fear death. I fear dying in here while my city burns. And there's no one there to save it.",
+      "author": "Bruce Wayne (The Dark Knight Rises)",
+      "source": "The Dark Knight Rises",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Dark_Knight_Rises",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 198,
+      "text": "I will look for you, I will find you, and I will kill you.",
+      "author": "Bryan Mills (Taken)",
+      "source": "Taken",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Taken",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 199,
+      "text": "A jug fills drop by drop.",
+      "author": "Buddha",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Buddha",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 200,
+      "text": "He is able who thinks he is able.",
+      "author": "Buddha",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Buddha",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 201,
+      "text": "If you light a lamp for somebody, it will also brighten your path.",
+      "author": "Buddha",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Buddha",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 202,
+      "text": "It is better to travel well than to arrive.",
+      "author": "Buddha",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Buddha",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 203,
+      "text": "What we think, we become.",
+      "author": "Buddha",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Buddha",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 204,
+      "text": "You only lose what you cling to.",
+      "author": "Buddha",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Buddha",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 205,
+      "text": "If you were waiting for the opportune moment, that was it.",
+      "author": "Captain Jack Sparrow (Pirates of the Caribbean)",
+      "source": "Pirates of the Caribbean",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Pirates_of_the_Caribbean",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 206,
+      "text": "Imagination will often carry us to worlds that never were. But without it we go nowhere.",
+      "author": "Carl Sagan",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Carl_Sagan",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 207,
+      "text": "Nothing happens unless first we dream.",
+      "author": "Carl Sandburg",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Carl_Sandburg",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 208,
+      "text": "Tears aren't a woman's only weapon. The best one's between your legs.",
+      "author": "Cersei Lannister (Game of Thrones)",
+      "source": "Game of Thrones",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Game_of_Thrones",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 209,
+      "text": "When you play the game of thrones, you win or you die. There is no middle ground.",
+      "author": "Cersei Lannister (Game of Thrones)",
+      "source": "Game of Thrones",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Game_of_Thrones",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 210,
+      "text": "Be slow of tongue and quick of eye.",
+      "author": "Cervantes",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Cervantes",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 211,
+      "text": "A man is great by deeds, not by birth.",
+      "author": "Chanakya",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Chanakya",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 212,
+      "text": "Don't leave a stone unturned. It's always something, to know you have done the most you could.",
+      "author": "Charles Dickens",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Charles_Dickens",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 213,
+      "text": "One fails forward toward success.",
+      "author": "Charles Kettering",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Charles_Kettering",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 214,
+      "text": "Just because someone stumbles and loses their path, doesn't mean they're lost forever.",
+      "author": "Charles Xavier/Professor X (X-Men: Days of Future Past)",
+      "source": "X-Men: Days of Future Past",
+      "sourceUrl": "https://en.wikiquote.org/wiki/X-Men%3A_Days_of_Future_Past",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 215,
+      "text": "Example has more followers than reason.",
+      "author": "Christian Bovee",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Christian_Bovee",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 216,
+      "text": "Oh, screw beautiful. I'm brilliant. If you want to appease me, compliment my brain!",
+      "author": "Christina Yang (Grey's Anatomy)",
+      "source": "Grey's Anatomy",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Grey%27s_Anatomy",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 217,
+      "text": "There is only one success - to be able to spend your life in your own way.",
+      "author": "Christopher Morley",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Christopher_Morley",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 218,
+      "text": "Once you choose hope, anythings possible.",
+      "author": "Christopher Reeve",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Christopher_Reeve",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 219,
+      "text": "Gratitude is not only the greatest of virtues, but the parent of all the others.",
+      "author": "Cicero",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Cicero",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 220,
+      "text": "Worst. Episode. Ever.",
+      "author": "Comic Book Guy (The Simpsons)",
+      "source": "The Simpsons",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Simpsons",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 221,
+      "text": "Ability will never catch up with the demand for it.",
+      "author": "Confucius",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Confucius",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 222,
+      "text": "Silence is a true friend who never betrays.",
+      "author": "Confucius",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Confucius",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 223,
+      "text": "The cautious seldom err.",
+      "author": "Confucius",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Confucius",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 224,
+      "text": "To be wronged is nothing unless you continue to remember it.",
+      "author": "Confucius",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Confucius",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 225,
+      "text": "What you do not want done to yourself, do not do to others.",
+      "author": "Confucius",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Confucius",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 226,
+      "text": "Wherever you go, go with all your heart.",
+      "author": "Confucius",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Confucius",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 227,
+      "text": "To want to be what one can be is purpose in life.",
+      "author": "Cynthia Ozick",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Cynthia_Ozick",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 228,
+      "text": "If you lose today, win tomorrow. In this never-ending spirit of challenge is the heart of a victor.",
+      "author": "Daisaku Ikeda",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Daisaku_Ikeda",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 229,
+      "text": "Be kind whenever possible. It is always possible.",
+      "author": "Dalai Lama",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Dalai_Lama",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 230,
+      "text": "Happiness mainly comes from our own attitude, rather than from external factors.",
+      "author": "Dalai Lama",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Dalai_Lama",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 231,
+      "text": "See the positive side, the potential, and make an effort.",
+      "author": "Dalai Lama",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Dalai_Lama",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 232,
+      "text": "When fate hands us a lemon, lets try to make lemonade.",
+      "author": "Dale Carnegie",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Dale_Carnegie",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 233,
+      "text": "No, I am your father.",
+      "author": "Darth Vader (Star Wars. The Empire Strikes Back)",
+      "source": "Star Wars. The Empire Strikes Back",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Empire_Strikes_Back",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 234,
+      "text": "Real success is finding your lifework in the work that you love.",
+      "author": "David McCullough",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/David_McCullough",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 235,
+      "text": "Oh? You're approaching me?",
+      "author": "Dio Brando (JoJo's Bizarre Adventure: Stardust Crusaders)",
+      "source": "JoJo's Bizarre Adventure: Stardust Crusaders",
+      "sourceUrl": "https://en.wikiquote.org/wiki/JoJo%27s_Bizarre_Adventure",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 236,
+      "text": "These violent delights have violent ends.",
+      "author": "Dolores Abernathy (Westworld)",
+      "source": "Westworld",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Westworld",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 237,
+      "text": "I'm gonna make him an offer he can't refuse.",
+      "author": "Don Corleone (The Godfather)",
+      "source": "The Godfather",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Godfather",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 238,
+      "text": "Everything in life is luck.",
+      "author": "Donald Trump",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Donald_Trump",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 239,
+      "text": "You have to think anyway, so why not think big?",
+      "author": "Donald Trump",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Donald_Trump",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 240,
+      "text": "Gratitude is riches. Complaint is poverty.",
+      "author": "Doris Day",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Doris_Day",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 241,
+      "text": "I do one thing at a time, I do it very well. And then, I move on.",
+      "author": "Dr. Charles Emmerson-Winchester III (M*A*S*H)",
+      "source": "M*A*S*H",
+      "sourceUrl": "https://en.wikiquote.org/wiki/M%2AA%2AS%2AH",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 242,
+      "text": "You can't play God without being acquainted with the devil.",
+      "author": "Dr. Robert Ford (Westworld)",
+      "source": "Westworld",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Westworld",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 243,
+      "text": "Don't cry because it's over. Smile because it happened.",
+      "author": "Dr. Seuss",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Dr._Seuss",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 244,
+      "text": "Ladies and Gentlemen take my advice, pull do your pants and slide on the ice.",
+      "author": "Dr. Sidney Friedman (M*A*S*H)",
+      "source": "M*A*S*H",
+      "sourceUrl": "https://en.wikiquote.org/wiki/M%2AA%2AS%2AH",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 245,
+      "text": "It is not uncommon for people to spend their whole life waiting to start living.",
+      "author": "Eckhart Tolle",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Eckhart_Tolle",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 246,
+      "text": "A man is not old as long as he is seeking something.",
+      "author": "Edmond Rostand",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Edmond_Rostand",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 247,
+      "text": "On every thorn, delightful wisdom grows, In every rill a sweet instruction flows.",
+      "author": "Edward Young",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Edward_Young",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 248,
+      "text": "The final proof of greatness lies in being able to endure criticism without resentment.",
+      "author": "Elbert Hubbard",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Elbert_Hubbard",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 249,
+      "text": "There is no failure except in no longer trying.",
+      "author": "Elbert Hubbard",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Elbert_Hubbard",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 250,
+      "text": "Do one thing every day that scares you.",
+      "author": "Eleanor Roosevelt",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Eleanor_Roosevelt",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 251,
+      "text": "It is not fair to ask of others what you are unwilling to do yourself.",
+      "author": "Eleanor Roosevelt",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Eleanor_Roosevelt",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 252,
+      "text": "You must do the things you think you cannot do.",
+      "author": "Eleanor Roosevelt",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Eleanor_Roosevelt",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 253,
+      "text": "Light tomorrow with today!",
+      "author": "Elizabeth Browning",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Elizabeth_Browning",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 254,
+      "text": "Love doesn't make the world go round, love is what makes the ride worthwhile.",
+      "author": "Elizabeth Browning",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Elizabeth_Browning",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 255,
+      "text": "Whoso loves, believes the impossible.",
+      "author": "Elizabeth Browning",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Elizabeth_Browning",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 256,
+      "text": "I Have To Remind Myself That Some Birds Aren't Meant To Be Caged.",
+      "author": "Ellis Boyd Redding (The Shawshank Redemption)",
+      "source": "The Shawshank Redemption",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Shawshank_Redemption",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 257,
+      "text": "There's Not A Day Goes By I Don't Feel Regret.",
+      "author": "Ellis Boyd Redding (The Shawshank Redemption)",
+      "source": "The Shawshank Redemption",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Shawshank_Redemption",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 258,
+      "text": "Difficulties are things that show a person what they are.",
+      "author": "Epictetus",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Epictetus",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 259,
+      "text": "Freedom is the right to live as we wish.",
+      "author": "Epictetus",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Epictetus",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 260,
+      "text": "If you wish to be a writer, write.",
+      "author": "Epictetus",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Epictetus",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 261,
+      "text": "It's not what happens to you, but how you react to it that matters.",
+      "author": "Epictetus",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Epictetus",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 262,
+      "text": "Know, first, who you are, and then adorn yourself accordingly.",
+      "author": "Epictetus",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Epictetus",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 263,
+      "text": "No man is free who is not master of himself.",
+      "author": "Epictetus",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Epictetus",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 264,
+      "text": "Never mistake motion for action.",
+      "author": "Ernest Hemingway",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Ernest_Hemingway",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 265,
+      "text": "The wisest men follow their own direction.",
+      "author": "Euripides",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Euripides",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 266,
+      "text": "So we beat on, boats against the current, borne back ceaselessly into the past.",
+      "author": "F. Scott Fitzgerald (The Great Gatsby)",
+      "source": "The Great Gatsby",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Great_Gatsby",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 267,
+      "text": "We Didn't Choose This Life, We're Just Living In It.",
+      "author": "Five (The Umbrella Academy)",
+      "source": "The Umbrella Academy",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Umbrella_Academy",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 268,
+      "text": "My mama always said: life's like a box of chocolate - you never know what you gonna get.",
+      "author": "Forrest Gump",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Forrest_Gump",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 269,
+      "text": "A prudent question is one half of wisdom.",
+      "author": "Francis Bacon",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Francis_Bacon",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 270,
+      "text": "Oh ho, you're lucky a priest is taking me into the woods!",
+      "author": "Frank Murphy (F is for Family)",
+      "source": "F is for Family",
+      "sourceUrl": "https://en.wikiquote.org/wiki/F_is_for_Family",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 271,
+      "text": "When you come to the end of your rope, tie a knot and hang on.",
+      "author": "Franklin Roosevelt",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Franklin_Roosevelt",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 272,
+      "text": "Keep true to the dreams of thy youth.",
+      "author": "Friedrich von Schiller",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Friedrich_von_Schiller",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 273,
+      "text": "To be tested is good. The challenged life may be the best therapist.",
+      "author": "Gail Sheehy",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Gail_Sheehy",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 274,
+      "text": "All truths are easy to understand once they are discovered; the point is to discover them.",
+      "author": "Galileo Galilei",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Galileo_Galilei",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 275,
+      "text": "What do we live for, if it is not to make life less difficult for each other?",
+      "author": "George Eliot",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/George_Eliot",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 276,
+      "text": "Myths which are believed in tend to become true.",
+      "author": "George Orwell",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/George_Orwell",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 277,
+      "text": "If a man does his best, what else is there?",
+      "author": "George Patton",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/George_Patton",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 278,
+      "text": "Those who cannot learn from history are doomed to repeat it.",
+      "author": "George Santayana",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/George_Santayana",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 279,
+      "text": "If the shoe doesn't fit, must we change the foot?",
+      "author": "Gloria Steinem",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Gloria_Steinem",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 280,
+      "text": "A man sees in the world what he carries in his heart.",
+      "author": "Goethe",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Goethe",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 281,
+      "text": "What is not started today is never finished tomorrow.",
+      "author": "Goethe",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Goethe",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 282,
+      "text": "Me, Grimlock, want to munch metal!",
+      "author": "Grimlock (Transformers)",
+      "source": "Transformers",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Transformers",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 283,
+      "text": "Aw, it ain't armed robbery if the gun ain't loaded.",
+      "author": "H.I. McDonnough (Raising Arizona)",
+      "source": "Raising Arizona",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Raising_Arizona",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 284,
+      "text": "I'll be taking these Huggies and-uh-whatever cash ya got.",
+      "author": "H.I. McDonnough (Raising Arizona)",
+      "source": "Raising Arizona",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Raising_Arizona",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 285,
+      "text": "May the Force be with you.",
+      "author": "Han Solo (Star Wars)",
+      "source": "Star Wars",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Star_Wars",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 286,
+      "text": "We are all inclined to judge ourselves by our ideals; others, by their acts.",
+      "author": "Harold Nicolson",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Harold_Nicolson",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 287,
+      "text": "All serious daring starts from within.",
+      "author": "Harriet Beecher Stowe",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Harriet_Beecher_Stowe",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 288,
+      "text": "You either die a hero or live long enough to see yourself become the villian.",
+      "author": "Harvey Dent (The Dark Knight)",
+      "source": "The Dark Knight",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Dark_Knight",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 289,
+      "text": "Keep yourself to the sunshine and you cannot see the shadow.",
+      "author": "Helen Keller",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Helen_Keller",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 290,
+      "text": "The eye sees only what the mind is prepared to comprehend.",
+      "author": "Henri Bergson",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Henri_Bergson",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 291,
+      "text": "Think like a man of action; act like a man of thought.",
+      "author": "Henri Bergson",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Henri_Bergson",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 292,
+      "text": "Quality means doing it right when no one is looking.",
+      "author": "Henry Ford",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Henry_Ford",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 293,
+      "text": "Trouble is only opportunity in work clothes.",
+      "author": "Henry J. Kaiser",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Henry_J._Kaiser",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 294,
+      "text": "The world is but a canvas to the imagination.",
+      "author": "Henry David Thoreau",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Henry_David_Thoreau",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 295,
+      "text": "Every artist dips his brush in his own soul, and paints his own nature into his pictures.",
+      "author": "Henry Ward Beecher",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Henry_Ward_Beecher",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 296,
+      "text": "All is flux; nothing stays still.",
+      "author": "Heraclitus",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Heraclitus",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 297,
+      "text": "If I know what love is, it is because of you.",
+      "author": "Hermann Hesse",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Hermann_Hesse",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 298,
+      "text": "They're all dead. Everybody's dead, Dave.",
+      "author": "Holly (Red Dwarf)",
+      "source": "Red Dwarf",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Red_Dwarf",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 299,
+      "text": "Bart, I don't want to alarm you, but there may be a boogie man or boogie men in the house!",
+      "author": "Homer (The Simpsons)",
+      "source": "The Simpsons",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Simpsons",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 300,
+      "text": "Don't blame me, I voted for Kodos.",
+      "author": "Homer (The Simpsons)",
+      "source": "The Simpsons",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Simpsons",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 301,
+      "text": "I know you can read my thoughts, boy: meow, meow, meow, meow, meow.",
+      "author": "Homer (The Simpsons)",
+      "source": "The Simpsons",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Simpsons",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 302,
+      "text": "I'm normally not a praying man, but if you're up there, please save me, Superman.",
+      "author": "Homer (The Simpsons)",
+      "source": "The Simpsons",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Simpsons",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 303,
+      "text": "Must kill Moe, weee! Must kill Moe, weee!",
+      "author": "Homer (The Simpsons)",
+      "source": "The Simpsons",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Simpsons",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 304,
+      "text": "To alcohol! The cause of, and solution to, all of life's problems!",
+      "author": "Homer (The Simpsons)",
+      "source": "The Simpsons",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Simpsons",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 305,
+      "text": "Well, he's got all the money in the world, but there's one thing he can't buy: a dinosaur.",
+      "author": "Homer (The Simpsons)",
+      "source": "The Simpsons",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Simpsons",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 306,
+      "text": "You don't win friends with salad.",
+      "author": "Homer (The Simpsons)",
+      "source": "The Simpsons",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Simpsons",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 307,
+      "text": "Your potato? You can't, like, own a potato, man. It's one of Mother Earth's creatures.",
+      "author": "Homer (The Simpsons)",
+      "source": "The Simpsons",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Simpsons",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 308,
+      "text": "When you doubt your power, you give power to your doubt.",
+      "author": "Honore de Balzac",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Honore_de_Balzac",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 309,
+      "text": "Begin, be bold, and venture to be wise.",
+      "author": "Horace",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Horace",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 310,
+      "text": "There wolf; there castle.",
+      "author": "Igor (Young Frankenstein)",
+      "source": "Young Frankenstein",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Young_Frankenstein",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 311,
+      "text": "You can't shake hands with a clenched fist.",
+      "author": "Indira Gandhi",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Indira_Gandhi",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 312,
+      "text": "We can only learn to love by loving.",
+      "author": "Iris Murdoch",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Iris_Murdoch",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 313,
+      "text": "Sometimes the best way to help yourself is to help someone else.",
+      "author": "Iroh (Avatar the Last Airbender)",
+      "source": "Avatar the Last Airbender",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Avatar:_The_Last_Airbender",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 314,
+      "text": "This tea is nothing more than hot leaf juice!",
+      "author": "Iroh (Avatar the Last Airbender)",
+      "source": "Avatar the Last Airbender",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Avatar:_The_Last_Airbender",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 315,
+      "text": "Loyalty, Honor, A willing heart, i can ask no more than that.",
+      "author": "J. R. R. Tolkien (The Hobbit)",
+      "source": "The Hobbit",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Hobbit",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 316,
+      "text": "Things turn out best for those who make the best of the way things turn out.",
+      "author": "Jack Buck",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Jack_Buck",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 317,
+      "text": "Don't compromise yourself. You are all you've got.",
+      "author": "Janis Joplin",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Janis_Joplin",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 318,
+      "text": "People don't wanna follow an idea, they wanna follow a leader.",
+      "author": "Jared (Silicon Valley)",
+      "source": "Silicon Valley",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Silicon_Valley",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 319,
+      "text": "The Elders of the Internet know who I am?!",
+      "author": "Jen (The IT Crowd)",
+      "source": "The IT Crowd",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_IT_Crowd",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 320,
+      "text": "Life is effort and I'll stop when I die!",
+      "author": "Jerry Smith (Rick and Morty)",
+      "source": "Rick and Morty",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Rick_and_Morty",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 321,
+      "text": "Either you run the day or the day runs you.",
+      "author": "Jim Rohn",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Jim_Rohn",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 322,
+      "text": "The more you care, the stronger you can be.",
+      "author": "Jim Rohn",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Jim_Rohn",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 323,
+      "text": "I know it's not ordinary. But who ever loved ordinary?",
+      "author": "Joan Clarke (The Imitation Game)",
+      "source": "The Imitation Game",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Imitation_Game",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 324,
+      "text": "Great talent finds happiness in execution.",
+      "author": "Goethe",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Goethe",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 325,
+      "text": "In the end we retain from our studies only that which we practically apply.",
+      "author": "Goethe",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Goethe",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 326,
+      "text": "Knowing is not enough; we must apply!",
+      "author": "Goethe",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Goethe",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 327,
+      "text": "Mountains cannot be surmounted except by winding paths.",
+      "author": "Goethe",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Goethe",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 328,
+      "text": "People hurt the ones they love. That's how it is all around the world.",
+      "author": "John Coffey (The Green Mile)",
+      "source": "The Green Mile",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Green_Mile",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 329,
+      "text": "Arriving at one point is the starting point to another.",
+      "author": "John Dewey",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/John_Dewey",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 330,
+      "text": "Every great advance in science has issued from a new audacity of the imagination.",
+      "author": "John Dewey",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/John_Dewey",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 331,
+      "text": "Without some goals and some efforts to reach it, no man can live.",
+      "author": "John Dewey",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/John_Dewey",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 332,
+      "text": "A thing well said will be wit in all languages.",
+      "author": "John Dryden",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/John_Dryden",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 333,
+      "text": "Fortune befriends the bold.",
+      "author": "John Dryden",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/John_Dryden",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 334,
+      "text": "Life is what happens to you while you're busy making other plans.",
+      "author": "John Lennon",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/John_Lennon",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 335,
+      "text": "Love is the flower you've got to let grow.",
+      "author": "John Lennon",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/John_Lennon",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 336,
+      "text": "Reality leaves a lot to the imagination.",
+      "author": "John Lennon",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/John_Lennon",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 337,
+      "text": "Time you enjoy wasting, was not wasted.",
+      "author": "John Lennon",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/John_Lennon",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 338,
+      "text": "Time you enjoyed wasting was not wasted.",
+      "author": "John Lennon",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/John_Lennon",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 339,
+      "text": "A day of worry is more exhausting than a day of work.",
+      "author": "John Lubbock",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/John_Lubbock",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 340,
+      "text": "What we see depends mainly on what we look for.",
+      "author": "John Lubbock",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/John_Lubbock",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 341,
+      "text": "Never mistake activity for achievement.",
+      "author": "John Wooden",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/John_Wooden",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 342,
+      "text": "You can't let praise or criticism get to you. It's a weakness to get caught up in either one.",
+      "author": "John Wooden",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/John_Wooden",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 343,
+      "text": "Intuition will tell the thinking mind where to look next.",
+      "author": "Jonas Salk",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Jonas_Salk",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 344,
+      "text": "On a scale of one to ten, how would your rank your pain?",
+      "author": "Jordan Roberts , Robert L. Baird, Dan Gerson (Big Hero 6)",
+      "source": "Big Hero 6",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Big_Hero_6",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 345,
+      "text": "He who has imagination without learning has wings but no feet.",
+      "author": "Joseph Joubert",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Joseph_Joubert",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 346,
+      "text": "I believe in one thing only, the power of human will.",
+      "author": "Joseph Stalin",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Joseph_Stalin",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 347,
+      "text": "Beauty is not in the face; beauty is a light in the heart.",
+      "author": "Kahlil Gibran",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Kahlil_Gibran",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 348,
+      "text": "We choose our joys and sorrows long before we experience them.",
+      "author": "Kahlil Gibran",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Kahlil_Gibran",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 349,
+      "text": "You won't skid if you stay in a rut.",
+      "author": "Kin Hubbard",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Kin_Hubbard",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 350,
+      "text": "Can we have ONE conversation about feminism where MEN get to be in charge?",
+      "author": "Kip Bunthart (Parks and Recreation)",
+      "source": "Parks and Recreation",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Parks_and_Recreation",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 351,
+      "text": "Another day another Doug.",
+      "author": "Korg (Thor: Ragnarok)",
+      "source": "Thor: Ragnarok",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Thor%3A_Ragnarok",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 352,
+      "text": "Be the chief but never the lord.",
+      "author": "Lao Tzu",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Lao_Tzu",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 353,
+      "text": "From wonder into wonder existence opens.",
+      "author": "Lao Tzu",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Lao_Tzu",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 354,
+      "text": "He who is contented is rich.",
+      "author": "Lao Tzu",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Lao_Tzu",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 355,
+      "text": "He who knows himself is enlightened.",
+      "author": "Lao Tzu",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Lao_Tzu",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 356,
+      "text": "He who talks more is sooner exhausted.",
+      "author": "Lao Tzu",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Lao_Tzu",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 357,
+      "text": "To see things in the seed, that is genius.",
+      "author": "Lao Tzu",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Lao_Tzu",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 358,
+      "text": "A goal without a plan is just a wish.",
+      "author": "Larry Elder",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Larry_Elder",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 359,
+      "text": "Imagination is the highest kite one can fly.",
+      "author": "Lauren Bacall",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Lauren_Bacall",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 360,
+      "text": "Always be smarter than the people who hire you.",
+      "author": "Lena Horne",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Lena_Horne",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 361,
+      "text": "Never idealize others. They will never live up to your expectations.",
+      "author": "Leo Buscaglia",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Leo_Buscaglia",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 362,
+      "text": "Everyone thinks of changing the world, but no one thinks of changing himself.",
+      "author": "Leo Tolstoy",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Leo_Tolstoy",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 363,
+      "text": "We lost because we told ourselves we lost.",
+      "author": "Leo Tolstoy",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Leo_Tolstoy",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 364,
+      "text": "All our knowledge has its origins in our perceptions.",
+      "author": "Leonardo da Vinci",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Leonardo_da_Vinci",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 365,
+      "text": "Nothing strengthens authority so much as silence.",
+      "author": "Leonardo da Vinci",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Leonardo_da_Vinci",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 366,
+      "text": "Time stays long enough for anyone who will use it.",
+      "author": "Leonardo da Vinci",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Leonardo_da_Vinci",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 367,
+      "text": "Who sows virtue reaps honour.",
+      "author": "Leonardo da Vinci",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Leonardo_da_Vinci",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 368,
+      "text": "Let me tell you the secret that has led me to my goal: my strength lies solely in my tenacity.",
+      "author": "Louis Pasteur",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Louis_Pasteur",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 369,
+      "text": "Society develops wit, but its contemplation alone forms genius.",
+      "author": "Madame de Stael",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Madame_de_Stael",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 370,
+      "text": "When a man learns to love, he has to bear the risk of hatred.",
+      "author": "Madara Uchiha (Naruto)",
+      "source": "Naruto",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Naruto",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 371,
+      "text": "It is the quality of our work which will please God, not the quantity.",
+      "author": "Mahatma Gandhi",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Mahatma_Gandhi",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 372,
+      "text": "Our greatness lies not so much in being able to remake the world as being able to remake ourselves.",
+      "author": "Mahatma Gandhi",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Mahatma_Gandhi",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 373,
+      "text": "Strength does not come from physical capacity. It comes from an indomitable will.",
+      "author": "Mahatma Gandhi",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Mahatma_Gandhi",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 374,
+      "text": "We must become the change we want to see.",
+      "author": "Mahatma Gandhi",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Mahatma_Gandhi",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 375,
+      "text": "Each day provides its own gifts.",
+      "author": "Marcus Aurelius",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Marcus_Aurelius",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 376,
+      "text": "If it is not right do not do it; if it is not true do not say it.",
+      "author": "Marcus Aurelius",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Marcus_Aurelius",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 377,
+      "text": "Loss is nothing else but change,and change is Natures delight.",
+      "author": "Marcus Aurelius",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Marcus_Aurelius",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 378,
+      "text": "There is nothing happens to any person but what was in his power to go through with.",
+      "author": "Marcus Aurelius",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Marcus_Aurelius",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 379,
+      "text": "If you have knowledge, let others light their candles in it.",
+      "author": "Margaret Fuller",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Margaret_Fuller",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 380,
+      "text": "I never see what has been done; I only see what remains to be done.",
+      "author": "Marie Curie",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Marie_Curie",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 381,
+      "text": "Nothing in life is to be feared. It is only to be understood.",
+      "author": "Marie Curie",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Marie_Curie",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 382,
+      "text": "Great men are not born great, they grow great.",
+      "author": "Mario Puzo (The Godfather)",
+      "source": "The Godfather",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Godfather",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 383,
+      "text": "Kindness is the language which the deaf can hear and the blind can see.",
+      "author": "Mark Twain",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Mark_Twain",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 384,
+      "text": "When in doubt, tell the truth.",
+      "author": "Mark Twain",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Mark_Twain",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 385,
+      "text": "Whoever is happy will make others happy, too.",
+      "author": "Mark Twain",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Mark_Twain",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 386,
+      "text": "Wrinkles should merely indicate where smiles have been.",
+      "author": "Mark Twain",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Mark_Twain",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 387,
+      "text": "The beginning is always today.",
+      "author": "Mary Wollstonecraft",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Mary_Wollstonecraft",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 388,
+      "text": "One often meets his destiny on the road he takes to avoid it.",
+      "author": "Master Oogway (Kung fu Panda)",
+      "source": "Kung fu Panda",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Kung_Fu_Panda",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 389,
+      "text": "All great achievements require time.",
+      "author": "Maya Angelou",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Maya_Angelou",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 390,
+      "text": "I believe that every person is born with talent.",
+      "author": "Maya Angelou",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Maya_Angelou",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 391,
+      "text": "Nothing will work unless you do.",
+      "author": "Maya Angelou",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Maya_Angelou",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 392,
+      "text": "When you learn, teach. When you get, give.",
+      "author": "Maya Angelou",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Maya_Angelou",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 393,
+      "text": "To fly, we have to have resistance.",
+      "author": "Maya Lin",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Maya_Lin",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 394,
+      "text": "People who talk in metaphors oughta shampoo my crotch.",
+      "author": "Melvin Udall (As Good as It Gets)",
+      "source": "As Good as It Gets",
+      "sourceUrl": "https://en.wikiquote.org/wiki/As_Good_as_It_Gets",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 395,
+      "text": "It is remarkable how similar the pattern of love is to the pattern of insanity.",
+      "author": "Merovingian (The Matrix Revolutions)",
+      "source": "The Matrix Revolutions",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Matrix_Revolutions",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 396,
+      "text": "Keep your friends close, but your enemies closer.",
+      "author": "Michael Corleone (The Godfather Part II)",
+      "source": "The Godfather Part II",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Godfather_Part_II",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 397,
+      "text": "To succeed, we must first believe that we can.",
+      "author": "Michael Korda",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Michael_Korda",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 398,
+      "text": "I am running away from my responsibilities. And it feels good.",
+      "author": "Michael Scott (The Office)",
+      "source": "The Office",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Office",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 399,
+      "text": "Be the change that you want to see in the world.",
+      "author": "Mahatma Gandhi",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Mahatma_Gandhi",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 400,
+      "text": "Forgiveness is choosing to love. It is the first skill of self-giving love.",
+      "author": "Mahatma Gandhi",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Mahatma_Gandhi",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 401,
+      "text": "Freedom is not worth having if it does not connote freedom to err.",
+      "author": "Mahatma Gandhi",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Mahatma_Gandhi",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 402,
+      "text": "It is not only for what we do that we are held responsible, but also for what we do not do.",
+      "author": "Moliere",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Moliere",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 403,
+      "text": "Do you think that's air you're breathing now?",
+      "author": "Morpheus (Matrix)",
+      "source": "Matrix",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Matrix",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 404,
+      "text": "Stop trying to hit me and hit me.",
+      "author": "Morpheus (Matrix)",
+      "source": "Matrix",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Matrix",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 405,
+      "text": "If you spend your whole life waiting for the storm, you'll never enjoy the sunshine.",
+      "author": "Morris West",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Morris_West",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 406,
+      "text": "Nobody exists on purpose. Nobody belongs anywhere. Everybody's gonna die. Come watch TV.",
+      "author": "Morty Smith (Rick and Morty)",
+      "source": "Rick and Morty",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Rick_and_Morty",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 407,
+      "text": "Did you see that ludicrous display last night?",
+      "author": "Moss (The IT Crowd)",
+      "source": "The IT Crowd",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_IT_Crowd",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 408,
+      "text": "Be faithful in small things because it is in them that your strength lies.",
+      "author": "Mother Teresa",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Mother_Teresa",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 409,
+      "text": "Kind words can be short and easy to speak, but their echoes are truly endless.",
+      "author": "Mother Teresa",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Mother_Teresa",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 410,
+      "text": "Let us always meet each other with smile, for the smile is the beginning of love.",
+      "author": "Mother Teresa",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Mother_Teresa",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 411,
+      "text": "Peace begins with a smile.",
+      "author": "Mother Teresa",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Mother_Teresa",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 412,
+      "text": "The universe is made of stories, not atoms.",
+      "author": "Muriel Rukeyser",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Muriel_Rukeyser",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 413,
+      "text": "Think how hard physics would be if particles could think.",
+      "author": "Murray Gell-Mann",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Murray_Gell-Mann",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 414,
+      "text": "He who fears being conquered is sure of defeat.",
+      "author": "Napoleon Bonaparte",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Napoleon_Bonaparte",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 415,
+      "text": "Imagination rules the world.",
+      "author": "Napoleon Bonaparte",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Napoleon_Bonaparte",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 416,
+      "text": "Take time to deliberate, but when the time for action has arrived, stop thinking and go in.",
+      "author": "Napoleon Bonaparte",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Napoleon_Bonaparte",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 417,
+      "text": "The best cure for the body is a quiet mind.",
+      "author": "Napoleon Bonaparte",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Napoleon_Bonaparte",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 418,
+      "text": "Victory belongs to the most persevering.",
+      "author": "Napoleon Bonaparte",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Napoleon_Bonaparte",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 419,
+      "text": "A goal is a dream with a deadline.",
+      "author": "Napoleon Hill",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Napoleon_Hill",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 420,
+      "text": "Fears are nothing more than a state of mind.",
+      "author": "Napoleon Hill",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Napoleon_Hill",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 421,
+      "text": "If you cannot do great things, do small things in a great way.",
+      "author": "Napoleon Hill",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Napoleon_Hill",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 422,
+      "text": "No alibi will save you from accepting the responsibility.",
+      "author": "Napoleon Hill",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Napoleon_Hill",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 423,
+      "text": "You can do it if you believe you can!",
+      "author": "Napoleon Hill",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Napoleon_Hill",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 424,
+      "text": "You give before you get.",
+      "author": "Napoleon Hill",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Napoleon_Hill",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 425,
+      "text": "If you have no reason to be alive, it is the same as being dead.",
+      "author": "Naruto Uzumaki (Naruto)",
+      "source": "Naruto",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Naruto",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 426,
+      "text": "As we are liberated from our own fear, our presence automatically liberates others.",
+      "author": "Nelson Mandela",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Nelson_Mandela",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 427,
+      "text": "It took me five tries.",
+      "author": "old lady (Maid)",
+      "source": "Maid",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Maid",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 428,
+      "text": "I don't believe in failure. It is not failure if you enjoyed the process.",
+      "author": "Oprah Winfrey",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Oprah_Winfrey",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 429,
+      "text": "If you want your life to be more rewarding, you have to change the way you think.",
+      "author": "Oprah Winfrey",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Oprah_Winfrey",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 430,
+      "text": "The biggest adventure you can ever take is to live the life of your dreams.",
+      "author": "Oprah Winfrey",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Oprah_Winfrey",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 431,
+      "text": "With every experience, you alone are painting your own canvas, thought by thought, choice by choice.",
+      "author": "Oprah Winfrey",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Oprah_Winfrey",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 432,
+      "text": "Be yourself; everyone else is already taken.",
+      "author": "Oscar Wilde",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Oscar_Wilde",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 433,
+      "text": "The only thing to do with good advice is to pass it on. It is never of any use to oneself.",
+      "author": "Oscar Wilde",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Oscar_Wilde",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 434,
+      "text": "The smallest act of kindness is worth more than the grandest intention.",
+      "author": "Oscar Wilde",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Oscar_Wilde",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 435,
+      "text": "All things change; nothing perishes.",
+      "author": "Ovid",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Ovid",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 436,
+      "text": "Let your hook always be cast; in the pool where you least expect it, there will be a fish.",
+      "author": "Ovid",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Ovid",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 437,
+      "text": "Take rest; a field that has rested gives a bountiful crop.",
+      "author": "Ovid",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Ovid",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 438,
+      "text": "Everything you can imagine is real.",
+      "author": "Pablo Picasso",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Pablo_Picasso",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 439,
+      "text": "I am always doing that which I can not do, in order that I may learn how to do it.",
+      "author": "Pablo Picasso",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Pablo_Picasso",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 440,
+      "text": "We each owe a death - there are no exceptions - but, oh God, sometimes the Green Mile seems so long.",
+      "author": "Paul Edgecomb (The Green Mile)",
+      "source": "The Green Mile",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Green_Mile",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 441,
+      "text": "Growth itself contains the germ of happiness.",
+      "author": "Pearl Buck",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Pearl_Buck",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 442,
+      "text": "One faces the future with ones past.",
+      "author": "Pearl Buck",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Pearl_Buck",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 443,
+      "text": "Time is the wisest counsellor of all.",
+      "author": "Pericles",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Pericles",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 444,
+      "text": "Efficiency is doing things right; effectiveness is doing the right things.",
+      "author": "Peter Drucker",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Peter_Drucker",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 445,
+      "text": "I May Be An Idiot, But There's One Thing I'm Not Sir, And That Is An Idiot.",
+      "author": "Peter Griffin (Family Guy)",
+      "source": "Family Guy",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Family_Guy",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 446,
+      "text": "Mr. Stark, I don't feel so good.",
+      "author": "Peter Parker/Spiderman (Avengers: Infinity War)",
+      "source": "Avengers: Infinity War",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Avengers%3A_Infinity_War",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 447,
+      "text": "The most dangerous man in the world is the one who doesn't know what he doesn't know.",
+      "author": "Philip Banks (Uncle Phill) (The Fresh Prince of Bel-Air)",
+      "source": "The Fresh Prince of Bel-Air",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Fresh_Prince_of_Bel-Air",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 448,
+      "text": "Either I will find a way, or I will make one.",
+      "author": "Philip Sidney",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Philip_Sidney",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 449,
+      "text": "Good actions give strength to ourselves and inspire good actions in others.",
+      "author": "Plato",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Plato",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 450,
+      "text": "Gentlemen, you can't fight in here! This is the war room!",
+      "author": "President Merkin Muffley (Dr. Strangelove)",
+      "source": "Dr. Strangelove",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Dr._Strangelove",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 451,
+      "text": "Only do what your heart tells you.",
+      "author": "Princess Diana",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Princess_Diana",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 452,
+      "text": "Men would sooner put the realm to the torch than see a woman ascend the Iron Throne.",
+      "author": "Princess Rhaenys Velaryon (House Of The Dragon)",
+      "source": "House Of The Dragon",
+      "sourceUrl": "https://en.wikiquote.org/wiki/House_of_the_Dragon",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 453,
+      "text": "A rolling stone gathers no moss.",
+      "author": "Publilius Syrus",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Publilius_Syrus",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 454,
+      "text": "Never promise more than you can perform.",
+      "author": "Publilius Syrus",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Publilius_Syrus",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 455,
+      "text": "While we stop to think, we often miss our opportunity.",
+      "author": "Publilius Syrus",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Publilius_Syrus",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 456,
+      "text": "We read the world wrong and say that it deceives us.",
+      "author": "Rabindranath Tagore",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Rabindranath_Tagore",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 457,
+      "text": "The greatest minds are capable of the greatest vices as well as of the greatest virtues.",
+      "author": "Rene Descartes",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Rene_Descartes",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 458,
+      "text": "Frankly, my dear, I don't give a damn.",
+      "author": "Rhett Butler (Gone With the Wind)",
+      "source": "Gone With the Wind",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Gone_With_the_Wind",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 459,
+      "text": "Every gift from a friend is a wish for your happiness.",
+      "author": "Richard Bach",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Richard_Bach",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 460,
+      "text": "Every problem has a gift for you in its hands.",
+      "author": "Richard Bach",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Richard_Bach",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 461,
+      "text": "In order to win, you must expect to win.",
+      "author": "Richard Bach",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Richard_Bach",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 462,
+      "text": "Learning is finding out what you already know.",
+      "author": "Richard Bach",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Richard_Bach",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 463,
+      "text": "The simplest things are often the truest.",
+      "author": "Richard Bach",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Richard_Bach",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 464,
+      "text": "You teach best what you most need to learn.",
+      "author": "Richard Bach",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Richard_Bach",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 465,
+      "text": "Chaos and Order are not enemies, only opposites.",
+      "author": "Richard Garriott",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Richard_Garriott",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 466,
+      "text": "I'm sorry, but your opinion means very little to me.",
+      "author": "Rick Sanchez (Rick and Morty)",
+      "source": "Rick and Morty",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Rick_and_Morty",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 467,
+      "text": "They're just robots, Morty! It's OK to shoot them! They're robots!",
+      "author": "Rick Sanchez (Rick and Morty)",
+      "source": "Rick and Morty",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Rick_and_Morty",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 468,
+      "text": "Creativity comes from trust. Trust your instincts. And never hope more than you work.",
+      "author": "Rita Mae Brown",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Rita_Mae_Brown",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 469,
+      "text": "The best way out is always through.",
+      "author": "Robert Frost",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Robert_Frost",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 470,
+      "text": "I'm not locked in here with you. You're locked in here with me!",
+      "author": "Rorschach (Watchmen)",
+      "source": "Watchmen",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Watchmen",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 471,
+      "text": "Have you tried turning it off and on again?",
+      "author": "Roy (The IT Crowd)",
+      "source": "The IT Crowd",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_IT_Crowd",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 472,
+      "text": "Patience is the companion of wisdom.",
+      "author": "Saint Augustine",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Saint_Augustine",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 473,
+      "text": "Memory is the mother of all wisdom.",
+      "author": "Samuel Johnson",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Samuel_Johnson",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 474,
+      "text": "Imagination is the living power and prime agent of all human perception.",
+      "author": "Samuel Taylor Coleridge",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Samuel_Taylor_Coleridge",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 475,
+      "text": "Don't look back. Something might be gaining on you.",
+      "author": "Satchel Paige",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Satchel_Paige",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 476,
+      "text": "No man was ever wise by chance.",
+      "author": "Seneca",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Seneca",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 477,
+      "text": "The greatest remedy for anger is delay.",
+      "author": "Seneca",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Seneca",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 478,
+      "text": "The mind unlearns with difficulty what it has long learned.",
+      "author": "Seneca",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Seneca",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 479,
+      "text": "There is no advantage to living life on the run.",
+      "author": "Shikamaru Nara (Naruto)",
+      "source": "Naruto",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Naruto",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 480,
+      "text": "From error to error one discovers the entire truth.",
+      "author": "Sigmund Freud",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Sigmund_Freud",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 481,
+      "text": "Be as you wish to seem.",
+      "author": "Socrates",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Socrates",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 482,
+      "text": "The greatest way to live with honour in this world is to be what we pretend to be.",
+      "author": "Socrates",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Socrates",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 483,
+      "text": "Wisdom begins in wonder.",
+      "author": "Socrates",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Socrates",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 484,
+      "text": "Truth is powerful and it prevails.",
+      "author": "Sojourner Truth",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Sojourner_Truth",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 485,
+      "text": "This guy is too good he shoots fire from his brain.",
+      "author": "Sokka (Avatar the Last Airbender)",
+      "source": "Avatar the Last Airbender",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Avatar:_The_Last_Airbender",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 486,
+      "text": "A short saying oft contains much wisdom.",
+      "author": "Sophocles",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Sophocles",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 487,
+      "text": "A short saying often contains much wisdom.",
+      "author": "Sophocles",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Sophocles",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 488,
+      "text": "Much wisdom often goes with fewer words.",
+      "author": "Sophocles",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Sophocles",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 489,
+      "text": "Numberless are the worlds wonders, but none more wonderful than man.",
+      "author": "Sophocles",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Sophocles",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 490,
+      "text": "Wisdom is the supreme part of happiness.",
+      "author": "Sophocles",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Sophocles",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 491,
+      "text": "To dare is to lose ones footing momentarily. To not dare is to lose oneself.",
+      "author": "Soren Kierkegaard",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Soren_Kierkegaard",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 492,
+      "text": "He's not coming back from that. That chick was, like, the Pele of anal.",
+      "author": "Sterling Archer (Archer)",
+      "source": "Archer",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Archer",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 493,
+      "text": "I am not slurring my words, I'm talking in cursive.",
+      "author": "Sterling Archer (Archer)",
+      "source": "Archer",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Archer",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 494,
+      "text": "If I stop drinking all at once, I'm afraid the cumulative hangover will kill me.",
+      "author": "Sterling Archer (Archer)",
+      "source": "Archer",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Archer",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 495,
+      "text": "Karate? The dane cook of martial arts.",
+      "author": "Sterling Archer (Archer)",
+      "source": "Archer",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Archer",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 496,
+      "text": "You have to believe in yourself.",
+      "author": "Sun Tzu",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Sun_Tzu",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 497,
+      "text": "Dread it, run from it, destiny arrives all the same.",
+      "author": "Thanos (Avengers infinity war)",
+      "source": "Avengers infinity war",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Avengers:_Infinity_War",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 498,
+      "text": "The hardest choices require the strongest wills.",
+      "author": "Thanos (Avengers: Infinity War)",
+      "source": "Avengers: Infinity War",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Avengers%3A_Infinity_War",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 499,
+      "text": "That rug really tied the room together, did it not?",
+      "author": "The Dude (Jeff Bridges) (The Big Lebowski)",
+      "source": "The Big Lebowski",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Big_Lebowski",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 500,
+      "text": "We're All Looking For Happy.",
+      "author": "The Handler (The Umbrella Academy)",
+      "source": "The Umbrella Academy",
+      "sourceUrl": "https://en.wikiquote.org/wiki/The_Umbrella_Academy",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 501,
+      "text": "Smile, breathe and go slowly.",
+      "author": "Thich Nhat Hanh",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Thich_Nhat_Hanh",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 502,
+      "text": "If we did the things we are capable of, we would astound ourselves.",
+      "author": "Thomas Edison",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Thomas_Edison",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 503,
+      "text": "Opportunity is missed by most because it is dressed in overalls and looks like work.",
+      "author": "Thomas Edison",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Thomas_Edison",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 504,
+      "text": "No garden is without its weeds.",
+      "author": "Thomas Fuller",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Thomas_Fuller",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 505,
+      "text": "Don't talk about what you have done or what you are going to do.",
+      "author": "Thomas Jefferson",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Thomas_Jefferson",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 506,
+      "text": "I'm a great believer in luck and I find the harder I work, the more I have of it.",
+      "author": "Thomas Jefferson",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Thomas_Jefferson",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 507,
+      "text": "Never put off till tomorrow what you can do today.",
+      "author": "Thomas Jefferson",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Thomas_Jefferson",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 508,
+      "text": "Reason and free inquiry are the only effectual agents against error.",
+      "author": "Thomas Jefferson",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Thomas_Jefferson",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 509,
+      "text": "If you surrender to the wind, you can ride it.",
+      "author": "Toni Morrison",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Toni_Morrison",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 510,
+      "text": "The eyes, Chico. They never lie.",
+      "author": "Tony Montana (Scarface)",
+      "source": "Scarface",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Scarface",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 511,
+      "text": "It is in your moments of decision that your destiny is shaped.",
+      "author": "Tony Robbins",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Tony_Robbins",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 512,
+      "text": "Successful people ask better questions, and as a result, they get better answers.",
+      "author": "Tony Robbins",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Tony_Robbins",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 513,
+      "text": "The only limit to your impact is your imagination and commitment.",
+      "author": "Tony Robbins",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Tony_Robbins",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 514,
+      "text": "We can change our lives. We can do, have, and be exactly what we wish.",
+      "author": "Tony Robbins",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Tony_Robbins",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 515,
+      "text": "Whatever happens, take responsibility.",
+      "author": "Tony Robbins",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Tony_Robbins",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 516,
+      "text": "You always succeed in producing a result.",
+      "author": "Tony Robbins",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Tony_Robbins",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 517,
+      "text": "We create our own demons.",
+      "author": "Tony Stark (Iron Man 3)",
+      "source": "Iron Man 3",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Iron_Man_3",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 518,
+      "text": "A Lannister always pays his debts.",
+      "author": "Tyrion Lannister (Game of Thrones)",
+      "source": "Game of Thrones",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Game_of_Thrones",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 519,
+      "text": "Any man who must say \"I am the king\" is no true king.",
+      "author": "Tyrion Lannister (Game of Thrones)",
+      "source": "Game of Thrones",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Game_of_Thrones",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 520,
+      "text": "Every lie we tell incurs a debt to the truth. Sooner or later that debt is paid.",
+      "author": "Valery Legasov (Chernobyl)",
+      "source": "Chernobyl",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Chernobyl",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 521,
+      "text": "Fortune favours the brave.",
+      "author": "Virgil",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Virgil",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 522,
+      "text": "They can conquer who believe they can.",
+      "author": "Virgil",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Virgil",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 523,
+      "text": "They can do all because they think they can.",
+      "author": "Virgil",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Virgil",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 524,
+      "text": "The longer we dwell on our misfortunes, the greater is their power to harm us.",
+      "author": "Voltaire",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Voltaire",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 525,
+      "text": "Think for yourselves and let others enjoy the privilege to do so too.",
+      "author": "Voltaire",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Voltaire",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 526,
+      "text": "To enjoy life, we must touch much of it lightly.",
+      "author": "Voltaire",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Voltaire",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 527,
+      "text": "To choose what is difficult all ones days, as if it were easy, that is faith.",
+      "author": "W. H. Auden",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/W._H._Auden",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 528,
+      "text": "If you can dream it, you can do it.",
+      "author": "Walt Disney",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Walt_Disney",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 529,
+      "text": "Weve got to have a dream if we are going to make a dream come true.",
+      "author": "Walt Disney",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Walt_Disney",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 530,
+      "text": "I can't imagine a person becoming a success who doesn't give this game of life everything hes got.",
+      "author": "Walter Cronkite",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Walter_Cronkite",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 531,
+      "text": "Where all think alike, no one thinks very much.",
+      "author": "Walter Lippmann",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Walter_Lippmann",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 532,
+      "text": "I think and that is all that I am.",
+      "author": "Wayne Dyer",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Wayne_Dyer",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 533,
+      "text": "Our intention creates our reality.",
+      "author": "Wayne Dyer",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Wayne_Dyer",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 534,
+      "text": "Real magic in relationships means an absence of judgement of others.",
+      "author": "Wayne Dyer",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Wayne_Dyer",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 535,
+      "text": "We are Divine enough to ask and we are important enough to receive.",
+      "author": "Wayne Dyer",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Wayne_Dyer",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 536,
+      "text": "You can't choose up sides on a round world.",
+      "author": "Wayne Dyer",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Wayne_Dyer",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 537,
+      "text": "You'll see it when you believe it.",
+      "author": "Wayne Dyer",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Wayne_Dyer",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 538,
+      "text": "If you find yourself in a hole, the first thing to do is stop digging.",
+      "author": "Will Rogers",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Will_Rogers",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 539,
+      "text": "Do more than dream: work.",
+      "author": "William Arthur Ward",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/William_Arthur_Ward",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 540,
+      "text": "In seed time learn, in harvest teach, in winter enjoy.",
+      "author": "William Blake",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/William_Blake",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 541,
+      "text": "To change ones life, start immediately, do it flamboyantly, no exceptions.",
+      "author": "William James",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/William_James",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 542,
+      "text": "Every man dies, but not every man really lives.",
+      "author": "William Wallace (Braveheart)",
+      "source": "Braveheart",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Braveheart",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 543,
+      "text": "They may take our lives, but they'll never take our freedom!",
+      "author": "William Wallace (Braveheart)",
+      "source": "Braveheart",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Braveheart",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 544,
+      "text": "I never worry about action, but only inaction.",
+      "author": "Winston Churchill",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Winston_Churchill",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 545,
+      "text": "The price of greatness is responsibility.",
+      "author": "Winston Churchill",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Winston_Churchill",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 546,
+      "text": "We make a living by what we get, but we make a life by what we give.",
+      "author": "Winston Churchill",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Winston_Churchill",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 547,
+      "text": "We choose our destiny in the way we treat others.",
+      "author": "Wit",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Wit",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 548,
+      "text": "You know nothing, Jon Snow.",
+      "author": "Ygritte (Game of Thrones)",
+      "source": "Game of Thrones",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Game_of_Thrones",
+      "band": "EASY",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 549,
+      "text": "Do, or do not. There is no try.",
+      "author": "Yoda",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Yoda",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 550,
+      "text": "No. Try not. Do... or do not. There is no try.",
+      "author": "Yoda (Star Wars Episode V: The Empire Strikes Back)",
+      "source": "Star Wars Episode V: The Empire Strikes Back",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Star_Wars_Episode_V%3A_The_Empire_Strikes_Back",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 551,
+      "text": "You can observe a lot just by watching.",
+      "author": "Yogi Berra",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Yogi_Berra",
+      "band": "MEDIUM",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 552,
+      "text": "You got to be careful if you don't know where you're going, because you might not get there.",
+      "author": "Yogi Berra",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Yogi_Berra",
+      "band": "EXTREME",
+      "addedOn": "2026-09-11"
+    },
+    {
+      "id": 553,
+      "text": "You are the only person on Earth who can use your ability.",
+      "author": "Zig Ziglar",
+      "source": "",
+      "sourceUrl": "https://en.wikiquote.org/wiki/Zig_Ziglar",
+      "band": "HARD",
+      "addedOn": "2026-09-11"
     }
   ]
 }
