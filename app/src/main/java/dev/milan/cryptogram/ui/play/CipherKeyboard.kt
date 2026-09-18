@@ -35,7 +35,8 @@ private val ROW_PAD = listOf(0.dp, 18.dp, 46.dp)
  *
  * [placedLetters]: assigned to a number that still has an empty tile — shown
  * green, still tappable. [doneLetters]: assigned and every tile of its number
- * filled (no free slot left) — dimmed. Both come straight from the puzzle state,
+ * filled (no free slot left) — hidden (blank, untappable slot) so a fully placed
+ * letter stops cluttering the board. Both come straight from the puzzle state,
  * so the keyboard resets with each level.
  */
 @Composable
@@ -62,22 +63,20 @@ fun CipherKeyboard(
             ) {
                 row.forEach { ch ->
                     val done = ch in doneLetters
-                    val placed = ch in placedLetters && !done
-                    Key(
-                        modifier = Modifier.weight(1f),
-                        label = ch.toString(),
-                        bg = when {
-                            placed -> c.accent.copy(alpha = 0.16f)
-                            done -> c.keyUsed
-                            else -> c.key
-                        },
-                        fg = when {
-                            placed -> c.accent
-                            done -> c.ink.copy(alpha = 0.3f)
-                            else -> c.ink
-                        },
-                        onClick = { onKey(ch) },
-                    )
+                    if (done) {
+                        // Fully placed, no empty slot left for it: hide the key
+                        // (blank, untappable) instead of showing a dead dim key.
+                        Box(Modifier.weight(1f).height(44.dp))
+                    } else {
+                        val placed = ch in placedLetters
+                        Key(
+                            modifier = Modifier.weight(1f),
+                            label = ch.toString(),
+                            bg = if (placed) c.accent.copy(alpha = 0.16f) else c.key,
+                            fg = if (placed) c.accent else c.ink,
+                            onClick = { onKey(ch) },
+                        )
+                    }
                 }
             }
         }
