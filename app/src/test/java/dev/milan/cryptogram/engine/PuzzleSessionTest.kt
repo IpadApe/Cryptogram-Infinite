@@ -158,6 +158,26 @@ class PuzzleSessionTest {
     }
 
     @Test
+    fun `advancing after a fill moves forward, not back to an earlier gap`() {
+        val session = PuzzleSession(alphabetPlain, Difficulty.EXTREME, seed = 12L)
+        val s0 = session.state.value
+        val unfilled = s0.letterNums.indices.filter { !s0.isPositionFilled(it) }
+        check(unfilled.size >= 3) { "test needs at least 3 unfilled positions" }
+        val earlyGap = unfilled[0]
+        val midGap = unfilled[1]
+
+        // Fill a middle gap out of order, correctly.
+        session.selectAt(midGap)
+        session.enter(session.correctFor(s0.letterNums[midGap]))
+
+        val sel = session.state.value.selectedPosition
+        assertTrue(
+            "expected to move forward past $midGap, not back to earlier gap $earlyGap (got $sel)",
+            sel == null || sel > midGap,
+        )
+    }
+
+    @Test
     fun `autofill fills every tile of a number at once`() {
         val plain = "BANANA BAND" // number for A/B/N repeats
         val session = PuzzleSession(plain, Difficulty.EXTREME, seed = 9L, autofill = true)

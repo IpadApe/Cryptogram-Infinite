@@ -145,13 +145,16 @@ fun PlayScreen(
     val pct = if (puzzle.solvableCipherNums.isEmpty()) 0f
         else filled.toFloat() / puzzle.solvableCipherNums.size
 
-    // Keyboard letter state — only the letters the player placed (given/hinted
-    // letters are excluded), derived from the puzzle so it resets every level:
-    // green while a placed letter still has an empty tile, dimmed once done.
+    // Keyboard letter state — only the letters the player *correctly* placed
+    // (given/hinted letters, and any wrong-but-filled guess on ON_CHECK/
+    // ON_COMPLETE bands, are excluded), derived from the puzzle so it resets
+    // every level: green while a correct letter still has an empty tile,
+    // hidden entirely once every tile for it is correctly filled.
     val placedLetters = remember(puzzle) {
         buildSet {
             puzzle.mapping.forEach { (num, letter) ->
                 if (letter in puzzle.revealed) return@forEach
+                if (letter != correct(num)) return@forEach
                 val positions = puzzle.letterNums.withIndex().filter { it.value == num }.map { it.index }
                 if (positions.any { !puzzle.isPositionFilled(it) }) add(letter)
             }
@@ -161,6 +164,7 @@ fun PlayScreen(
         buildSet {
             puzzle.mapping.forEach { (num, letter) ->
                 if (letter in puzzle.revealed) return@forEach
+                if (letter != correct(num)) return@forEach
                 val positions = puzzle.letterNums.withIndex().filter { it.value == num }.map { it.index }
                 if (positions.isNotEmpty() && positions.all { puzzle.isPositionFilled(it) }) add(letter)
             }

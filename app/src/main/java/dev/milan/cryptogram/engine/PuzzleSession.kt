@@ -42,6 +42,14 @@ class PuzzleSession private constructor(initial: PuzzleState) {
         }
     }
 
+    /** Next unfilled, unlocked position strictly after [from]. */
+    private fun nextUnfilledPositionAfter(s: PuzzleState, from: Int): Int? {
+        val locked = lockedCipherNums(s)
+        return ((from + 1) until s.letterNums.size).firstOrNull {
+            !s.isPositionFilled(it) && s.letterNums[it] !in locked
+        }
+    }
+
     private fun firstUnmappedNumber(s: PuzzleState): Int? =
         s.tokens().firstNotNullOfOrNull { t ->
             (t as? CipherToken.Num)?.n?.takeIf { it !in s.mapping }
@@ -234,9 +242,17 @@ class PuzzleSession private constructor(initial: PuzzleState) {
     private fun isGridCorrect(s: PuzzleState): Boolean =
         s.solvableCipherNums.all { s.mapping[it] == correctPlainOf.getValue(it) }
 
+    /**
+     * Move on from the just-filled tile: the next empty tile *after* it in
+     * reading order, so filling in sequence keeps moving forward instead of
+     * jumping back to an earlier gap left by filling out of order. Only
+     * wraps to the earliest remaining gap once nothing is left ahead.
+     */
     private fun advanceSelection(s: PuzzleState): PuzzleState {
         if (s.status != PuzzleStatus.IN_PROGRESS) return s
-        val pos = firstUnfilledPosition(s) ?: return s
+        val pos = s.selectedPosition?.let { nextUnfilledPositionAfter(s, it) }
+            ?: firstUnfilledPosition(s)
+            ?: return s
         return s.copy(selectedPosition = pos, selectedCipherNum = s.letterNums[pos])
     }
 
